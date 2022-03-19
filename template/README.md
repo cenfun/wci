@@ -13,8 +13,9 @@ npm install wci-{id}
 ```
 # API Usage
 ```js
-import { tagName, icon, getIcon } from "wci-{id}";
-const $icon = document.createElement(tagName);
+import { icon, getIcon } from "wci-{id}";
+
+const $icon = document.createElement("wci-{id}");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -28,7 +29,10 @@ icon.list.forEach(item => {
 ```
 # Browser Usage
 ```html
+
 <script src="path-to/wci-{id}/dist/wci-{id}.js"></script>
+
+<wci-{id} name="[icon-name]"></wci-{id}>
 <wci-{id} name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-{id}>
 ```
 see [preview/index.html](preview/index.html)

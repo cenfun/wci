@@ -13,8 +13,9 @@ npm install wci-hero
 ```
 # API Usage
 ```js
-import { tagName, icon, getIcon } from "wci-hero";
-const $icon = document.createElement(tagName);
+import { icon, getIcon } from "wci-hero";
+
+const $icon = document.createElement("wci-hero");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -28,7 +29,10 @@ icon.list.forEach(item => {
 ```
 # Browser Usage
 ```html
+
 <script src="path-to/wci-hero/dist/wci-hero.js"></script>
+
+<wci-hero name="[icon-name]"></wci-hero>
 <wci-hero name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-hero>
 ```
 see [preview/index.html](preview/index.html)

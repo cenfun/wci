@@ -13,8 +13,9 @@ npm install wci-tabler
 ```
 # API Usage
 ```js
-import { tagName, icon, getIcon } from "wci-tabler";
-const $icon = document.createElement(tagName);
+import { icon, getIcon } from "wci-tabler";
+
+const $icon = document.createElement("wci-tabler");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -28,7 +29,10 @@ icon.list.forEach(item => {
 ```
 # Browser Usage
 ```html
+
 <script src="path-to/wci-tabler/dist/wci-tabler.js"></script>
+
+<wci-tabler name="[icon-name]"></wci-tabler>
 <wci-tabler name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-tabler>
 ```
 see [preview/index.html](preview/index.html)
