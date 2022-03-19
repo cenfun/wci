@@ -1,11 +1,15 @@
 {
     "name": "cei-hero",
     "version": "1.0.0",
+    "description": "Custom Element Icons for hero",
     "main": "dist/cei-hero.js",
     "files": [
         "dist",
         "preview"
     ],
+    "repository": {
+        "url": "https://github.com/cenfun/cei.git"
+    },
     "dependencies": {},
     "devDependencies": {}
 }

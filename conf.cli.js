@@ -35,7 +35,7 @@ module.exports = {
                 const toPath = path.resolve(componentPath, relPath);
                 const content = Util.readFileContentSync(absPath);
                 const newContent = Util.replace(content, {
-                    'tag-name': fullName
+                    id: item.name
                 });
                 Util.writeFileContentSync(toPath, newContent);
             });
