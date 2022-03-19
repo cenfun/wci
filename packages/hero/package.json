@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "dist/ce-icons-hero.js",
     "files": [
-        "dist"
+        "dist",
+        "preview"
     ],
     "dependencies": {},
     "devDependencies": {}
