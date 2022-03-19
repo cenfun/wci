@@ -1,2 +1,3 @@
-# ce-tabler-icons
-Custom Element Tabler Icons
+# ce-icons
+Custom Element Icons
+

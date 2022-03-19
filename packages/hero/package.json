@@ -1,0 +1,10 @@
+{
+    "name": "ce-icons-hero",
+    "version": "1.0.0",
+    "main": "dist/ce-icons-hero.js",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {},
+    "devDependencies": {}
+}

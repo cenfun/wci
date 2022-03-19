@@ -1,0 +1,10 @@
+{
+    "name": "ce-icons-tabler",
+    "version": "1.0.0",
+    "main": "dist/ce-icons-tabler.js",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {},
+    "devDependencies": {}
+}
