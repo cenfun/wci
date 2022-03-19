@@ -2,13 +2,21 @@ const path = require('path');
 
 const options = {
     tabler: {
-        dirs: 'node_modules/@tabler/icons/icons'
+        dirs: 'node_modules/@tabler/icons/icons',
+        readme: `
+            Web Components Icons for [tabler](https://github.com/tabler/tabler-icons)
+        
+        `
     },
     hero: {
         dirs: {
             o: 'node_modules/heroicons/outline',
             s: 'node_modules/heroicons/solid'
-        }
+        },
+        readme: `
+            Web Components Icons for [hero](https://github.com/tailwindlabs/heroicons)
+
+        `
     }
 };
 
@@ -25,6 +33,7 @@ module.exports = {
                 return 0;
             }
 
+            const readme = option.readme.split(/\r/g).map(it => it.trim()).join('\r');
             const fullName = item.fullName;
             const componentPath = item.componentPath;
             //copy template
@@ -35,7 +44,8 @@ module.exports = {
                 const toPath = path.resolve(componentPath, relPath);
                 const content = Util.readFileContentSync(absPath);
                 const newContent = Util.replace(content, {
-                    id: item.name
+                    id: item.name,
+                    readme
                 });
                 Util.writeFileContentSync(toPath, newContent);
             });
