@@ -1,14 +1,14 @@
 {
-    "name": "cei-{id}",
+    "name": "wci-{id}",
     "version": "1.0.0",
-    "description": "Custom Element Icons for {id}",
-    "main": "dist/cei-{id}.js",
+    "description": "Web Components Icons for {id}",
+    "main": "dist/wci-{id}.js",
     "files": [
         "dist",
         "preview"
     ],
     "repository": {
-        "url": "https://github.com/cenfun/cei.git"
+        "url": "https://github.com/cenfun/wci.git"
     },
     "dependencies": {},
     "devDependencies": {}

@@ -1,1 +1,1 @@
-# Custom Element Icons for hero
+# Web Components Icons for hero

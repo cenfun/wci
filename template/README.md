@@ -1,1 +1,1 @@
-# Custom Element Icons for {id}
+# Web Components Icons for {id}

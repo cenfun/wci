@@ -1,4 +1,4 @@
-import icon from './dist/cei-{id}.js';
+import icon from './dist/wci-{id}.js';
 
 const getIcon = function(id, key) {
     if (!id) {
@@ -73,7 +73,7 @@ class IconElement extends HTMLElement {
     }
 }
 
-const tagName = 'cei-{id}';
+const tagName = 'wci-{id}';
 //override tagName
 IconElement.tagName = tagName;
 

@@ -1,10 +1,10 @@
 {
-    "name": "cei",
-    "description": "Custom Element Icons",
+    "name": "wci",
+    "description": "Web Components Icons",
     "version": "1.0.0",
     "main": "",
     "keywords": [
-        "cei"
+        "wci"
     ],
     "scripts": {},
     "workspaces": [

@@ -1,3 +1,3 @@
-# Custom Element Icons (CEI)
+# Web Components Icons (WCI)
 
 

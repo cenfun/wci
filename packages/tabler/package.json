@@ -1,14 +1,14 @@
 {
-    "name": "cei-tabler",
+    "name": "wci-tabler",
     "version": "1.0.0",
-    "description": "Custom Element Icons for tabler",
-    "main": "dist/cei-tabler.js",
+    "description": "Web Components Icons for tabler",
+    "main": "dist/wci-tabler.js",
     "files": [
         "dist",
         "preview"
     ],
     "repository": {
-        "url": "https://github.com/cenfun/cei.git"
+        "url": "https://github.com/cenfun/wci.git"
     },
     "dependencies": {},
     "devDependencies": {}

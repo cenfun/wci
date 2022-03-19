@@ -1,14 +1,14 @@
 {
-    "name": "cei-hero",
+    "name": "wci-hero",
     "version": "1.0.0",
-    "description": "Custom Element Icons for hero",
-    "main": "dist/cei-hero.js",
+    "description": "Web Components Icons for hero",
+    "main": "dist/wci-hero.js",
     "files": [
         "dist",
         "preview"
     ],
     "repository": {
-        "url": "https://github.com/cenfun/cei.git"
+        "url": "https://github.com/cenfun/wci.git"
     },
     "dependencies": {},
     "devDependencies": {}

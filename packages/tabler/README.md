@@ -1,1 +1,1 @@
-# Custom Element Icons for tabler
+# Web Components Icons for tabler
