@@ -1,3 +1,3 @@
-# ce-icons
-Custom Element Icons
+# Custom Element Icons (CEI)
+
 

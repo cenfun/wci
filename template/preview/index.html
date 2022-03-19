@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="icon" href="data:,">
-    <title>Preview cei-hero</title>
+    <title>Preview {tag-name}</title>
     <!--inject:start-->
-    <script src="../dist/cei-hero.js"></script>
+    <script src="../dist/{tag-name}.js"></script>
     <!--inject:end-->
     <style>
         html,
@@ -96,7 +96,7 @@
 
 <body>
     <div class="preview-head">
-        <div class="preview-title">Preview cei-hero:</div>
+        <div class="preview-title">Preview {tag-name}:</div>
         <div class="preview-toolbar">
             size:
             <select class="icon-size">
@@ -131,7 +131,7 @@
         <div class="preview-container"></div>
     </div>
     <script>
-        const Icon = window['cei-hero'];
+        const Icon = window['{tag-name}'];
         console.log(Icon);
         const icon = Icon.icon;
         const tagName = Icon.tagName;

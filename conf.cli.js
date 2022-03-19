@@ -1,28 +1,51 @@
-const svgToSymbol = require('svg-to-symbol');
+const path = require('path');
+
+const options = {
+    tabler: {
+        dirs: 'node_modules/@tabler/icons/icons'
+    },
+    hero: {
+        dirs: {
+            o: 'node_modules/heroicons/outline',
+            s: 'node_modules/heroicons/solid'
+        }
+    }
+};
+
 
 module.exports = {
 
     hooks: {
 
         beforeBuild: (item, Util) => {
-            const maps = {
-                tabler: 'node_modules/@tabler/icons/icons',
-                hero: {
-                    o: 'node_modules/heroicons/outline',
-                    s: 'node_modules/heroicons/solid'
-                }
-            };
 
-            const dirs = maps[item.name];
+            const option = options[item.name];
 
-            if (!dirs) {
+            if (!option) {
                 return 0;
             }
 
+            const fullName = item.fullName;
+            const componentPath = item.componentPath;
+            //copy template
+            const templatePath = path.resolve('./template');
+            Util.forEachFile(templatePath, ['.js', '.html', '.md', '.json'], function(filename, filePath) {
+                const absPath = path.resolve(filePath, filename);
+                const relPath = path.relative(templatePath, absPath);
+                const toPath = path.resolve(componentPath, relPath);
+                const content = Util.readFileContentSync(absPath);
+                const newContent = Util.replace(content, {
+                    'tag-name': fullName
+                });
+                Util.writeFileContentSync(toPath, newContent);
+            });
+
+            //compress svg
+            const svgToSymbol = require('svg-to-symbol');
             const result = svgToSymbol({
-                name: item.fullName,
-                dirs,
-                outputDir: `${item.componentPath}/src/dist`
+                name: fullName,
+                dirs: option.dirs,
+                outputDir: `${componentPath}/src/dist`
             });
 
             if (!result.metadata) {

@@ -1,10 +1,10 @@
 {
-    "name": "ce-icons",
-    "description": "ce-icons",
+    "name": "cei",
+    "description": "Custom Element Icons",
     "version": "1.0.0",
     "main": "",
     "keywords": [
-        "ce-icons"
+        "cei"
     ],
     "scripts": {},
     "workspaces": [

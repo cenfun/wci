@@ -1,7 +1,7 @@
 {
-    "name": "cei-tabler",
+    "name": "{tag-name}",
     "version": "1.0.0",
-    "main": "dist/cei-tabler.js",
+    "main": "dist/{tag-name}.js",
     "files": [
         "dist",
         "preview"

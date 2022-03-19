@@ -1,4 +1,4 @@
-import icon from './dist/ce-icons-hero.js';
+import icon from './dist/cei-hero.js';
 
 const getIcon = function(id, key) {
     if (!id) {
@@ -73,7 +73,7 @@ class IconElement extends HTMLElement {
     }
 }
 
-const tagName = 'hero-icon';
+const tagName = 'cei-hero';
 //override tagName
 IconElement.tagName = tagName;
 
