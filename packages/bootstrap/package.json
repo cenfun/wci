@@ -1,6 +1,6 @@
 {
     "name": "wci-bootstrap",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Web components icons built from bootstrap-icons",
     "main": "dist/wci-bootstrap.js",
     "files": [
