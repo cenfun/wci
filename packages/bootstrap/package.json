@@ -1,0 +1,15 @@
+{
+    "name": "wci-bootstrap",
+    "version": "1.0.1",
+    "description": "Web components icons built from bootstrap-icons",
+    "main": "dist/wci-bootstrap.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

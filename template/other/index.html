@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="icon" href="data:,">
+    <title>Web Components Icons (WCI)</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-family: arial, sans-serif;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        a:visited,
+        a:link {
+            color: #000;
+        }
+
+        a:hover {
+            color: deepskyblue;
+        }
+
+        .preview-menu {
+            width: 200px;
+        }
+
+        .preview-title {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 0 20px;
+            height: 35px;
+            line-height: 35px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .preview-list li {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+        }
+
+        .preview-list li span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .preview-main {
+            flex: auto;
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-left: 1px solid #ccc;
+        }
+
+        .preview-main iframe {
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="preview-menu">
+        <div class="preview-title"><a href="https://github.com/cenfun/wci" target="_blank">WCI</a></div>
+        <ul class="preview-list"></ul>
+    </div>
+    <div class="preview-main">
+        <iframe name="iframe" style="width: 100%; height: 100%;"></iframe>
+    </div>
+    <script>
+        
+        const render = function() {
+            const list = JSON.parse('{replace_holder_list}');
+
+            const screenshots = [];
+
+            const $list = document.querySelector('.preview-list');
+            list.forEach(function(it) {
+                const name = it.name;
+                const $li = document.createElement('li');
+
+                const $a = document.createElement('a');
+                $a.href = `${name}/preview/index.html`;
+                $a.innerHTML = `${name}`;
+                $a.target = 'iframe';
+                $li.appendChild($a);
+
+                const $sp = document.createElement('span');
+                $sp.innerHTML = ` (${it.total})`;
+                $li.appendChild($sp);
+
+                $list.appendChild($li);
+
+                screenshots.push(`<img src="${name}/preview/screenshot.png" alt="${name} screenshot" width="1020" style="margin:20px;" />`);
+
+            });
+
+            const $iframe = document.querySelector('iframe');
+
+            $iframe.contentWindow.document.body.innerHTML = screenshots.join('');
+
+        };
+
+        render();
+        
+    </script>
+</body>
+
+</html>

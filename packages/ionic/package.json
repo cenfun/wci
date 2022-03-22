@@ -1,0 +1,15 @@
+{
+    "name": "wci-ionic",
+    "version": "1.0.1",
+    "description": "Web components icons built from ionicons",
+    "main": "dist/wci-ionic.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
