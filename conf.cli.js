@@ -10,6 +10,7 @@ const options = {
             o: 'node_modules/@ant-design/icons-svg/inline-svg/outlined'
         },
         readme: 'No "twotone" icons because custom colors are not supported',
+        license: 'MIT',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
@@ -19,7 +20,8 @@ const options = {
         package: 'bootstrap-icons',
         url: 'https://github.com/twbs/icons',
         dirs: 'node_modules/bootstrap-icons/icons',
-        readme: ''
+        readme: '',
+        license: 'MIT'
     },
 
     carbon: {
@@ -27,6 +29,7 @@ const options = {
         url: 'https://github.com/carbon-design-system/carbon',
         dirs: 'node_modules/@carbon/icons/svg/32',
         readme: '',
+        license: 'Apache 2.0',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
@@ -39,7 +42,8 @@ const options = {
         package: 'css.gg',
         url: 'https://github.com/astrit/css.gg',
         dirs: 'node_modules/css.gg/icons/svg',
-        readme: ''
+        readme: '',
+        license: 'MIT'
     },
 
     eva: {
@@ -50,6 +54,7 @@ const options = {
             'node_modules/eva-icons/outline/svg'
         ],
         readme: '',
+        license: 'MIT',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
@@ -59,7 +64,8 @@ const options = {
         package: 'feather-icons',
         url: 'https://github.com/feathericons/feather',
         dirs: 'node_modules/feather-icons/dist/icons',
-        readme: ''
+        readme: '',
+        license: 'MIT'
     },
     
     hero: {
@@ -69,7 +75,8 @@ const options = {
             o: 'node_modules/heroicons/outline',
             s: 'node_modules/heroicons/solid'
         },
-        readme: ''
+        readme: '',
+        license: 'MIT'
     },
 
     ionic: {
@@ -78,6 +85,7 @@ const options = {
         dirs: 'node_modules/ionicons/dist/svg',
         exclude: ['*-sharp.svg'],
         readme: 'No "sharp" icons',
+        license: 'MIT',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
@@ -88,6 +96,7 @@ const options = {
         url: 'https://github.com/Remix-Design/RemixIcon',
         dirs: 'node_modules/remixicon/icons',
         readme: '',
+        license: 'Apache 2.0',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
@@ -97,7 +106,8 @@ const options = {
         package: '@tabler/icons',
         url: 'https://github.com/tabler/tabler-icons',
         dirs: 'node_modules/@tabler/icons/icons',
-        readme: ''
+        readme: '',
+        license: 'MIT'
     }
 
 };
@@ -206,6 +216,7 @@ module.exports = {
             metadata.url = packageUrl;
             metadata.package = option.package;
             metadata.version = version;
+            metadata.license = option.license;
 
             const componentPath = item.componentPath;
 

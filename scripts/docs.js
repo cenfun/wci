@@ -79,13 +79,14 @@ module.exports = function(option, Util) {
             item.total,
             item.size,
             item.gzip,
+            item.license,
             `[${item.package}@${item.version}](${item.url})`
         ];
     });
 
     const readmeTable = getMarkDownTable({
-        headers: ['Name', 'Icons', 'Size', 'Gzip', 'Built From'],
-        columns: [32, 10, 10, 10, 30],
+        headers: ['Name', 'Icons', 'Size', 'Gzip', 'License', 'Built'],
+        columns: [32, 10, 10, 10, 10, 30],
         rows: readmeList
     });
     let readmeContent = Util.readFileContentSync(path.resolve(__dirname, '../template/other/README.md'));
