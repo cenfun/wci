@@ -1,0 +1,15 @@
+{
+    "name": "wci-material",
+    "version": "1.0.2",
+    "description": "Web components icons built from @material-design-icons/svg",
+    "main": "dist/wci-material.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

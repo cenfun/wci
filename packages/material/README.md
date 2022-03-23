@@ -1,14 +1,14 @@
-# wci-ionic
-Built from [ionicons@6.0.1](https://github.com/ionic-team/ionicons)  
+# wci-material
+Built from [@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)  
 
-918 icons / size: 250.8KB / gzip: 187.1KB  
+4172 icons / size: 503.9KB / gzip: 377.6KB  
 
-No sharp icons
+No sharp/round/two-tone icons
 
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/ionic/preview/](https://cenfun.github.io/wci/ionic/preview/)
+Online Page: [https://cenfun.github.io/wci/material/preview/](https://cenfun.github.io/wci/material/preview/)
 
 # Features
 * Web Components
@@ -17,13 +17,13 @@ Online Page: [https://cenfun.github.io/wci/ionic/preview/](https://cenfun.github
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-ionic
+npm install wci-material
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-ionic";
+import { icon, getIcon } from "wci-material";
 
-const $icon = document.createElement("wci-ionic");
+const $icon = document.createElement("wci-material");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -38,10 +38,10 @@ icon.list.forEach(item => {
 # Browser Usage
 ```html
 
-<script src="path-to/wci-ionic/dist/wci-ionic.js"></script>
+<script src="path-to/wci-material/dist/wci-material.js"></script>
 
-<wci-ionic name="[icon-name]"></wci-ionic>
-<wci-ionic name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-ionic>
+<wci-material name="[icon-name]"></wci-material>
+<wci-material name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-material>
 ```
 see [preview/index.html](preview/index.html)
 

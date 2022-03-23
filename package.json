@@ -16,6 +16,7 @@
         "@ant-design/icons-svg": "^4.2.1",
         "@carbon/icons": "^10.48.0",
         "@fluentui/svg-icons": "^1.1.163",
+        "@material-design-icons/svg": "^0.10.8",
         "@tabler/icons": "^1.56.0",
         "bootstrap-icons": "^1.8.1",
         "css.gg": "^2.0.0",

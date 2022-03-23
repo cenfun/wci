@@ -9,7 +9,7 @@ const options = {
             f: 'node_modules/@ant-design/icons-svg/inline-svg/filled',
             o: 'node_modules/@ant-design/icons-svg/inline-svg/outlined'
         },
-        readme: 'No "twotone" icons because custom colors are not supported',
+        readme: 'No two-tone icons',
         license: 'MIT',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
@@ -102,10 +102,29 @@ const options = {
         url: 'https://github.com/ionic-team/ionicons',
         dirs: 'node_modules/ionicons/dist/svg',
         exclude: ['*-sharp.svg'],
-        readme: 'No "sharp" icons',
+        readme: 'No sharp icons',
         license: 'MIT',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
+        }
+    },
+
+    material: {
+        package: '@material-design-icons/svg',
+        url: 'https://github.com/marella/material-design-icons',
+        dirs: {
+            f: 'node_modules/@material-design-icons/svg/filled',
+            o: 'node_modules/@material-design-icons/svg/outlined'
+        },
+        readme: 'No sharp/round/two-tone icons',
+        license: 'Apache 2.0',
+        onSVGAttribute: function($svg) {
+            $svg.attr('fill', 'currentColor');
+        },
+        onSVGFilename: function(filename) {
+            filename = filename.toLowerCase();
+            filename = filename.split('_').join('-');
+            return filename;
         }
     },
 

@@ -13,5 +13,6 @@
 |[fluent](packages/fluent)       |3759      |700.3KB   |525.6KB   |MIT       |[@fluentui/svg-icons@1.1.163](https://github.com/microsoft/fluentui-system-icons)
 |[hero](packages/hero)           |460       |63.0KB    |45.0KB    |MIT       |[heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)
 |[ionic](packages/ionic)         |918       |250.8KB   |187.1KB   |MIT       |[ionicons@6.0.1](https://github.com/ionic-team/ionicons)
+|[material](packages/material)   |4172      |503.9KB   |377.6KB   |Apache 2.0|[@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)
 |[remix](packages/remix)         |2271      |320.1KB   |239.5KB   |Apache 2.0|[remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)
 |[tabler](packages/tabler)       |1571      |138.0KB   |101.7KB   |MIT       |[@tabler/icons@1.56.0](https://github.com/tabler/tabler-icons)

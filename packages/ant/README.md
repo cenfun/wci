@@ -3,7 +3,7 @@ Built from [@ant-design/icons-svg@4.2.1](https://github.com/ant-design/ant-desig
 
 639 icons / size: 202.6KB / gzip: 150.6KB  
 
-No "twotone" icons because custom colors are not supported
+No two-tone icons
 
 # Preview
 ![screenshot](preview/screenshot.png)

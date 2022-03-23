@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="icon" href="data:,">
+    <title>Preview wci-material</title>
+    <!--inject:start-->
+    <script src="../dist/wci-material.js"></script>
+    <!--inject:end-->
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-family: arial, sans-serif;
+        }
+
+        a:visited,
+        a:link {
+            color: #000;
+        }
+
+        a:hover {
+            color: deepskyblue;
+        }
+
+        .preview-head {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 5px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+        }
+
+        .preview-title {
+            flex: auto;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .preview-title span {
+            font-weight: normal;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .preview-toolbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .preview-toolbar select {
+            margin: 0 5px;
+        }
+
+        .preview-container {
+            padding: 5px;
+        }
+
+        .preview-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .icon-item {
+            margin: 4px;
+            float: left;
+            border: 1px solid transparent;
+        }
+
+        .icon-item:hover {
+            border: 1px solid #ccc;
+        }
+
+        .icon-item > * {
+            cursor: pointer;
+        }
+
+        .icon-item div {
+            font-size: 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preview-head">
+        <div class="preview-title"><a href="https://github.com/cenfun/wci" target="_blank">wci-material</a> <span>(4172 icons / size: 503.9KB / gzip: 377.6KB)</span></div>
+        <div class="preview-toolbar">
+            size:
+            <select class="icon-size">
+                <option>16px</option>
+                <option>20px</option>
+                <option selected>32px</option>
+                <option>50px</option>
+                <option>64px</option>
+                <option>100px</option>
+                <option>128px</option>
+            </select>
+            color:
+            <select class="icon-color">
+                <option></option>
+                <option selected>rainbow</option>
+                <option>green</option>
+                <option>red</option>
+                <option>blue</option>
+            </select>
+            background:
+            <select class="icon-background">
+                <option></option>
+                <option>#eee</option>
+                <option>#fff</option>
+                <option>#ccc</option>
+                <option>#000</option>
+            </select>
+            radius:
+            <select class="icon-radius">
+                <option></option>
+                <option>5px</option>
+                <option>10px</option>
+                <option>20%</option>
+                <option>50%</option>
+            </select>
+        </div>
+    </div>
+    <div class="preview-body">
+        <div class="preview-container"></div>
+    </div>
+    <script>
+        const Icon = window['wci-material'];
+        console.log(Icon);
+        const icon = Icon.icon;
+        const tagName = Icon.tagName;
+
+        const $container = document.querySelector('.preview-container');
+
+        const copyContent = function(content) {
+            navigator.clipboard.writeText(content);
+        };
+
+        $container.addEventListener('click', function(e) {
+            const $item = e.target;
+            if ($item.tagName.toLowerCase() === tagName) {
+                copyContent($item.outerHTML);
+            }
+        });
+
+        const render = function() {
+
+            $container.innerHTML = '';
+
+            const colors = [
+                'red',
+                'orangered',
+                'orange',
+                'green',
+                'deepskyblue',
+                'royalblue',
+                'darkorchid'
+            ];
+
+            const size = document.querySelector('.icon-size').value;
+            const color = document.querySelector('.icon-color').value;
+            const background = document.querySelector('.icon-background').value;
+            const radius = document.querySelector('.icon-radius').value;
+
+            icon.list.forEach(function(item, i) {
+
+                const $div = document.createElement('div');
+                $div.className = 'icon-item';
+                $div.title = item.id;
+
+                const $icon = document.createElement(tagName);
+                $icon.setAttribute('name', item.id);
+                $icon.setAttribute('size', size);
+                if (color) {
+                    let c = color;
+                    if (c === 'rainbow') {
+                        const index = i % colors.length;
+                        c = colors[index];
+                    }
+                    $icon.setAttribute('color', c);
+                }
+                if (background) {
+                    $icon.setAttribute('background', background);
+                }
+                if (radius) {
+                    $icon.setAttribute('radius', radius);
+                }
+                $div.appendChild($icon);
+
+                if (parseInt(size) >= 64) {
+                    const $name = document.createElement('div');
+                    $name.style.width = size;
+                    $name.innerText = item.id;
+                    $div.appendChild($name);
+                }
+
+                $container.appendChild($div);
+            });
+
+        };
+
+        const toolbars = ['.icon-size', '.icon-color', '.icon-background', '.icon-radius'];
+        toolbars.forEach(function(item) {
+            const $item = document.querySelector(item);
+            $item.addEventListener('change', function(e) {
+                render();
+            });
+        });
+
+        render();
+        
+    </script>
+</body>
+
+</html>
