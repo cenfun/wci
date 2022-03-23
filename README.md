@@ -10,6 +10,7 @@
 |[cssgg](packages/cssgg)         |704       |92.5KB    |66.9KB    |MIT       |[css.gg@2.0.0](https://github.com/astrit/css.gg)
 |[eva](packages/eva)             |490       |79.5KB    |57.4KB    |MIT       |[eva-icons@1.1.3](https://github.com/akveo/eva-icons)
 |[feather](packages/feather)     |286       |33.1KB    |22.2KB    |MIT       |[feather-icons@4.28.0](https://github.com/feathericons/feather)
+|[fluent](packages/fluent)       |3759      |700.3KB   |525.6KB   |MIT       |[@fluentui/svg-icons@1.1.163](https://github.com/microsoft/fluentui-system-icons)
 |[hero](packages/hero)           |460       |63.0KB    |45.0KB    |MIT       |[heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)
 |[ionic](packages/ionic)         |918       |250.8KB   |187.1KB   |MIT       |[ionicons@6.0.1](https://github.com/ionic-team/ionicons)
 |[remix](packages/remix)         |2271      |320.1KB   |239.5KB   |Apache 2.0|[remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)
