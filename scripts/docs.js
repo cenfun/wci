@@ -73,7 +73,9 @@ module.exports = function(option, Util) {
     });
 
     //README.md
+    let total = 0;
     const readmeList = jobList.map(item => {
+        total += item.total;
         return [
             `[${item.name}](packages/${item.name})`,
             item.total,
@@ -83,9 +85,10 @@ module.exports = function(option, Util) {
             `[${item.package}@${item.version}](${item.url})`
         ];
     });
+    readmeList.push(['[Total](https://cenfun.github.io/wci/)', total.toLocaleString(), '', '', '', '']);
 
     const readmeTable = getMarkDownTable({
-        headers: ['Name', 'Icons', 'Size', 'Gzip', 'License', 'Built'],
+        headers: ['Name', 'Icons', 'Size', 'Gzip', 'License', 'Built from'],
         columns: [32, 10, 10, 10, 10, 30],
         rows: readmeList
     });

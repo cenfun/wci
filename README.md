@@ -1,8 +1,8 @@
 # Web Components Icons (WCI)
 
 [https://cenfun.github.io/wci/](https://cenfun.github.io/wci/)
-## Projects
-|Name                            |Icons     |Size      |Gzip      |License   |Built                         
+## Packages
+|Name                            |Icons     |Size      |Gzip      |License   |Built from                    
 |--------------------------------|----------|----------|----------|----------|------------------------------
 |[ant](packages/ant)             |639       |202.6KB   |150.6KB   |MIT       |[@ant-design/icons-svg@4.2.1](https://github.com/ant-design/ant-design-icons)
 |[bootstrap](packages/bootstrap) |1668      |358.3KB   |268.3KB   |MIT       |[bootstrap-icons@1.8.1](https://github.com/twbs/icons)
@@ -16,3 +16,4 @@
 |[material](packages/material)   |4172      |503.9KB   |377.6KB   |Apache 2.0|[@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)
 |[remix](packages/remix)         |2271      |320.1KB   |239.5KB   |Apache 2.0|[remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)
 |[tabler](packages/tabler)       |1571      |138.0KB   |101.7KB   |MIT       |[@tabler/icons@1.56.0](https://github.com/tabler/tabler-icons)
+|[Total](https://cenfun.github.io/wci/)|18,872    |          |          |          |                              
