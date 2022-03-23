@@ -64,11 +64,13 @@ module.exports = function(option, Util) {
     
     //console.log(jobList);
 
-    //docs index.html
-    let docsIndexContent = Util.readFileContentSync(path.resolve(__dirname, '../template/other/index.html'));
-    docsIndexContent = docsIndexContent.replace('{replace_holder_list}', JSON.stringify(jobList));
-    const docsIndexPath = path.resolve(docsPath, 'index.html');
-    Util.writeFileContentSync(docsIndexPath, docsIndexContent);
+    //docs pages
+    ['index.html', 'main.html'].forEach(page => {
+        let docsIndexContent = Util.readFileContentSync(path.resolve(__dirname, `../template/other/${page}`));
+        docsIndexContent = docsIndexContent.replace('{replace_holder_list}', JSON.stringify(jobList));
+        const docsIndexPath = path.resolve(docsPath, page);
+        Util.writeFileContentSync(docsIndexPath, docsIndexContent);
+    });
 
     //README.md
     const readmeList = jobList.map(item => {

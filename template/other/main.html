@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="icon" href="data:,">
+    <title>Web Components Icons (WCI)</title>
+</head>
+
+<body>
+    <script>
+        
+        const render = function() {
+            const list = JSON.parse('{replace_holder_list}');
+
+            list.forEach(function(it) {
+                const name = it.name;
+                const link = `${name}/preview/index.html`;
+
+                const $a = document.createElement('a');
+                $a.href = link;
+
+                const $img = document.createElement('img');
+                $img.alt = 'screenshot';
+                $img.src = `${name}/preview/screenshot.png`;
+                $a.appendChild($img);
+
+                document.body.appendChild($a);
+
+            });
+
+        };
+
+        render();
+        
+    </script>
+</body>
+
+</html>
