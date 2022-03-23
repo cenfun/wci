@@ -22,6 +22,19 @@ const options = {
         readme: ''
     },
 
+    carbon: {
+        package: '@carbon/icons',
+        url: 'https://github.com/carbon-design-system/carbon',
+        dirs: 'node_modules/@carbon/icons/svg/32',
+        readme: '',
+        onSVGAttribute: function($svg) {
+            $svg.attr('fill', 'currentColor');
+        },
+        onSVGFilename: function(filename) {
+            return filename.toLowerCase();
+        }
+    },
+
     cssgg: {
         package: 'css.gg',
         url: 'https://github.com/astrit/css.gg',
@@ -125,13 +138,21 @@ module.exports = {
 
             //compress svg
             const svgToSymbol = require('svg-to-symbol');
-            const result = svgToSymbol({
+            const config = {
                 name: fullName,
                 dirs: option.dirs,
-                exclude: option.exclude,
-                onSVGAttribute: option.onSVGAttribute,
                 outputDir: `${componentPath}/src/dist`
-            });
+            };
+            if (option.exclude) {
+                config.exclude = option.exclude;
+            }
+            if (option.onSVGAttribute) {
+                config.onSVGAttribute = option.onSVGAttribute;
+            }
+            if (option.onSVGFilename) {
+                config.onSVGFilename = option.onSVGFilename;
+            }
+            const result = svgToSymbol(config);
 
             if (!result.metadata) {
                 console.error('ERROR: Failed to generate svg symbol file');
