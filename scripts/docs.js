@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const shelljs = require('shelljs');
 
 const getMarkDownTable = function(d) {
     //console.log(d);
@@ -46,18 +45,26 @@ module.exports = function(option, Util) {
     
     const docsPath = path.resolve(__dirname, '../docs');
     //clean previous
-    shelljs.rm('-rf', docsPath);
-    shelljs.mkdir(docsPath);
+    Util.rmSync(docsPath);
+    fs.mkdirSync(docsPath, {
+        recursive: true
+    });
 
     const packagesPath = path.resolve(__dirname, '../packages');
 
     //copy packages
     fs.readdirSync(packagesPath).forEach(item => {
-        const docsDir = path.resolve(docsPath, item);
-        shelljs.mkdir(docsDir);
+        const distDir = path.resolve(docsPath, item, 'dist');
+        fs.mkdirSync(distDir, {
+            recursive: true
+        });
+        fs.copyFileSync(path.resolve(packagesPath, item, `dist/wci-${item}.js`), path.resolve(distDir, `wci-${item}.js`));
 
-        shelljs.cp('-R', path.resolve(packagesPath, item, 'dist'), path.resolve(docsDir, 'dist'));
-        shelljs.cp('-R', path.resolve(packagesPath, item, 'preview'), path.resolve(docsDir, 'preview'));
+        const previewDir = path.resolve(docsPath, item, 'preview');
+        fs.mkdirSync(previewDir, {
+            recursive: true
+        });
+        fs.copyFileSync(path.resolve(packagesPath, item, 'preview/index.html'), path.resolve(previewDir, 'index.html'));
 
         console.log(`copied ${item}`);
     });
@@ -71,6 +78,9 @@ module.exports = function(option, Util) {
         const docsIndexPath = path.resolve(docsPath, page);
         Util.writeFileContentSync(docsIndexPath, docsIndexContent);
     });
+
+    //copy turbogrid.js
+    fs.copyFileSync(path.resolve(__dirname, '../node_modules/turbogrid/dist/turbogrid.js'), path.resolve(docsPath, 'turbogrid.js'));
 
     //README.md
     let total = 0;

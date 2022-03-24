@@ -1,7 +1,7 @@
 # wci-cssgg
 Built from [css.gg@2.0.0](https://github.com/astrit/css.gg)  
 
-704 icons / size: 92.5KB / gzip: 66.9KB  
+704 icons / size: 92.4KB / gzip: 66.9KB  
 
 
 

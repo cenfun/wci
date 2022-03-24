@@ -165,6 +165,13 @@ module.exports = {
 
     addPreCommitHook: false,
 
+    webpackConfig: (conf, Util) => {
+
+        conf.devtool = false;
+
+        return conf;
+    },
+
     hooks: {
 
         beforeBuildAll: (list, Util) => {

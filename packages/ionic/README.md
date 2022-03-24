@@ -1,7 +1,7 @@
 # wci-ionic
 Built from [ionicons@6.0.1](https://github.com/ionic-team/ionicons)  
 
-918 icons / size: 250.8KB / gzip: 187.1KB  
+918 icons / size: 250.7KB / gzip: 187.1KB  
 
 No sharp icons
 

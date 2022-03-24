@@ -7,43 +7,142 @@
     <link rel="icon" href="data:,">
     <title>Web Components Icons (WCI)</title>
     <style>
-        a {
-            margin-bottom: 20px;
-            display: block;
-            opacity: 0.8;
-        }
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+    overflow: hidden;
+}
 
-        a:hover {
-            opacity: 1;
-        }
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-auto {
+    flex: auto;
+    overflow: hidden;
+}
+
+.header {
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.grid {
+    height: 100%;
+}
+
     </style>
+    <script src="turbogrid.js"></script>
 </head>
 
-<body>
+<body class="flex-column">
+    <div class="header flex-row">
+        <div class="title"></div>
+    </div>
+    <div class="grid flex-auto"></div>
     <script>
-        
-        const render = function() {
-            const list = JSON.parse('{replace_holder_list}');
 
-            list.forEach(function(it) {
-                const name = it.name;
-                const link = `${name}/preview/index.html`;
+const Grid = window.turbogrid.Grid;
+const grid = new Grid(document.querySelector('.grid'));
+grid.setOption({
+    collapseAll: true,
+    bindWindowResize: true
+});
 
-                const $a = document.createElement('a');
-                $a.href = link;
+grid.showLoading();
 
-                const $img = document.createElement('img');
-                $img.alt = 'screenshot';
-                $img.src = `${name}/preview/screenshot.png`;
-                $a.appendChild($img);
+const renderGrid = function(rows) {
+    console.log(rows);
+    
+    grid.setData({
+        columns: [{
+            id: 'name',
+            name: 'Name'
+        }, {
+            id: 'svg',
+            name: ''
+        }],
+        rows
+    });
+    grid.render();
+    grid.hideLoading();
+};
 
-                document.body.appendChild($a);
+const render = function(list) {
+    console.log(list);
+    let total = 0;
+    const rows = [];
+    list.forEach(function(item) {
+        const icons = item.icon.list;
+        total += icons.length;
 
-            });
+        const subs = icons.map(ic => {
+            return {
+                name: ic.id,
+                svg: ic.fullSvg
+            };
+        });
 
-        };
+        rows.push({
+            name: item.name,
+            collapsed: true,
+            subs
+        });
 
-        render();
+    });
+
+    document.querySelector('.title').innerHTML = `Total ${total.toLocaleString()} icons`;
+
+    renderGrid(rows);
+};
+
+const loadLibs = function() {
+
+    const list = JSON.parse('{replace_holder_list}');
+
+    let loaded = 0;
+    const loadHandler = function(item) {
+        Object.assign(item, window[`wci-${item.name}`]);
+        loaded += 1;
+        if (loaded >= list.length) {
+            console.log('all loaded');
+            render(list);
+        }
+    };
+            
+    list.forEach(function(item) {
+        const $script = document.createElement('script');
+        $script.src = `${item.name}/dist/wci-${item.name}.js`;
+        $script.addEventListener('load', function() {
+            loadHandler(item);
+        });
+        document.body.appendChild($script);
+    });
+
+};
+
+loadLibs();
         
     </script>
 </body>
