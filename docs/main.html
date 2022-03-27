@@ -463,9 +463,16 @@ const render = function(list) {
     });
 
 
-    document.querySelector('.grid-stats').innerHTML = `Total ${total.toLocaleString()} icons`;
+    document.querySelector('.grid-stats').innerHTML = `Total ${list.length} packages and ${total.toLocaleString()} icons`;
+
+    const popularList = initPopular();
+    const picked = popularList[Math.floor(popularList.length * Math.random())];
+    keywords = [picked];
 
     const $keywords = document.querySelector('.keywords');
+    $keywords.value = picked;
+    $keywords.focus();
+
     const keywordsHandler = function() {
         const str = $keywords.value.trim();
         if (str) {
@@ -480,7 +487,6 @@ const render = function(list) {
         keywordsHandler();
     });
 
-    const popularList = initPopular();
     const $popular = document.querySelector('.popular');
     $popular.addEventListener('click', function(e) {
         if (e.target.tagName === 'SPAN') {
@@ -489,7 +495,6 @@ const render = function(list) {
         }
     });
     $popular.innerHTML = getPopular(popularList);
-
 
     const toolbars = ['.icon-size', '.icon-color', '.icon-background', '.icon-radius'];
     toolbars.forEach(function(item) {
