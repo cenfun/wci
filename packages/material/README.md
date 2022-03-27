@@ -1,7 +1,7 @@
 # wci-material
 Built from [@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)  
 
-4172 icons / size: 503.9KB / gzip: 377.6KB  
+4172 icons / size: 505.5KB / gzip: 378.8KB  
 
 No sharp/round/two-tone icons
 

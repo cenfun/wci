@@ -6,13 +6,17 @@ const options = {
         package: '@ant-design/icons-svg',
         url: 'https://github.com/ant-design/ant-design-icons',
         dirs: {
-            f: 'node_modules/@ant-design/icons-svg/inline-svg/filled',
-            o: 'node_modules/@ant-design/icons-svg/inline-svg/outlined'
+            filled: 'node_modules/@ant-design/icons-svg/inline-svg/filled',
+            outlined: 'node_modules/@ant-design/icons-svg/inline-svg/outlined'
         },
         readme: 'No two-tone icons',
         license: 'MIT',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
+        },
+        onSVGName: function(name, item) {
+            name = name.toLowerCase();
+            return `${name}-${item.namespace}`;
         }
     },
 
@@ -33,8 +37,10 @@ const options = {
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
-        onSVGFilename: function(filename) {
-            return filename.toLowerCase();
+        onSVGName: function(name) {
+            //replace -- to -
+            name = name.split(/-+/).join('-');
+            return name.toLowerCase();
         }
     },
 
@@ -78,11 +84,11 @@ const options = {
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
-        onSVGFilename: function(filename) {
-            filename = filename.toLowerCase();
-            filename = filename.split('_20_').join('-');
-            filename = filename.split('_').join('-');
-            return filename;
+        onSVGName: function(name) {
+            name = name.toLowerCase();
+            name = name.split('_20_').join('-');
+            name = name.split('_').join('-');
+            return name;
         }
     },
     
@@ -90,11 +96,15 @@ const options = {
         package: 'heroicons',
         url: 'https://github.com/tailwindlabs/heroicons',
         dirs: {
-            o: 'node_modules/heroicons/outline',
-            s: 'node_modules/heroicons/solid'
+            outline: 'node_modules/heroicons/outline',
+            solid: 'node_modules/heroicons/solid'
         },
         readme: '',
-        license: 'MIT'
+        license: 'MIT',
+        onSVGName: function(name, item) {
+            name = name.toLowerCase();
+            return `${name}-${item.namespace}`;
+        }
     },
 
     ionic: {
@@ -113,18 +123,18 @@ const options = {
         package: '@material-design-icons/svg',
         url: 'https://github.com/marella/material-design-icons',
         dirs: {
-            f: 'node_modules/@material-design-icons/svg/filled',
-            o: 'node_modules/@material-design-icons/svg/outlined'
+            filled: 'node_modules/@material-design-icons/svg/filled',
+            outlined: 'node_modules/@material-design-icons/svg/outlined'
         },
         readme: 'No sharp/round/two-tone icons',
         license: 'Apache 2.0',
         onSVGAttribute: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
-        onSVGFilename: function(filename) {
-            filename = filename.toLowerCase();
-            filename = filename.split('_').join('-');
-            return filename;
+        onSVGName: function(name, item) {
+            name = name.toLowerCase();
+            name = name.split('_').join('-');
+            return `${name}-${item.namespace}`;
         }
     },
 
@@ -203,8 +213,8 @@ module.exports = {
             if (option.onSVGAttribute) {
                 config.onSVGAttribute = option.onSVGAttribute;
             }
-            if (option.onSVGFilename) {
-                config.onSVGFilename = option.onSVGFilename;
+            if (option.onSVGName) {
+                config.onSVGName = option.onSVGName;
             }
             const result = svgToSymbol(config);
 

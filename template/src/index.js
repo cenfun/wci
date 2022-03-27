@@ -64,10 +64,12 @@ class IconElement extends HTMLElement {
             $background = `background: ${background};`;
         }
 
+        let $overflow = '';
         const radius = this.getAttribute('radius');
         let $radius = '';
         if (radius) {
             $radius = `border-radius: ${radius};`;
+            $overflow = 'overflow: hidden;';
         }
 
         const fullSvg = getIcon(name, 'fullSvg');
@@ -82,6 +84,7 @@ class IconElement extends HTMLElement {
                 ${$color}
                 ${$background}
                 ${$radius}
+                ${$overflow}
             }
         `;
 

@@ -39,17 +39,81 @@ body {
     overflow: hidden;
 }
 
-.header {
-    height: 35px;
-    line-height: 35px;
-    border-bottom: 1px solid #ccc;
-    font-size: 16px;
+h1 {
+    text-align: center;
     font-weight: bold;
-    padding: 0 20px;
+    padding: 5px 0;
+    font-size: 35px;
+}
+
+.filter {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 500px;
+}
+
+.searcher {
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    background-color: #eee;
+}
+
+.keywords {
+    border: none;
+    height: 32px;
+    line-height: 32px;
+    outline: none;
+    margin-right: 5px;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.keywords:focus {
+    border: none;
+}
+
+.popular {
+    text-align: center;
+    padding: 10px;
+}
+
+.grid-header {
+    font-size: 16px;
+    padding: 8px 5px;
+}
+
+.grid-footer {
+    font-size: 16px;
+    padding: 10px 5px;
+}
+
+.view {
+    margin: 20px;
 }
 
 .grid {
-    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.grid .tg-turbogrid .tg-scrollbar-track {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+.grid .tg-turbogrid .tg-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+.grid .tg-turbogrid .tg-cell.icon {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.not-found {
+    font-size: 20px;
 }
 
     </style>
@@ -57,31 +121,156 @@ body {
 </head>
 
 <body class="flex-column">
-    <div class="header flex-row">
-        <div class="title"></div>
+    <h1>Web Components Icons</h1>
+    <div class="filter flex-row">
+        <div class="searcher flex-row">
+            <input type="text" class="keywords flex-auto" onfocus="this.select()" /> 
+            <wci-tabler name="search" size="32px"></wci-tabler>
+        </div>
     </div>
-    <div class="grid flex-auto"></div>
+    <div class="popular">Popular icons: arrow, search, copy</div>
+    <div class="view flex-auto flex-column">
+        <div class="grid-header flex-row">
+            <div class="grid-stats flex-auto"></div>
+            <div class="toolbar">
+                size:
+                <select class="icon-size">
+                    <option>16px</option>
+                    <option>20px</option>
+                    <option>32px</option>
+                    <option>50px</option>
+                    <option selected>64px</option>
+                    <option>100px</option>
+                    <option>128px</option>
+                    <option>150px</option>
+                </select>
+                color:
+                <select class="icon-color">
+                    <option></option>
+                    <option selected>rainbow</option>
+                    <option>red</option>
+                    <option>orangered</option>
+                    <option>orange</option>
+                    <option>green</option>
+                    <option>deepskyblue</option>
+                    <option>royalblue</option>
+                    <option>darkorchid</option>
+                    <option>gray</option>
+                </select>
+                background:
+                <select class="icon-background">
+                    <option></option>
+                    <option>#eee</option>
+                    <option>#fff</option>
+                    <option>#ccc</option>
+                    <option>#000</option>
+                </select>
+                radius:
+                <select class="icon-radius">
+                    <option></option>
+                    <option>5px</option>
+                    <option>10px</option>
+                    <option>20%</option>
+                    <option>50%</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid flex-auto"></div>
+        <!-- <div class="grid-footer">Selected: <span class="selected-rows">0</span></div> -->
+    </div>
+    
     <script>
 
 const Grid = window.turbogrid.Grid;
 const grid = new Grid(document.querySelector('.grid'));
-grid.setOption({
-    collapseAll: true,
-    bindWindowResize: true
-});
-
+// grid.bind('onDblClick', function(e, d) {
+//     grid.setSelectedRow(d.row);
+// });
+// grid.bind('onSelectedChanged', function(e, d) {
+//     const selectedRows = grid.getSelectedRows();
+//     document.querySelector('.selected-rows').innerHTML = selectedRows.length;
+// });
 grid.showLoading();
 
+const getColor = function(c, colorIndex) {
+    const colors = [
+        'red',
+        'orangered',
+        'orange',
+        'green',
+        'deepskyblue',
+        'royalblue',
+        'darkorchid'
+    ];
+
+    if (c === 'rainbow') {
+        const index = colorIndex % colors.length;
+        c = colors[index];
+        colorIndex += 1;
+    }
+
+    return c;
+};
+
+let keywords = [];
+
 const renderGrid = function(rows) {
-    console.log(rows);
     
+    const size = document.querySelector('.icon-size').value;
+    const color = document.querySelector('.icon-color').value;
+    const background = document.querySelector('.icon-background').value;
+    const radius = document.querySelector('.icon-radius').value;
+
+    const cellSize = parseInt(size) + 10;
+
+    grid.setOption({
+        rowHeight: cellSize,
+        frozenColumn: 1,
+        //showCheckbox: true,
+        showRowNumber: false,
+        bindWindowResize: true,
+        rowNotFound: '<div class="not-found">Not found results</div>',
+        rowFilter: function(rowData) {
+            if (!keywords.length) {
+                return true;
+            }
+            const str = rowData.name;
+            for (let i = 0; i < keywords.length; i++) {
+                const keyword = keywords[i];
+                if (str.indexOf(keyword) !== -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    });
+    grid.setFormatter({
+        icon: function(v, r) {
+            const c = getColor(color, r.tg_g_index);
+            return `<${v} name="${r.name}" size="${size}" color="${c}" background="${background}" radius="${radius}"></${v}>`;
+        }
+    });
     grid.setData({
         columns: [{
-            id: 'name',
-            name: 'Name'
+            id: 'index',
+            name: '',
+            align: 'center',
+            width: 55
         }, {
-            id: 'svg',
-            name: ''
+            id: 'icon',
+            name: '',
+            width: cellSize + 10,
+            align: 'center',
+            columnClass: 'icon',
+            formatter: 'icon'
+        }, {
+            id: 'name',
+            name: 'Name',
+            width: 260
+        }, {
+            id: 'package',
+            name: 'Package',
+            align: 'center'
         }],
         rows
     });
@@ -91,28 +280,44 @@ const renderGrid = function(rows) {
 
 const render = function(list) {
     console.log(list);
+    let iconIndex = 1;
     let total = 0;
     const rows = [];
     list.forEach(function(item) {
         const icons = item.icon.list;
         total += icons.length;
 
-        const subs = icons.map(ic => {
-            return {
+        icons.forEach(ic => {
+            rows.push({
+                index: iconIndex,
+                icon: `wci-${item.name}`,
                 name: ic.id,
-                svg: ic.fullSvg
-            };
+                package: item.name
+            });
+            iconIndex += 1;
         });
-
-        rows.push({
-            name: item.name,
-            collapsed: true,
-            subs
-        });
-
     });
 
-    document.querySelector('.title').innerHTML = `Total ${total.toLocaleString()} icons`;
+    document.querySelector('.grid-stats').innerHTML = `Total ${total.toLocaleString()} icons`;
+
+    document.querySelector('.keywords').addEventListener('input', function(e) {
+        const str = e.target.value.trim();
+        if (str) {
+            keywords = str.split(/\s+/);
+        } else {
+            keywords = [];
+        }
+        //console.log(keywords);
+        grid.update();
+    });
+
+    const toolbars = ['.icon-size', '.icon-color', '.icon-background', '.icon-radius'];
+    toolbars.forEach(function(item) {
+        const $item = document.querySelector(item);
+        $item.addEventListener('change', function(e) {
+            renderGrid(rows);
+        });
+    });
 
     renderGrid(rows);
 };
@@ -146,5 +351,4 @@ loadLibs();
         
     </script>
 </body>
-
 </html>

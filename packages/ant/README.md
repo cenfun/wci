@@ -1,7 +1,7 @@
 # wci-ant
 Built from [@ant-design/icons-svg@4.2.1](https://github.com/ant-design/ant-design-icons)  
 
-639 icons / size: 202.6KB / gzip: 150.6KB  
+639 icons / size: 203.4KB / gzip: 151.3KB  
 
 No two-tone icons
 

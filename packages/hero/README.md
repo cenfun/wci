@@ -1,7 +1,7 @@
 # wci-hero
 Built from [heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)  
 
-460 icons / size: 63.0KB / gzip: 45.0KB  
+460 icons / size: 63.3KB / gzip: 45.2KB  
 
 
 
