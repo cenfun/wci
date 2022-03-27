@@ -18,6 +18,15 @@ body {
     overflow: hidden;
 }
 
+a:visited,
+a:link {
+    color: #000;
+}
+
+a:hover {
+    color: deepskyblue;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -76,7 +85,18 @@ h1 {
 
 .popular {
     text-align: center;
-    padding: 10px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.popular span {
+    margin-left: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.popular span:hover {
+    color: deepskyblue;
 }
 
 .grid-header {
@@ -112,6 +132,32 @@ h1 {
     padding-left: 10px;
 }
 
+.grid .tg-turbogrid .tg-cell.copy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.grid .tg-turbogrid .tg-cell.textarea {
+    padding: 3px 5px;
+}
+
+.grid .tg-turbogrid .tg-cell.textarea textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-family: monaco, sans-serif;
+}
+
+.icon-copy {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.icon-copy:hover {
+    opacity: 1;
+}
+
 .not-found {
     font-size: 20px;
 }
@@ -128,7 +174,7 @@ h1 {
             <wci-tabler name="search" size="32px"></wci-tabler>
         </div>
     </div>
-    <div class="popular">Popular icons: arrow, search, copy</div>
+    <div class="popular"></div>
     <div class="view flex-auto flex-column">
         <div class="grid-header flex-row">
             <div class="grid-stats flex-auto"></div>
@@ -181,6 +227,10 @@ h1 {
     
     <script>
 
+const copyContent = function(content) {
+    navigator.clipboard.writeText(content);
+};
+
 const Grid = window.turbogrid.Grid;
 const grid = new Grid(document.querySelector('.grid'));
 // grid.bind('onDblClick', function(e, d) {
@@ -190,7 +240,22 @@ const grid = new Grid(document.querySelector('.grid'));
 //     const selectedRows = grid.getSelectedRows();
 //     document.querySelector('.selected-rows').innerHTML = selectedRows.length;
 // });
+grid.bind('onClick', function(e, d) {
+    const $target = d.e.target;
+    if ($target.tagName === 'TEXTAREA') {
+        $target.select();
+        return;
+    }
+    if ($target.className === 'icon-copy') {
+        const row = grid.getRowItem(d.row);
+        const url = `https://cenfun.github.io/wci/${row.package}/dist/${row.tag}.js`;
+        const textarea = document.createElement('textarea');
+        textarea.innerHTML = `&lt;script src=&quot;${url}&quot;&gt;&lt;/script&gt;`;
+        copyContent(textarea.value);
+    }
+});
 grid.showLoading();
+
 
 const getColor = function(c, colorIndex) {
     const colors = [
@@ -210,6 +275,11 @@ const getColor = function(c, colorIndex) {
     }
 
     return c;
+};
+
+const getIcon = function(r, size, color, background, radius) {
+    const c = getColor(color, r.tg_g_index);
+    return `<${r.tag} name="${r.name}" size="${size}" color="${c}" background="${background}" radius="${radius}"></${r.tag}>`;
 };
 
 let keywords = [];
@@ -245,9 +315,23 @@ const renderGrid = function(rows) {
         }
     });
     grid.setFormatter({
+        index: function(v, r) {
+            return r.tg_index + 1;
+        },
         icon: function(v, r) {
-            const c = getColor(color, r.tg_g_index);
-            return `<${v} name="${r.name}" size="${size}" color="${c}" background="${background}" radius="${radius}"></${v}>`;
+            return getIcon(r, size, color, background, radius);
+        },
+        package: function(v, r) {
+            return `<a target="_blank" href="${v}/preview/index.html">${v}</a>`;
+        },
+        copy: function(v) {
+            return '<wci-ant class="icon-copy" name="copy-outlined" size="16px" title="copy library script"></wci-ant>';
+        },
+        textarea: function(v, r, c) {
+            if (c.id === 'svg') {
+                return `<textarea spellcheck="false">${v}</textarea>`;
+            }
+            return `<textarea spellcheck="false">${getIcon(r, size, color, background, radius)}</textarea>`;
         }
     });
     grid.setData({
@@ -255,14 +339,18 @@ const renderGrid = function(rows) {
             id: 'index',
             name: '',
             align: 'center',
-            width: 55
+            width: 55,
+            sortable: false,
+            formatter: 'index'
         }, {
             id: 'icon',
             name: '',
             width: cellSize + 10,
+            minWidth: cellSize + 10,
             align: 'center',
             columnClass: 'icon',
-            formatter: 'icon'
+            formatter: 'icon',
+            sortable: false
         }, {
             id: 'name',
             name: 'Name',
@@ -270,7 +358,31 @@ const renderGrid = function(rows) {
         }, {
             id: 'package',
             name: 'Package',
-            align: 'center'
+            align: 'center',
+            formatter: 'package'
+        }, {
+            id: 'copy',
+            name: '',
+            align: 'center',
+            formatter: 'copy',
+            columnClass: 'copy',
+            width: 50
+        }, {
+            id: 'wc',
+            name: 'Web component',
+            columnClass: 'textarea',
+            formatter: 'textarea',
+            sortable: false,
+            width: 260,
+            maxWidth: 500
+        }, {
+            id: 'svg',
+            name: 'Pure SVG',
+            columnClass: 'textarea',
+            formatter: 'textarea',
+            sortable: false,
+            width: 260,
+            maxWidth: 1000
         }],
         rows
     });
@@ -278,30 +390,84 @@ const renderGrid = function(rows) {
     grid.hideLoading();
 };
 
+const popularMap = {};
+const addPopular = function(n) {
+    const ignores = ['filled', 'outlined', 'regular', 'fill', 'outline'];
+    n.split('-').forEach(w => {
+        if (w.length < 2) {
+            return;
+        }
+        if (ignores.includes(w)) {
+            return;
+        }
+        if (popularMap[w]) {
+            popularMap[w] += 1;
+        } else {
+            popularMap[w] = 1;
+        }
+    });
+};
+
+const initPopular = function() {
+    const popularList = [];
+    Object.keys(popularMap).map(k => {
+        const num = popularMap[k];
+        if (num > 10) {
+            popularList.push(k);
+        }
+    });
+    return popularList;
+};
+
+const getPopular = function(popularList) {
+    //console.log(popularList);
+
+    const list = [];
+    let num = 10;
+    while (num > 0) {
+        const item = popularList[Math.floor(popularList.length * Math.random())];
+        if (!list.includes(item)) {
+            list.push(item);
+            num -= 1;
+        }
+    }
+
+    return `Popular icons: ${list.map(item => {
+        return `<span>${item}</span>`;
+    })}`;
+};
+
 const render = function(list) {
     console.log(list);
-    let iconIndex = 1;
+
     let total = 0;
     const rows = [];
     list.forEach(function(item) {
         const icons = item.icon.list;
         total += icons.length;
 
+        const packageName = item.name;
+
         icons.forEach(ic => {
+
+            const iconName = ic.id;
+            addPopular(iconName);
+
             rows.push({
-                index: iconIndex,
-                icon: `wci-${item.name}`,
-                name: ic.id,
-                package: item.name
+                tag: `wci-${packageName}`,
+                name: iconName,
+                package: packageName,
+                svg: ic.fullSvg
             });
-            iconIndex += 1;
         });
     });
 
+
     document.querySelector('.grid-stats').innerHTML = `Total ${total.toLocaleString()} icons`;
 
-    document.querySelector('.keywords').addEventListener('input', function(e) {
-        const str = e.target.value.trim();
+    const $keywords = document.querySelector('.keywords');
+    const keywordsHandler = function() {
+        const str = $keywords.value.trim();
         if (str) {
             keywords = str.split(/\s+/);
         } else {
@@ -309,7 +475,21 @@ const render = function(list) {
         }
         //console.log(keywords);
         grid.update();
+    };
+    $keywords.addEventListener('input', function(e) {
+        keywordsHandler();
     });
+
+    const popularList = initPopular();
+    const $popular = document.querySelector('.popular');
+    $popular.addEventListener('click', function(e) {
+        if (e.target.tagName === 'SPAN') {
+            $keywords.value = e.target.innerText;
+            keywordsHandler();
+        }
+    });
+    $popular.innerHTML = getPopular(popularList);
+
 
     const toolbars = ['.icon-size', '.icon-color', '.icon-background', '.icon-radius'];
     toolbars.forEach(function(item) {
