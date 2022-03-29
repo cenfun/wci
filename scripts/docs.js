@@ -81,6 +81,7 @@ module.exports = function(option, Util) {
 
     //copy turbogrid.js
     fs.copyFileSync(path.resolve(__dirname, '../node_modules/turbogrid/dist/turbogrid.js'), path.resolve(docsPath, 'turbogrid.js'));
+    fs.copyFileSync(path.resolve(__dirname, '../node_modules/file-saver/dist/FileSaver.min.js'), path.resolve(docsPath, 'filesaver.js'));
 
     //README.md
     let total = 0;

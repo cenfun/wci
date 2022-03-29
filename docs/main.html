@@ -59,7 +59,7 @@ h1 {
     text-align: center;
     margin: 0 auto;
     width: 60%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .searcher {
@@ -87,6 +87,7 @@ h1 {
     text-align: center;
     height: 35px;
     line-height: 35px;
+    font-size: 16px;
 }
 
 .popular span {
@@ -132,12 +133,6 @@ h1 {
     padding-left: 10px;
 }
 
-.grid .tg-turbogrid .tg-cell.copy {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .grid .tg-turbogrid .tg-cell.textarea {
     padding: 3px 5px;
 }
@@ -149,13 +144,20 @@ h1 {
     font-family: monaco, sans-serif;
 }
 
-.icon-copy {
+.icon-item {
     cursor: pointer;
     opacity: 0.6;
 }
 
-.icon-copy:hover {
+.icon-item:hover {
     opacity: 1;
+}
+
+.grid .tg-turbogrid .tg-cell .icon-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .not-found {
@@ -164,6 +166,7 @@ h1 {
 
     </style>
     <script src="turbogrid.js"></script>
+    <script src="filesaver.js"></script>
 </head>
 
 <body class="flex-column">
@@ -231,6 +234,15 @@ const copyContent = function(content) {
     navigator.clipboard.writeText(content);
 };
 
+const saveFile = function(content, name) {
+    //add xmlns
+    content = content.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
+    const blob = new Blob([content], {
+        type: 'text/plain;charset=utf-8'
+    });
+    window.saveAs(blob, `${name}.svg`);
+};
+
 const Grid = window.turbogrid.Grid;
 const grid = new Grid(document.querySelector('.grid'));
 // grid.bind('onDblClick', function(e, d) {
@@ -246,12 +258,18 @@ grid.bind('onClick', function(e, d) {
         $target.select();
         return;
     }
-    if ($target.className === 'icon-copy') {
+    if ($target.classList.contains('icon-copy')) {
         const row = grid.getRowItem(d.row);
         const url = `https://cenfun.github.io/wci/${row.package}/dist/${row.tag}.js`;
         const textarea = document.createElement('textarea');
         textarea.innerHTML = `&lt;script src=&quot;${url}&quot;&gt;&lt;/script&gt;`;
         copyContent(textarea.value);
+        return;
+    }
+    if ($target.classList.contains('icon-download')) {
+        const row = grid.getRowItem(d.row);
+        saveFile(row.svg, row.name);
+        
     }
 });
 grid.showLoading();
@@ -325,13 +343,16 @@ const renderGrid = function(rows) {
             return `<a target="_blank" href="${v}/preview/index.html">${v}</a>`;
         },
         copy: function(v) {
-            return '<wci-ant class="icon-copy" name="copy-outlined" size="16px" title="copy library script"></wci-ant>';
+            return '<wci-ant class="icon-item icon-copy" name="copy-outlined" size="16px" title="copy library script"></wci-ant>';
         },
         textarea: function(v, r, c) {
             if (c.id === 'svg') {
                 return `<textarea spellcheck="false">${v}</textarea>`;
             }
             return `<textarea spellcheck="false">${getIcon(r, size, color, background, radius)}</textarea>`;
+        },
+        download: function(v) {
+            return '<wci-tabler class="icon-item icon-download" name="download" size="16px" title="download svg file"></wci-tabler>';
         }
     });
     grid.setData({
@@ -365,7 +386,6 @@ const renderGrid = function(rows) {
             name: '',
             align: 'center',
             formatter: 'copy',
-            columnClass: 'copy',
             width: 50
         }, {
             id: 'wc',
@@ -383,6 +403,12 @@ const renderGrid = function(rows) {
             sortable: false,
             width: 260,
             maxWidth: 1000
+        }, {
+            id: 'download',
+            name: '',
+            align: 'center',
+            formatter: 'download',
+            width: 50
         }],
         rows
     });
@@ -392,12 +418,8 @@ const renderGrid = function(rows) {
 
 const popularMap = {};
 const addPopular = function(n) {
-    const ignores = ['filled', 'outlined', 'regular', 'fill', 'outline'];
     n.split('-').forEach(w => {
         if (w.length < 2) {
-            return;
-        }
-        if (ignores.includes(w)) {
             return;
         }
         if (popularMap[w]) {
@@ -432,7 +454,7 @@ const getPopular = function(popularList) {
         }
     }
 
-    return `Popular icons: ${list.map(item => {
+    return `Popular: ${list.map(item => {
         return `<span>${item}</span>`;
     })}`;
 };
