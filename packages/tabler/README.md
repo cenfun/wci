@@ -1,7 +1,7 @@
 # wci-tabler
-Built from [@tabler/icons@1.58.0](https://github.com/tabler/tabler-icons)  
+Built from [@tabler/icons@1.59.0](https://github.com/tabler/tabler-icons)  
 
-1613 icons / size: 140.6KB / gzip: 103.7KB  
+1631 icons / size: 141.8KB / gzip: 104.3KB  
 
 
 

@@ -15,5 +15,5 @@
 |[ionic](packages/ionic)         |918       |250.8KB   |187.1KB   |MIT       |[ionicons@6.0.1](https://github.com/ionic-team/ionicons)
 |[material](packages/material)   |4172      |505.5KB   |378.8KB   |Apache 2.0|[@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)
 |[remix](packages/remix)         |2271      |320.1KB   |239.5KB   |Apache 2.0|[remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)
-|[tabler](packages/tabler)       |1613      |140.6KB   |103.7KB   |MIT       |[@tabler/icons@1.58.0](https://github.com/tabler/tabler-icons)
-|[Total](https://cenfun.github.io/wci/)|18,966    |          |          |          |                              
+|[tabler](packages/tabler)       |1631      |141.8KB   |104.3KB   |MIT       |[@tabler/icons@1.59.0](https://github.com/tabler/tabler-icons)
+|[Total](https://cenfun.github.io/wci/)|18,984    |          |          |          |                              
