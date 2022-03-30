@@ -138,6 +138,17 @@ const options = {
         }
     },
 
+    oct: {
+        package: '@primer/octicons',
+        url: 'https://github.com/primer/octicons',
+        dirs: 'node_modules/@primer/octicons/build/svg',
+        readme: '',
+        license: 'MIT',
+        onSVGAttribute: function($svg) {
+            $svg.attr('fill', 'currentColor');
+        }
+    },
+
     remix: {
         package: 'remixicon',
         url: 'https://github.com/Remix-Design/RemixIcon',
