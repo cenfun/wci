@@ -151,7 +151,7 @@ const options = {
 
     simple: {
         package: 'simple-icons',
-        url: 'https://github.com/tabler/tabler-icons',
+        url: 'https://github.com/simple-icons/simple-icons',
         dirs: 'node_modules/simple-icons/icons',
         readme: '',
         license: 'CC0 1.0',
@@ -171,6 +171,17 @@ const options = {
         dirs: 'node_modules/@tabler/icons/icons',
         readme: '',
         license: 'MIT'
+    },
+
+    typ: {
+        package: 'typicons.font',
+        url: 'https://github.com/stephenhutchings/typicons.font',
+        dirs: 'node_modules/typicons.font/src/svg',
+        readme: '',
+        license: 'SIL Open Font',
+        onSVGAttribute: function($svg) {
+            $svg.attr('fill', 'currentColor');
+        }
     }
 
 };

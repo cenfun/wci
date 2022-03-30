@@ -1,0 +1,15 @@
+{
+    "name": "wci-typ",
+    "version": "1.0.3",
+    "description": "Web components icons built from typicons.font",
+    "main": "dist/wci-typ.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

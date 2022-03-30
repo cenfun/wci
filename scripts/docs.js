@@ -100,7 +100,7 @@ module.exports = function(option, Util) {
 
     const readmeTable = getMarkDownTable({
         headers: ['Name', 'Icons', 'Size', 'Gzip', 'License', 'Built from'],
-        columns: [32, 10, 10, 10, 10, 30],
+        columns: [32, 10, 10, 10, 15, 30],
         rows: readmeList
     });
     let readmeContent = Util.readFileContentSync(path.resolve(__dirname, '../template/other/README.md'));

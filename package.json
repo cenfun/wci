@@ -39,6 +39,7 @@
         "stylelint-config-recommended": "^7.0.0",
         "stylelint-config-standard": "^25.0.0",
         "svg-to-symbol": "^1.0.12",
-        "turbogrid": "^2.0.6"
+        "turbogrid": "^2.0.6",
+        "typicons.font": "^2.1.2"
     }
 }

@@ -1,14 +1,14 @@
-# wci-simple
-Built from [simple-icons@6.16.0](https://github.com/simple-icons/simple-icons)  
+# wci-typ
+Built from [typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)  
 
-2219 icons / size: 1.8MB / gzip: 1.4MB  
+336 icons / size: 111.1KB / gzip: 81.2KB  
 
 
 
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/simple/preview/](https://cenfun.github.io/wci/simple/preview/)
+Online Page: [https://cenfun.github.io/wci/typ/preview/](https://cenfun.github.io/wci/typ/preview/)
 
 # Features
 * Web Components
@@ -17,13 +17,13 @@ Online Page: [https://cenfun.github.io/wci/simple/preview/](https://cenfun.githu
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-simple
+npm install wci-typ
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-simple";
+import { icon, getIcon } from "wci-typ";
 
-const $icon = document.createElement("wci-simple");
+const $icon = document.createElement("wci-typ");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -38,10 +38,10 @@ icon.list.forEach(item => {
 # Browser Usage
 ```html
 
-<script src="path-to/wci-simple/dist/wci-simple.js"></script>
+<script src="path-to/wci-typ/dist/wci-typ.js"></script>
 
-<wci-simple name="[icon-name]"></wci-simple>
-<wci-simple name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-simple>
+<wci-typ name="[icon-name]"></wci-typ>
+<wci-typ name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-typ>
 ```
 see [preview/index.html](preview/index.html)
 
