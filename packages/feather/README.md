@@ -1,7 +1,7 @@
 # wci-feather
-Built from [feather-icons@4.28.0](https://github.com/feathericons/feather)  
+Built from [feather-icons@4.29.0](https://github.com/feathericons/feather)  
 
-286 icons / size: 33.1KB / gzip: 22.2KB  
+287 icons / size: 33.1KB / gzip: 22.3KB  
 
 
 

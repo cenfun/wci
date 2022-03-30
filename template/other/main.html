@@ -262,7 +262,7 @@ grid.bind('onClick', function(e, d) {
         const row = grid.getRowItem(d.row);
         const url = `https://cenfun.github.io/wci/${row.package}/dist/${row.tag}.js`;
         const textarea = document.createElement('textarea');
-        textarea.innerHTML = `&lt;script src=&quot;${url}&quot;&gt;&lt;/script&gt;`;
+        textarea.innerHTML = `&lt;script src=&quot;${url}&quot;&gt;&lt;/script&gt;\n${$target.innerHTML}`;
         copyContent(textarea.value);
         return;
     }
@@ -342,14 +342,14 @@ const renderGrid = function(rows) {
         package: function(v, r) {
             return `<a target="_blank" href="${v}/preview/index.html">${v}</a>`;
         },
-        copy: function(v) {
-            return '<wci-ant class="icon-item icon-copy" name="copy-outlined" size="16px" title="copy library script"></wci-ant>';
+        copy: function(v, r) {
+            return `<wci-ant class="icon-item icon-copy" name="copy-outlined" size="16px" title="copy script/wci">${this.getFormatter('icon')(v, r)}</wci-ant>`;
         },
         textarea: function(v, r, c) {
             if (c.id === 'svg') {
                 return `<textarea spellcheck="false">${v}</textarea>`;
             }
-            return `<textarea spellcheck="false">${getIcon(r, size, color, background, radius)}</textarea>`;
+            return `<textarea spellcheck="false">${this.getFormatter('icon')(v, r)}</textarea>`;
         },
         download: function(v) {
             return '<wci-tabler class="icon-item icon-download" name="download" size="16px" title="download svg file"></wci-tabler>';
@@ -377,24 +377,11 @@ const renderGrid = function(rows) {
             name: 'Name',
             width: 260
         }, {
-            id: 'package',
-            name: 'Package',
-            align: 'center',
-            formatter: 'package'
-        }, {
-            id: 'copy',
+            id: 'download',
             name: '',
             align: 'center',
-            formatter: 'copy',
+            formatter: 'download',
             width: 50
-        }, {
-            id: 'wc',
-            name: 'Web component',
-            columnClass: 'textarea',
-            formatter: 'textarea',
-            sortable: false,
-            width: 260,
-            maxWidth: 500
         }, {
             id: 'svg',
             name: 'Pure SVG',
@@ -404,10 +391,23 @@ const renderGrid = function(rows) {
             width: 260,
             maxWidth: 1000
         }, {
-            id: 'download',
+            id: 'wc',
+            name: 'Web component',
+            columnClass: 'textarea',
+            formatter: 'textarea',
+            sortable: false,
+            width: 260,
+            maxWidth: 500
+        }, {
+            id: 'package',
+            name: 'Package',
+            align: 'center',
+            formatter: 'package'
+        }, {
+            id: 'copy',
             name: '',
             align: 'center',
-            formatter: 'download',
+            formatter: 'copy',
             width: 50
         }],
         rows
