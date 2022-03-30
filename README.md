@@ -10,6 +10,7 @@
 |[cssgg](packages/cssgg)         |704       |92.5KB    |67.0KB    |MIT            |[css.gg@2.0.0](https://github.com/astrit/css.gg)
 |[eva](packages/eva)             |490       |79.5KB    |57.4KB    |MIT            |[eva-icons@1.1.3](https://github.com/akveo/eva-icons)
 |[feather](packages/feather)     |287       |33.1KB    |22.3KB    |MIT            |[feather-icons@4.29.0](https://github.com/feathericons/feather)
+|[flat](packages/flat)           |329       |92.7KB    |67.2KB    |MIT            |[flat-color-icons@1.1.0](https://github.com/icons8/flat-color-icons)
 |[fluent](packages/fluent)       |3811      |710.6KB   |533.3KB   |MIT            |[@fluentui/svg-icons@1.1.164](https://github.com/microsoft/fluentui-system-icons)
 |[hero](packages/hero)           |460       |63.3KB    |45.2KB    |MIT            |[heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)
 |[ionic](packages/ionic)         |918       |250.8KB   |187.1KB   |MIT            |[ionicons@6.0.1](https://github.com/ionic-team/ionicons)
@@ -19,4 +20,4 @@
 |[simple](packages/simple)       |2219      |1.8MB     |1.4MB     |CC0 1.0        |[simple-icons@6.16.0](https://github.com/simple-icons/simple-icons)
 |[tabler](packages/tabler)       |1649      |143.3KB   |105.2KB   |MIT            |[@tabler/icons@1.60.0](https://github.com/tabler/tabler-icons)
 |[typ](packages/typ)             |336       |111.1KB   |81.2KB    |SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
-|[Total](https://cenfun.github.io/wci/)|22,048    |          |          |               |                              
+|[Total](https://cenfun.github.io/wci/)|22,377    |          |          |               |                              

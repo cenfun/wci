@@ -74,6 +74,19 @@ const options = {
         license: 'MIT'
     },
 
+    flat: {
+        package: 'flat-color-icons',
+        url: 'https://github.com/icons8/flat-color-icons',
+        dirs: 'node_modules/flat-color-icons/svg',
+        readme: 'Fixed Color',
+        license: 'MIT',
+        onSVGName: function(name) {
+            name = name.toLowerCase();
+            name = name.split('_').join('-');
+            return name;
+        }
+    },
+
     fluent: {
         package: '@fluentui/svg-icons',
         url: 'https://github.com/microsoft/fluentui-system-icons',
