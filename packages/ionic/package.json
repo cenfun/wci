@@ -1,6 +1,6 @@
 {
     "name": "wci-ionic",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Web components icons built from ionicons",
     "main": "dist/wci-ionic.js",
     "files": [

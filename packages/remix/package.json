@@ -1,6 +1,6 @@
 {
     "name": "wci-remix",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Web components icons built from remixicon",
     "main": "dist/wci-remix.js",
     "files": [
