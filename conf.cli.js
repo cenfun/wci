@@ -149,6 +149,22 @@ const options = {
         }
     },
 
+    simple: {
+        package: 'simple-icons',
+        url: 'https://github.com/tabler/tabler-icons',
+        dirs: 'node_modules/simple-icons/icons',
+        readme: '',
+        license: 'CC0 1.0',
+        onSVGAttribute: function($svg) {
+            $svg.attr('fill', 'currentColor');
+        },
+        onSVGName: function(name, item) {
+            name = name.toLowerCase();
+            name = name.split('_').join('-');
+            return name;
+        }
+    },
+
     tabler: {
         package: '@tabler/icons',
         url: 'https://github.com/tabler/tabler-icons',

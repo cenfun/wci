@@ -34,10 +34,11 @@
         "postcss-html": "^1.3.0",
         "postcss-scss": "^4.0.3",
         "remixicon": "^2.5.0",
+        "simple-icons": "^6.16.0",
         "stylelint": "^14.6.1",
         "stylelint-config-recommended": "^7.0.0",
         "stylelint-config-standard": "^25.0.0",
-        "svg-to-symbol": "^1.0.11",
+        "svg-to-symbol": "^1.0.12",
         "turbogrid": "^2.0.6"
     }
 }

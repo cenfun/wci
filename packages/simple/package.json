@@ -1,0 +1,15 @@
+{
+    "name": "wci-simple",
+    "version": "1.0.3",
+    "description": "Web components icons built from simple-icons",
+    "main": "dist/wci-simple.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
