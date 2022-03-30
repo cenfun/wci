@@ -11,7 +11,7 @@ const options = {
         },
         readme: 'No two-tone icons',
         license: 'MIT',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
         onSVGName: function(name, item) {
@@ -28,13 +28,25 @@ const options = {
         license: 'MIT'
     },
 
+    box: {
+        package: 'boxicons',
+        url: 'https://github.com/atisawd/boxicons',
+        dirs: 'node_modules/boxicons/svg',
+        readme: '',
+        license: 'MIT',
+        onSVGDocument: function($svg) {
+            $svg.attr('viewBox', '0 0 24 24');
+            $svg.attr('fill', 'currentColor');
+        }
+    },
+
     carbon: {
         package: '@carbon/icons',
         url: 'https://github.com/carbon-design-system/carbon',
         dirs: 'node_modules/@carbon/icons/svg/32',
         readme: '',
         license: 'Apache 2.0',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
         onSVGName: function(name) {
@@ -61,7 +73,7 @@ const options = {
         ],
         readme: '',
         license: 'MIT',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
     },
@@ -94,7 +106,7 @@ const options = {
         readme: '',
         license: 'MIT',
         exclude: ['ic_fluent_*', '*_10_*', '*_12_*', '*_16_*', '*_24_*', '*_28_*', '*_32_*', '*_48_*'],
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
         onSVGName: function(name) {
@@ -127,7 +139,7 @@ const options = {
         exclude: ['*-sharp.svg'],
         readme: 'No sharp icons',
         license: 'MIT',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
     },
@@ -141,7 +153,7 @@ const options = {
         },
         readme: 'No sharp/round/two-tone icons',
         license: 'Apache 2.0',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
         onSVGName: function(name, item) {
@@ -157,7 +169,7 @@ const options = {
         dirs: 'node_modules/@primer/octicons/build/svg',
         readme: '',
         license: 'MIT',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
     },
@@ -168,7 +180,7 @@ const options = {
         dirs: 'node_modules/remixicon/icons',
         readme: '',
         license: 'Apache 2.0',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
     },
@@ -179,7 +191,7 @@ const options = {
         dirs: 'node_modules/simple-icons/icons',
         readme: '',
         license: 'CC0 1.0',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         },
         onSVGName: function(name, item) {
@@ -203,7 +215,7 @@ const options = {
         dirs: 'node_modules/typicons.font/src/svg',
         readme: '',
         license: 'SIL Open Font',
-        onSVGAttribute: function($svg) {
+        onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
     }
@@ -261,8 +273,8 @@ module.exports = {
             if (option.exclude) {
                 config.exclude = option.exclude;
             }
-            if (option.onSVGAttribute) {
-                config.onSVGAttribute = option.onSVGAttribute;
+            if (option.onSVGDocument) {
+                config.onSVGDocument = option.onSVGDocument;
             }
             if (option.onSVGName) {
                 config.onSVGName = option.onSVGName;

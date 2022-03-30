@@ -1,8 +1,8 @@
 {
-    "name": "wci-hero",
+    "name": "wci-box",
     "version": "1.0.3",
-    "description": "Web components icons built from heroicons",
-    "main": "dist/wci-hero.js",
+    "description": "Web components icons built from boxicons",
+    "main": "dist/wci-box.js",
     "files": [
         "dist",
         "preview"
