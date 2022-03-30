@@ -6,6 +6,7 @@
 |--------------------------------|----------|----------|----------|---------------|------------------------------
 |[ant](packages/ant)             |639       |203.4KB   |151.3KB   |MIT            |[@ant-design/icons-svg@4.2.1](https://github.com/ant-design/ant-design-icons)
 |[bootstrap](packages/bootstrap) |1668      |358.3KB   |268.3KB   |MIT            |[bootstrap-icons@1.8.1](https://github.com/twbs/icons)
+|[box](packages/box)             |1600      |318.3KB   |238.1KB   |MIT            |[boxicons@2.1.2](https://github.com/atisawd/boxicons)
 |[carbon](packages/carbon)       |1934      |331.9KB   |248.2KB   |Apache 2.0     |[@carbon/icons@10.48.0](https://github.com/carbon-design-system/carbon)
 |[cssgg](packages/cssgg)         |704       |92.5KB    |67.0KB    |MIT            |[css.gg@2.0.0](https://github.com/astrit/css.gg)
 |[eva](packages/eva)             |490       |79.5KB    |57.4KB    |MIT            |[eva-icons@1.1.3](https://github.com/akveo/eva-icons)
@@ -20,4 +21,5 @@
 |[simple](packages/simple)       |2219      |1.8MB     |1.4MB     |CC0 1.0        |[simple-icons@6.16.0](https://github.com/simple-icons/simple-icons)
 |[tabler](packages/tabler)       |1649      |143.3KB   |105.2KB   |MIT            |[@tabler/icons@1.60.0](https://github.com/tabler/tabler-icons)
 |[typ](packages/typ)             |336       |111.1KB   |81.2KB    |SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
-|[Total](https://cenfun.github.io/wci/)|22,377    |          |          |               |                              
+|[vscode](packages/vscode)       |408       |116.9KB   |85.7KB    |Attribution 4.0|[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
+|[Total](https://cenfun.github.io/wci/)|24,385    |          |          |               |                              

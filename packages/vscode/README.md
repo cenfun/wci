@@ -1,14 +1,14 @@
-# wci-box
-Built from [boxicons@2.1.2](https://github.com/atisawd/boxicons)  
+# wci-vscode
+Built from [@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)  
 
-1600 icons / size: 318.3KB / gzip: 238.1KB  
+408 icons / size: 116.9KB / gzip: 85.7KB  
 
 
 
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/box/preview/](https://cenfun.github.io/wci/box/preview/)
+Online Page: [https://cenfun.github.io/wci/vscode/preview/](https://cenfun.github.io/wci/vscode/preview/)
 
 # Features
 * Web Components
@@ -17,13 +17,13 @@ Online Page: [https://cenfun.github.io/wci/box/preview/](https://cenfun.github.i
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-box
+npm install wci-vscode
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-box";
+import { icon, getIcon } from "wci-vscode";
 
-const $icon = document.createElement("wci-box");
+const $icon = document.createElement("wci-vscode");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -38,10 +38,10 @@ icon.list.forEach(item => {
 # Browser Usage
 ```html
 
-<script src="path-to/wci-box/dist/wci-box.js"></script>
+<script src="path-to/wci-vscode/dist/wci-vscode.js"></script>
 
-<wci-box name="[icon-name]"></wci-box>
-<wci-box name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-box>
+<wci-vscode name="[icon-name]"></wci-vscode>
+<wci-vscode name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-vscode>
 ```
 see [preview/index.html](preview/index.html)
 

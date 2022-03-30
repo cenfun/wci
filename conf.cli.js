@@ -218,6 +218,14 @@ const options = {
         onSVGDocument: function($svg) {
             $svg.attr('fill', 'currentColor');
         }
+    },
+
+    vscode: {
+        package: '@vscode/codicons',
+        url: 'https://github.com/microsoft/vscode-codicons',
+        dirs: 'node_modules/@vscode/codicons/src/icons',
+        readme: '',
+        license: 'Attribution 4.0'
     }
 
 };

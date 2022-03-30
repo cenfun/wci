@@ -1,8 +1,8 @@
 {
-    "name": "wci-material",
+    "name": "wci-vscode",
     "version": "1.0.3",
-    "description": "Web components icons built from @material-design-icons/svg",
-    "main": "dist/wci-material.js",
+    "description": "Web components icons built from @vscode/codicons",
+    "main": "dist/wci-vscode.js",
     "files": [
         "dist",
         "preview"

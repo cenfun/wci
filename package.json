@@ -19,6 +19,7 @@
         "@material-design-icons/svg": "^0.10.8",
         "@primer/octicons": "^17.0.0",
         "@tabler/icons": "^1.60.0",
+        "@vscode/codicons": "^0.0.29",
         "bootstrap-icons": "^1.8.1",
         "boxicons": "^2.1.2",
         "css.gg": "^2.0.0",
