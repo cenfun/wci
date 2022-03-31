@@ -1,8 +1,8 @@
 {
-    "name": "wci-oct",
+    "name": "wci-park",
     "version": "1.0.4",
-    "description": "Web components icons built from @primer/octicons",
-    "main": "dist/wci-oct.js",
+    "description": "Web components icons built from @icon-park/svg",
+    "main": "dist/wci-park.js",
     "files": [
         "dist",
         "preview"

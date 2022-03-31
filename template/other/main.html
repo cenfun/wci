@@ -485,7 +485,7 @@ const render = function(list) {
     });
 
 
-    document.querySelector('.grid-stats').innerHTML = `Total ${list.length} packages and ${total.toLocaleString()} icons`;
+    document.querySelector('.grid-stats').innerHTML = `Total <a href="main.html">${list.length}</a> packages and <a href="main.html">${total.toLocaleString()}</a> icons`;
 
     const popularList = initPopular();
     const picked = popularList[Math.floor(popularList.length * Math.random())];
