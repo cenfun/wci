@@ -1,0 +1,15 @@
+{
+    "name": "wci-mono",
+    "version": "1.0.4",
+    "description": "Web components icons built from mono-icons",
+    "main": "dist/wci-mono.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

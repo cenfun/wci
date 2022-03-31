@@ -1,14 +1,14 @@
-# wci-material
-Built from [@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)  
+# wci-mono
+Built from [mono-icons@1.3.1](https://github.com/mono-company/mono-icons)  
 
-4172 icons / size: 505.5KB / gzip: 378.9KB  
+180 icons / size: 38.7KB / gzip: 26.7KB  
 
-No sharp/round/two-tone icons
+
 
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/material/preview/](https://cenfun.github.io/wci/material/preview/)
+Online Page: [https://cenfun.github.io/wci/mono/preview/](https://cenfun.github.io/wci/mono/preview/)
 
 # Features
 * Web Components
@@ -17,13 +17,13 @@ Online Page: [https://cenfun.github.io/wci/material/preview/](https://cenfun.git
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-material
+npm install wci-mono
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-material";
+import { icon, getIcon } from "wci-mono";
 
-const $icon = document.createElement("wci-material");
+const $icon = document.createElement("wci-mono");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -38,10 +38,10 @@ icon.list.forEach(item => {
 # Browser Usage
 ```html
 
-<script src="path-to/wci-material/dist/wci-material.js"></script>
+<script src="path-to/wci-mono/dist/wci-mono.js"></script>
 
-<wci-material name="[icon-name]"></wci-material>
-<wci-material name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-material>
+<wci-mono name="[icon-name]"></wci-mono>
+<wci-mono name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-mono>
 ```
 see [preview/index.html](preview/index.html)
 

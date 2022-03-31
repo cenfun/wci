@@ -18,7 +18,8 @@
 |[hero](packages/hero)           |460       |63.3KB    |45.2KB    |MIT            |[heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)
 |[iconoir](packages/iconoir)     |939       |124.6KB   |91.4KB    |MIT            |[iconoir@1.0.0](https://github.com/lucaburgio/iconoir)
 |[ionic](packages/ionic)         |918       |250.8KB   |187.1KB   |MIT            |[ionicons@6.0.1](https://github.com/ionic-team/ionicons)
-|[material](packages/material)   |4172      |505.5KB   |378.8KB   |Apache 2.0     |[@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)
+|[material](packages/material)   |4172      |505.5KB   |378.9KB   |Apache 2.0     |[@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)
+|[mono](packages/mono)           |180       |38.7KB    |26.7KB    |MIT            |[mono-icons@1.3.1](https://github.com/mono-company/mono-icons)
 |[oct](packages/oct)             |490       |123.5KB   |90.8KB    |MIT            |[@primer/octicons@17.0.0](https://github.com/primer/octicons)
 |[park](packages/park)           |2437      |330.0KB   |246.7KB   |Apache 2.0     |[@icon-park/svg@1.3.5](https://github.com/bytedance/IconPark)
 |[remix](packages/remix)         |2271      |320.1KB   |239.5KB   |Apache 2.0     |[remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)
@@ -26,4 +27,4 @@
 |[tabler](packages/tabler)       |1649      |143.3KB   |105.2KB   |MIT            |[@tabler/icons@1.60.0](https://github.com/tabler/tabler-icons)
 |[typ](packages/typ)             |336       |111.1KB   |81.2KB    |SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
 |[vscode](packages/vscode)       |408       |116.9KB   |85.7KB    |MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
-|[Total](https://cenfun.github.io/wci/)|29,700    |          |          |               |                              
+|[Total](https://cenfun.github.io/wci/)|29,880    |          |          |               |                              
