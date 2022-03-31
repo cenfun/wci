@@ -1,0 +1,15 @@
+{
+    "name": "wci-coreui",
+    "version": "1.0.4",
+    "description": "Web components icons built from @coreui/icons",
+    "main": "dist/wci-coreui.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
