@@ -5,6 +5,7 @@
 |Name                            |Icons     |Size      |Gzip      |License        |Built from                    
 |--------------------------------|----------|----------|----------|---------------|------------------------------
 |[ant](packages/ant)             |639       |203.4KB   |151.3KB   |MIT            |[@ant-design/icons-svg@4.2.1](https://github.com/ant-design/ant-design-icons)
+|[awesome](packages/awesome)     |1385      |473.3KB   |354.9KB   |Apache 2.0     |[@fortawesome/free-solid-svg-icons@6.1.1](https://github.com/FortAwesome/Font-Awesome)
 |[bootstrap](packages/bootstrap) |1668      |358.3KB   |268.3KB   |MIT            |[bootstrap-icons@1.8.1](https://github.com/twbs/icons)
 |[box](packages/box)             |1600      |318.3KB   |238.1KB   |MIT            |[boxicons@2.1.2](https://github.com/atisawd/boxicons)
 |[carbon](packages/carbon)       |1934      |331.9KB   |248.2KB   |Apache 2.0     |[@carbon/icons@10.48.0](https://github.com/carbon-design-system/carbon)
@@ -23,4 +24,4 @@
 |[tabler](packages/tabler)       |1649      |143.3KB   |105.2KB   |MIT            |[@tabler/icons@1.60.0](https://github.com/tabler/tabler-icons)
 |[typ](packages/typ)             |336       |111.1KB   |81.2KB    |SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
 |[vscode](packages/vscode)       |408       |116.9KB   |85.7KB    |MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
-|[Total](https://cenfun.github.io/wci/)|26,822    |          |          |               |                              
+|[Total](https://cenfun.github.io/wci/)|28,207    |          |          |               |                              

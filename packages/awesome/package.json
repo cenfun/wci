@@ -1,0 +1,15 @@
+{
+    "name": "wci-awesome",
+    "version": "1.0.4",
+    "description": "Web components icons built from @fortawesome/free-solid-svg-icons",
+    "main": "dist/wci-awesome.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

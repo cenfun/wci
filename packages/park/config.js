@@ -15,13 +15,14 @@ module.exports = {
     package: '@icon-park/svg',
     url: 'https://github.com/bytedance/IconPark',
     dirs: function(item, Util) {
-        const Pack = require('@icon-park/svg');
-        const keys = Object.keys(Pack);
+        
         const dir = 'node_modules/@icon-park/svg/svg';
         if (!fs.existsSync(dir)) {
             fs.mkdirSync(dir);
         }
 
+        const Pack = require('@icon-park/svg');
+        const keys = Object.keys(Pack);
         keys.forEach(k => {
             if (k === 'setConfig' || k === 'DEFAULT_ICON_CONFIGS') {
                 return;
@@ -39,7 +40,6 @@ module.exports = {
             }
 
         });
-
 
         return dir;
     },
