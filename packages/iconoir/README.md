@@ -1,14 +1,14 @@
-# wci-material
-Built from [@material-design-icons/svg@0.10.8](https://github.com/marella/material-design-icons)  
+# wci-iconoir
+Built from [iconoir@1.0.0](https://github.com/lucaburgio/iconoir)  
 
-4172 icons / size: 505.5KB / gzip: 378.8KB  
+939 icons / size: 124.6KB / gzip: 91.4KB  
 
-No sharp/round/two-tone icons
+
 
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/material/preview/](https://cenfun.github.io/wci/material/preview/)
+Online Page: [https://cenfun.github.io/wci/iconoir/preview/](https://cenfun.github.io/wci/iconoir/preview/)
 
 # Features
 * Web Components
@@ -17,13 +17,13 @@ Online Page: [https://cenfun.github.io/wci/material/preview/](https://cenfun.git
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-material
+npm install wci-iconoir
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-material";
+import { icon, getIcon } from "wci-iconoir";
 
-const $icon = document.createElement("wci-material");
+const $icon = document.createElement("wci-iconoir");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -38,10 +38,10 @@ icon.list.forEach(item => {
 # Browser Usage
 ```html
 
-<script src="path-to/wci-material/dist/wci-material.js"></script>
+<script src="path-to/wci-iconoir/dist/wci-iconoir.js"></script>
 
-<wci-material name="[icon-name]"></wci-material>
-<wci-material name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-material>
+<wci-iconoir name="[icon-name]"></wci-iconoir>
+<wci-iconoir name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-iconoir>
 ```
 see [preview/index.html](preview/index.html)
 
