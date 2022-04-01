@@ -13,8 +13,10 @@
 |[cssgg](packages/cssgg)         |704       |92.5KB    |67.0KB    |MIT            |[css.gg@2.0.0](https://github.com/astrit/css.gg)
 |[eva](packages/eva)             |490       |79.5KB    |57.4KB    |MIT            |[eva-icons@1.1.3](https://github.com/akveo/eva-icons)
 |[feather](packages/feather)     |287       |33.1KB    |22.3KB    |MIT            |[feather-icons@4.29.0](https://github.com/feathericons/feather)
+|[flag](packages/flag)           |512       |104.9KB   |76.7KB    |MIT            |[country-flag-icons@1.4.25](https://gitlab.com/catamphetamine/country-flag-icons)
 |[flat](packages/flat)           |329       |92.7KB    |67.2KB    |MIT            |[flat-color-icons@1.1.0](https://github.com/icons8/flat-color-icons)
 |[fluent](packages/fluent)       |3811      |710.6KB   |533.3KB   |MIT            |[@fluentui/svg-icons@1.1.164](https://github.com/microsoft/fluentui-system-icons)
+|[grommet](packages/grommet)     |615       |120.7KB   |88.7KB    |Apache 2.0     |[grommet-icons@4.7.0](https://github.com/FortAwesome/Font-Awesome)
 |[hero](packages/hero)           |460       |63.3KB    |45.2KB    |MIT            |[heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)
 |[iconoir](packages/iconoir)     |939       |124.6KB   |91.4KB    |MIT            |[iconoir@1.0.0](https://github.com/lucaburgio/iconoir)
 |[ionic](packages/ionic)         |918       |250.8KB   |187.1KB   |MIT            |[ionicons@6.0.1](https://github.com/ionic-team/ionicons)
@@ -27,4 +29,4 @@
 |[tabler](packages/tabler)       |1649      |143.3KB   |105.2KB   |MIT            |[@tabler/icons@1.60.0](https://github.com/tabler/tabler-icons)
 |[typ](packages/typ)             |336       |111.1KB   |81.2KB    |SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
 |[vscode](packages/vscode)       |408       |116.9KB   |85.7KB    |MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
-|[Total](https://cenfun.github.io/wci/)|29,880    |          |          |               |                              
+|[Total](https://cenfun.github.io/wci/)|31,007    |          |          |               |                              

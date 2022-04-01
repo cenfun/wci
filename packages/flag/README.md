@@ -1,7 +1,7 @@
 # wci-flag
 Built from [country-flag-icons@1.4.25](https://gitlab.com/catamphetamine/country-flag-icons)  
 
-512 icons / size: 115.3KB / gzip: 76.8KB  
+512 icons / size: 104.9KB / gzip: 76.7KB  
 
 
 
