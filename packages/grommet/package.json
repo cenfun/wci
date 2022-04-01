@@ -1,0 +1,15 @@
+{
+    "name": "wci-grommet",
+    "version": "1.0.4",
+    "description": "Web components icons built from grommet-icons",
+    "main": "dist/wci-grommet.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
