@@ -1,0 +1,15 @@
+{
+    "name": "wci-flag",
+    "version": "1.0.4",
+    "description": "Web components icons built from country-flag-icons",
+    "main": "dist/wci-flag.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
