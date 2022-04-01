@@ -32,6 +32,9 @@
             width: 200px;
             background-color: #222;
             color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .preview-title {
@@ -61,6 +64,13 @@
             height: 25px;
         }
 
+        .preview-list {
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
         .list-item {
             padding: 10px 15px;
             font-weight: bold;
@@ -69,6 +79,8 @@
 
         .package-list {
             margin: 0;
+            flex: auto;
+            overflow: auto;
         }
 
         .package-list li {
