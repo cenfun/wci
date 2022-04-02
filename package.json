@@ -14,6 +14,7 @@
     ],
     "dependencies": {
         "@ant-design/icons-svg": "^4.2.1",
+        "@blueprintjs/icons": "^4.2.0",
         "@carbon/icons": "^10.48.0",
         "@coreui/icons": "^2.1.0",
         "@fluentui/svg-icons": "^1.1.164",

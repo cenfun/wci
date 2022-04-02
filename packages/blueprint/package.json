@@ -1,0 +1,15 @@
+{
+    "name": "wci-blueprint",
+    "version": "1.0.4",
+    "description": "Web components icons built from @blueprintjs/icons",
+    "main": "dist/wci-blueprint.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
