@@ -101,8 +101,12 @@ module.exports = {
             
             const id = item.name;
             const packagePath = path.resolve(`node_modules/${option.package}/package.json`);
-            const version = Util.readJSONSync(packagePath).version;
-            const packageNameVersion = `${option.package}@${version}`;
+            let version = '';
+            const json = Util.readJSONSync(packagePath);
+            if (json) {
+                version = `@${json.version}`;
+            }
+            const packageNameVersion = `${option.package}${version}`;
             const packageUrl = option.url;
             const readme = option.readme.trim();
 
