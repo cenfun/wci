@@ -1,7 +1,7 @@
 # wci-mdi
 Built from [@mdi/svg@6.6.96](https://github.com/Templarian/MaterialDesign-SVG)  
 
-6696 icons / size: 1.0MB / gzip: 766.1KB  
+6696 icons / size: 1019.3KB / gzip: 766.0KB  
 
 
 

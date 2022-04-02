@@ -9,13 +9,10 @@
     "scripts": {
         "build": "sf build -m"
     },
-    "workspaces": [
-        "packages/*"
-    ],
     "dependencies": {
         "@ant-design/icons-svg": "^4.2.1",
         "@blueprintjs/icons": "^4.2.0",
-        "@carbon/icons": "^10.48.0",
+        "@carbon/icons": "^11.0.1",
         "@coreui/icons": "^2.1.0",
         "@fluentui/svg-icons": "^1.1.164",
         "@fortawesome/free-solid-svg-icons": "^6.1.1",
