@@ -217,7 +217,7 @@ const renderList = function($container, list, option) {
         $icon.setAttribute('name', item.id);
         $icon.setAttribute('size', option.size);
         if (option.color) {
-            const color = getColor(option.color, i);
+            const color = getColor(option.color, option.index);
             $icon.setAttribute('color', color);
         }
         if (option.background) {
@@ -236,6 +236,9 @@ const renderList = function($container, list, option) {
         }
 
         $container.appendChild($div);
+
+        option.index += 1;
+        
     });
 
     if (next.length) {
@@ -268,6 +271,7 @@ const renderPackage = function(option, item) {
 
     option.tagName = item.tagName;
     option.pageSize = 500;
+    option.index = 0;
 
     renderList($container, list, option);
 
