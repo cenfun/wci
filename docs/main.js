@@ -11,40 +11,6 @@ const saveFile = function(content, name) {
     window.saveAs(blob, `${name}.svg`);
 };
 
-const initGrid = function() {
-    const Grid = window.turbogrid.Grid;
-    const grid = new Grid(document.querySelector('.grid'));
-    // grid.bind('onDblClick', function(e, d) {
-    //     grid.setSelectedRow(d.row);
-    // });
-    // grid.bind('onSelectedChanged', function(e, d) {
-    //     const selectedRows = grid.getSelectedRows();
-    //     document.querySelector('.selected-rows').innerHTML = selectedRows.length;
-    // });
-    grid.bind('onClick', function(e, d) {
-        const $target = d.e.target;
-        if ($target.tagName === 'TEXTAREA') {
-            $target.select();
-            return;
-        }
-        if ($target.classList.contains('icon-copy')) {
-            const row = grid.getRowItem(d.row);
-            const url = `https://cenfun.github.io/wci/${row.package}/dist/${row.tag}.js`;
-            const textarea = document.createElement('textarea');
-            textarea.innerHTML = `&lt;script src=&quot;${url}&quot;&gt;&lt;/script&gt;\n${$target.innerHTML}`;
-            copyContent(textarea.value);
-            return;
-        }
-        if ($target.classList.contains('icon-download')) {
-            const row = grid.getRowItem(d.row);
-            saveFile(row.svg, row.name);
-        
-        }
-    });
-    grid.showLoading();
-};
-
-
 const getColor = function(c, colorIndex) {
     const colors = [
         'red',
@@ -70,14 +36,55 @@ const getIcon = function(r, size, color, background, radius) {
     return `<${r.tag} name="${r.name}" size="${size}" color="${c}" background="${background}" radius="${radius}"></${r.tag}>`;
 };
 
+
+let grid;
 let keywords = [];
 
+const initGrid = function() {
+    if (grid) {
+        return;
+    }
+
+    const Grid = window.turbogrid.Grid;
+    grid = new Grid(document.querySelector('.wci-grid'));
+    // grid.bind('onDblClick', function(e, d) {
+    //     grid.setSelectedRow(d.row);
+    // });
+    // grid.bind('onSelectedChanged', function(e, d) {
+    //     const selectedRows = grid.getSelectedRows();
+    //     document.querySelector('.selected-rows').innerHTML = selectedRows.length;
+    // });
+    grid.bind('onClick', function(e, d) {
+        const $target = d.e.target;
+        if ($target.tagName === 'TEXTAREA') {
+            $target.select();
+            return;
+        }
+        if ($target.classList.contains('wci-icon-copy')) {
+            const row = grid.getRowItem(d.row);
+            const url = `https://cenfun.github.io/wci/js/${row.tag}.js`;
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = `&lt;script src=&quot;${url}&quot;&gt;&lt;/script&gt;\n${$target.innerHTML}`;
+            copyContent(textarea.value);
+            return;
+        }
+        if ($target.classList.contains('wci-icon-download')) {
+            const row = grid.getRowItem(d.row);
+            saveFile(row.svg, row.name);
+        
+        }
+    });
+    grid.showLoading();
+};
+
 const renderGrid = function(rows) {
+
+    initGrid();
     
-    const size = document.querySelector('.icon-size').value;
-    const color = document.querySelector('.icon-color').value;
-    const background = document.querySelector('.icon-background').value;
-    const radius = document.querySelector('.icon-radius').value;
+    const size = document.querySelector('.wci-icon-size').value;
+    const color = document.querySelector('.wci-icon-color').value;
+    const background = document.querySelector('.wci-icon-background').value;
+    const radius = document.querySelector('.wci-icon-radius').value;
 
     const cellSize = parseInt(size) + 10;
 
@@ -87,7 +94,7 @@ const renderGrid = function(rows) {
         //showCheckbox: true,
         showRowNumber: false,
         bindWindowResize: true,
-        rowNotFound: '<div class="not-found">Not found results</div>',
+        rowNotFound: '<div class="wci-not-found">Not found results</div>',
         rowFilter: function(rowData) {
             if (!keywords.length) {
                 return true;
@@ -110,10 +117,10 @@ const renderGrid = function(rows) {
             return getIcon(r, size, color, background, radius);
         },
         package: function(v, r) {
-            return `<a target="_blank" href="${v}/preview/index.html">${v}</a>`;
+            return `<a href="#${v}">${v}</a>`;
         },
         copy: function(v, r) {
-            return `<wci-ant class="icon-item icon-copy" name="copy-outlined" size="16px" title="copy script/wci">${this.getFormatter('icon')(v, r)}</wci-ant>`;
+            return `<wci-ant class="wci-icon-item wci-icon-copy" name="copy-outlined" size="16px" title="copy script/wci">${this.getFormatter('icon')(v, r)}</wci-ant>`;
         },
         textarea: function(v, r, c) {
             if (c.id === 'svg') {
@@ -122,7 +129,7 @@ const renderGrid = function(rows) {
             return `<textarea spellcheck="false">${this.getFormatter('icon')(v, r)}</textarea>`;
         },
         download: function(v) {
-            return '<wci-tabler class="icon-item icon-download" name="download" size="16px" title="download svg file"></wci-tabler>';
+            return '<wci-tabler class="wci-icon-item wci-icon-download" name="download" size="16px" title="download svg file"></wci-tabler>';
         }
     });
     grid.setData({
@@ -139,7 +146,7 @@ const renderGrid = function(rows) {
             width: cellSize + 10,
             minWidth: cellSize + 10,
             align: 'center',
-            columnClass: 'icon',
+            columnClass: 'wci-icon',
             formatter: 'icon',
             sortable: false
         }, {
@@ -155,7 +162,7 @@ const renderGrid = function(rows) {
         }, {
             id: 'svg',
             name: 'Pure SVG',
-            columnClass: 'textarea',
+            columnClass: 'wci-textarea',
             formatter: 'textarea',
             sortable: false,
             width: 260,
@@ -163,7 +170,7 @@ const renderGrid = function(rows) {
         }, {
             id: 'wc',
             name: 'Web component',
-            columnClass: 'textarea',
+            columnClass: 'wci-textarea',
             formatter: 'textarea',
             sortable: false,
             width: 260,
@@ -229,16 +236,44 @@ const getPopular = function(popularList) {
     })}`;
 };
 
+const renderMenu = function(list) {
+
+    const $list = document.querySelector('.wci-menu-packages');
+    list.forEach(function(it) {
+        const name = it.name;
+        const $li = document.createElement('li');
+        const $a = document.createElement('a');
+        $a.href = `#${name}`;
+        $a.innerHTML = `${name}`;
+        $li.appendChild($a);
+
+        const $sp = document.createElement('span');
+        $sp.innerHTML = ` (${it.total})`;
+        $li.appendChild($sp);
+
+        $list.appendChild($li);
+        
+    });
+};
+
 const render = function(list) {
+
+    list.forEach(function(item) {
+        const lib = window[`wci-${item.name}`];
+        item.tagName = lib.tagName;
+        item.icon = lib.icon;
+    });
+
     console.log(list);
+
+    renderMenu(list);
 
     let total = 0;
     const rows = [];
     list.forEach(function(item) {
+
         const icons = item.icon.list;
         total += icons.length;
-
-        const packageName = item.name;
 
         icons.forEach(ic => {
 
@@ -246,22 +281,22 @@ const render = function(list) {
             addPopular(iconName);
 
             rows.push({
-                tag: `wci-${packageName}`,
+                tag: item.tagName,
                 name: iconName,
-                package: packageName,
+                package: item.name,
                 svg: ic.fullSvg
             });
         });
     });
 
 
-    document.querySelector('.grid-stats').innerHTML = `Total <a href="main.html">${list.length}</a> packages and <a href="main.html">${total.toLocaleString()}</a> icons`;
+    document.querySelector('.wci-stats').innerHTML = `Total <b>${list.length}</b> packages and <b>${total.toLocaleString()}</b> icons`;
 
     const popularList = initPopular();
     const picked = popularList[Math.floor(popularList.length * Math.random())];
     keywords = [picked];
 
-    const $keywords = document.querySelector('.keywords');
+    const $keywords = document.querySelector('.wci-keywords');
     $keywords.value = picked;
     $keywords.focus();
 
@@ -279,7 +314,7 @@ const render = function(list) {
         keywordsHandler();
     });
 
-    const $popular = document.querySelector('.popular');
+    const $popular = document.querySelector('.wci-popular');
     $popular.addEventListener('click', function(e) {
         if (e.target.tagName === 'SPAN') {
             $keywords.value = e.target.innerText;
@@ -288,7 +323,7 @@ const render = function(list) {
     });
     $popular.innerHTML = getPopular(popularList);
 
-    const toolbars = ['.icon-size', '.icon-color', '.icon-background', '.icon-radius'];
+    const toolbars = ['.wci-icon-size', '.wci-icon-color', '.wci-icon-background', '.wci-icon-radius'];
     toolbars.forEach(function(item) {
         const $item = document.querySelector(item);
         $item.addEventListener('change', function(e) {
@@ -299,43 +334,23 @@ const render = function(list) {
     renderGrid(rows);
 };
 
-
-const renderMenu = function() {
-
-    const $list = document.querySelector('.package-list');
-    list.forEach(function(it) {
-        const name = it.name;
-        const $li = document.createElement('li');
-
-        const link = `${name}/preview/index.html`;
-
-        const $a = document.createElement('a');
-        $a.href = link;
-        $a.innerHTML = `${name}`;
-        $a.target = 'iframe';
-        $li.appendChild($a);
-
-        const $sp = document.createElement('span');
-        $sp.innerHTML = ` (${it.total})`;
-        $li.appendChild($sp);
-
-        $list.appendChild($li);
-        
-    });
-};
-
 const loadLibs = function() {
 
     const wciMetadata = window.wciMetadata;
     const libs = wciMetadata.libs;
+    const total = libs.length;
+
+    const $loading = document.querySelector('.wci-loading');
+    const $loadingLabel = $loading.querySelector('.wci-loading-label');
 
     let loaded = 0;
     const loadHandler = function(item, num) {
         loaded += 1;
-        console.log(`loaded ${num},${item}`);
-        if (loaded >= libs.length) {
-            console.log('all loaded');
-            //render(libs);
+        const per = Math.round(num / total * 100);
+        $loadingLabel.innerHTML = `${per}% loaded ${item}`;
+        if (loaded >= total) {
+            $loading.style.display = 'none';
+            render(wciMetadata.list);
         }
     };
             

@@ -10,11 +10,6 @@ body {
     flex-direction: row;
 }
 
-a:visited,
-a:link {
-    color: #fff;
-}
-
 a:hover {
     color: deepskyblue;
 }
@@ -40,6 +35,42 @@ a:hover {
     overflow: hidden;
 }
 
+.wci-loading {
+    pointer-events: none;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@keyframes wci-loading-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wci-loading-icon {
+    width: 35px;
+    height: 35px;
+    color: #0077cf;
+    animation: 0.382s wci-loading-animation linear infinite;
+}
+
+.wci-loading-label {
+    margin-left: 10px;
+    font-size: 14px;
+    width: 70px;
+    white-space: nowrap;
+}
+
 .wci-menu {
     width: 200px;
     background-color: #222;
@@ -47,6 +78,11 @@ a:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.wci-menu a:visited,
+.wci-menu a:link {
+    color: #fff;
 }
 
 .wci-menu-title {
@@ -61,7 +97,6 @@ a:hover {
     background-color: #000;
 }
 
-.wci-menu-title a,
 .wci-menu-title svg {
     display: block;
 }
@@ -101,7 +136,7 @@ a:hover {
     font-size: 16px;
 }
 
-.wci-menu-packages li span {
+.wci-menu-packages span {
     font-size: 12px;
     color: #ccc;
     margin-left: 5px;
@@ -115,28 +150,53 @@ a:hover {
     border-left: 1px solid #ccc;
 }
 
-h1 {
+.wci-main a:visited,
+.wci-main a:link {
+    color: #333;
+}
+
+.wci-header {
+    font-size: 16px;
+    padding: 0 20px 0 15px;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+}
+
+.wci-finder {
+    height: 100%;
+}
+
+.wci-title {
     text-align: center;
     font-weight: bold;
     padding: 5px 0;
     font-size: 35px;
 }
 
-.filter {
+.wci-stats {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.wci-filter {
     text-align: center;
     margin: 0 auto;
     width: 60%;
     max-width: 600px;
 }
 
-.searcher {
+.wci-searcher {
     border-radius: 10px;
     padding: 10px 15px;
     width: 100%;
     background-color: #eee;
 }
 
-.keywords {
+.wci-keywords {
     border: none;
     height: 32px;
     line-height: 32px;
@@ -146,87 +206,87 @@ h1 {
     background-color: transparent;
 }
 
-.keywords:focus {
+.wci-keywords:focus {
     border: none;
 }
 
-.popular {
+.wci-popular {
     text-align: center;
     height: 35px;
     line-height: 35px;
     font-size: 16px;
 }
 
-.popular span {
+.wci-popular span {
     margin-left: 5px;
     text-decoration: underline;
     cursor: pointer;
 }
 
-.popular span:hover {
+.wci-popular span:hover {
     color: deepskyblue;
 }
 
-.grid-header {
+.wci-grid-header {
     font-size: 16px;
     padding: 8px 5px;
 }
 
-.grid-footer {
+.wci-grid-footer {
     font-size: 16px;
     padding: 10px 5px;
 }
 
-.view {
+.wci-view {
     margin: 20px;
 }
 
-.grid {
+.wci-grid {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-.grid .tg-turbogrid .tg-scrollbar-track {
+.wci-grid .tg-turbogrid .tg-scrollbar-track {
     border-radius: 5px;
     background-color: #f2f2f2;
 }
 
-.grid .tg-turbogrid .tg-scrollbar-thumb {
+.wci-grid .tg-turbogrid .tg-scrollbar-thumb {
     border-radius: 5px;
 }
 
-.grid .tg-turbogrid .tg-cell.icon {
+.wci-grid .tg-turbogrid .tg-cell.wci-icon {
     padding-top: 5px;
     padding-left: 10px;
 }
 
-.grid .tg-turbogrid .tg-cell.textarea {
+.wci-grid .tg-turbogrid .tg-cell.wci-textarea {
     padding: 3px 5px;
 }
 
-.grid .tg-turbogrid .tg-cell.textarea textarea {
+.wci-grid .tg-turbogrid .tg-cell.wci-textarea textarea {
     width: 100%;
     height: 100%;
     resize: none;
     font-family: monaco, sans-serif;
 }
 
-.icon-item {
+.wci-icon-item {
     cursor: pointer;
     opacity: 0.6;
 }
 
-.icon-item:hover {
+.wci-icon-item:hover {
     opacity: 1;
 }
 
-.grid .tg-turbogrid .tg-cell .icon-item {
+.wci-grid .tg-turbogrid .tg-cell .wci-icon-item {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.not-found {
+.wci-not-found {
     font-size: 20px;
 }
