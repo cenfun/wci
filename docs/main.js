@@ -344,9 +344,9 @@ const loadLibs = function() {
     const $loadingLabel = $loading.querySelector('.wci-loading-label');
 
     let loaded = 0;
-    const loadHandler = function(item, num) {
+    const loadHandler = function(item) {
         loaded += 1;
-        const per = Math.round(num / total * 100);
+        const per = Math.round(loaded / total * 100);
         $loadingLabel.innerHTML = `${per}% loaded ${item}`;
         if (loaded >= total) {
             $loading.style.display = 'none';
@@ -358,7 +358,7 @@ const loadLibs = function() {
         const $script = document.createElement('script');
         $script.src = `js/${item}`;
         $script.addEventListener('load', function() {
-            loadHandler(item, i + 1);
+            loadHandler(item);
         });
         document.body.appendChild($script);
     });
