@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const copyFiles = (templateList, replaceData, componentPath, Util) => {
-    const templatePath = path.resolve('./template');
+    const templatePath = path.resolve('./template/package');
     templateList.forEach(file => {
         const absPath = path.resolve(templatePath, file);
         const relPath = path.relative(templatePath, absPath);
@@ -107,8 +107,8 @@ module.exports = {
             const version = require('./package.json').version;
 
             copyFiles([
-                'package/src/index.js',
-                'package/package.json'
+                'src/index.js',
+                'package.json'
             ], {
                 id: item.name,
                 version,
@@ -155,8 +155,8 @@ module.exports = {
             metadata.license = option.license;
 
             copyFiles([
-                'package/preview/index.html',
-                'package/README.md'
+                'preview/index.html',
+                'README.md'
             ], {
                 id,
                 packageNameVersion,
