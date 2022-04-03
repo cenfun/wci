@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 
 const copyFiles = (templateList, replaceData, componentPath, Util) => {
@@ -10,6 +11,35 @@ const copyFiles = (templateList, replaceData, componentPath, Util) => {
         const newContent = Util.replace(content, replaceData);
         Util.writeFileContentSync(toPath, newContent);
     });
+};
+
+const getMarkDownTable = function(d) {
+    //console.log(d);
+    const lines = [];
+    if (d.headers) {
+        const line = [''];
+        d.headers.forEach((c, i) => {
+            const w = d.columns[i];
+            line.push(c.padEnd(w, ' '));
+        });
+        lines.push(line.join('|'));
+    }
+    const line = [''];
+    d.columns.forEach(w => {
+        line.push(''.padEnd(w, '-'));
+    });
+    lines.push(line.join('|'));
+
+    d.rows.forEach((r) => {
+        const row = [''];
+        d.columns.forEach((w, i) => {
+            const s = `${r[i]}`;
+            row.push(s.padEnd(w, ' '));
+        });
+        lines.push(row.join('|'));
+    });
+
+    return lines.join('\r\n');
 };
 
 module.exports = {
@@ -77,8 +107,8 @@ module.exports = {
             const version = require('./package.json').version;
 
             copyFiles([
-                'src/index.js',
-                'package.json'
+                'package/src/index.js',
+                'package/package.json'
             ], {
                 id: item.name,
                 version,
@@ -125,8 +155,8 @@ module.exports = {
             metadata.license = option.license;
 
             copyFiles([
-                'preview/index.html',
-                'README.md'
+                'package/preview/index.html',
+                'package/README.md'
             ], {
                 id,
                 packageNameVersion,
@@ -165,10 +195,102 @@ module.exports = {
         },
 
         afterBuildAll: (option, Util) => {
-            if (Util.option.minify) {
-                const docs = require('./scripts/docs.js');
-                docs(option, Util);
+
+            if (!Util.option.minify) {
+                return 0;
             }
+
+            //console.log(option);
+
+            let buildENV;
+            const list = option.jobList.map(job => {
+                if (!buildENV) {
+                    buildENV = job.buildENV;
+                }
+                return {
+                    name: job.name,
+                    duration: job.duration,
+                    ... job.metadata
+                };
+            });
+
+            //console.log(list);
+
+            //================================================================================
+            console.log('generating README.md ....');
+            //README.md
+            let total = 0;
+            const readmeList = list.map(item => {
+                total += item.total;
+                return [
+                    `[${item.name}](packages/${item.name})`,
+                    item.total,
+                    item.size,
+                    item.gzip,
+                    item.license,
+                    `[${item.package}@${item.version}](${item.url})`
+                ];
+            });
+            readmeList.push(['[Total](https://cenfun.github.io/wci/)', total.toLocaleString(), '', '', '', '']);
+ 
+            const readmeTable = getMarkDownTable({
+                headers: ['Name', 'Icons', 'Size', 'Gzip', 'License', 'Built from'],
+                columns: [32, 10, 10, 10, 15, 30],
+                rows: readmeList
+            });
+            let readmeContent = Util.readFileContentSync(path.resolve(__dirname, 'template/README.md'));
+            readmeContent = readmeContent.replace('{replace_holder_list}', readmeTable);
+            const readmePath = path.resolve(__dirname, 'README.md');
+            Util.writeFileContentSync(readmePath, readmeContent);
+            console.log('generated README.md');
+    
+            //================================================================================
+            console.log('generating docs ....');
+
+            const jsPath = path.resolve(__dirname, 'docs/js');
+            //clean previous
+            Util.rmSync(jsPath);
+            fs.mkdirSync(jsPath, {
+                recursive: true
+            });
+
+            const libs = [];
+
+            //copy vendors
+            const vendors = {
+                'turbogrid.js': 'node_modules/turbogrid/dist/turbogrid.js',
+                'filesaver.js': 'node_modules/file-saver/dist/FileSaver.min.js'
+            };
+
+            Object.keys(vendors).forEach(key => {
+                fs.copyFileSync(path.resolve(__dirname, vendors[key]), path.resolve(jsPath, key));
+                libs.push(key);
+                console.log(`copied ${key}`);
+            });
+          
+
+            //copy packages
+            list.forEach(p => {
+                const fn = `wci-${p.name}.js`;
+                fs.copyFileSync(path.resolve(__dirname, `packages/${p.name}/dist/${fn}`), path.resolve(jsPath, fn));
+                libs.push(fn);
+                console.log(`copied ${fn}`);
+            });
+
+            //metadata.js
+            console.log('generating metadata ....');
+            const metadataPath = path.resolve(jsPath, 'metadata.js');
+            const metadata = {
+                ... buildENV,
+                libs,
+                list
+            };
+
+            const metadataContent = `window.wciMetadata = ${JSON.stringify(metadata, null, 4)};`;
+            Util.writeFileContentSync(metadataPath, metadataContent);
+
+            console.log('generated docs');
+
             return 0;
         }
 

@@ -6,157 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="icon" href="data:,">
     <title>Web Components Icons (WCI)</title>
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            font-size: 14px;
-            font-family: arial, sans-serif;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-        }
-
-        a:visited,
-        a:link {
-            color: #fff;
-        }
-
-        a:hover {
-            color: deepskyblue;
-        }
-
-        .preview-menu {
-            width: 200px;
-            background-color: #222;
-            color: #fff;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .preview-title {
-            font-size: 16px;
-            font-weight: bold;
-            padding: 0 20px 0 15px;
-            height: 35px;
-            line-height: 35px;
-            border-bottom: 1px solid #111;
-            display: flex;
-            flex-direction: row;
-            background-color: #000;
-        }
-
-        .preview-title a,
-        .preview-title svg {
-            display: block;
-        }
-
-        .preview-title .wci {
-            flex: auto;
-        }
-
-        .preview-title .github {
-            padding: 5px 0;
-            width: 25px;
-            height: 25px;
-        }
-
-        .preview-list {
-            flex: auto;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
-
-        .list-item {
-            padding: 10px 15px;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .package-list {
-            margin: 0;
-            flex: auto;
-            overflow: auto;
-        }
-
-        .package-list li {
-            height: 30px;
-            line-height: 30px;
-            font-size: 16px;
-        }
-
-        .package-list li span {
-            font-size: 12px;
-            color: #ccc;
-            margin-left: 5px;
-        }
-
-        .preview-main {
-            flex: auto;
-            height: 100%;
-            overflow: hidden;
-            box-sizing: border-box;
-            border-left: 1px solid #ccc;
-        }
-
-        .preview-main iframe {
-            border: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div class="preview-menu">
-        <div class="preview-title">
-            <a href="main.html" target="iframe" title="Web Components Icons" class="wci">WCI</a>
+    <div class="wci-menu">
+        <div class="wci-menu-title">
+            <a href="https://github.com/cenfun/wci" target="_blank" class="wci" title="Web Components Icons">WCI</a>
             <a href="https://github.com/cenfun/wci" target="_blank" class="github" title="Fork WCI">
                 <svg pointer-events="none" width="100%" height="100%" viewBox="0 0 16 16"><g fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></g></svg>
             </a>
         </div>
-        <div class="preview-list">
-            <div class="list-item"><a href="main.html" target="iframe">Icon Finder</a></div>
-            <div class="list-item">Packages</div>
-            <ul class="package-list"></ul>
+        <div class="wci-menu-list">
+            <div class="wci-menu-item"><a href="main.html" target="iframe">Icon Finder</a></div>
+            <div class="wci-menu-item">Packages</div>
+            <ul class="wci-menu-packages"></ul>
         </div>
     </div>
-    <div class="preview-main">
-        <iframe name="iframe" src="main.html" style="width: 100%; height: 100%;"></iframe>
+    <div class="wci-main">
+        <div class="wci-head">
+            <div class="wci-title"><a href="https://github.com/cenfun/wci" target="_blank">wci-{id}</a> <span>({stats})</span></div>
+            <div class="wci-toolbar">
+                size:
+                <select class="icon-size">
+                    <option>16px</option>
+                    <option>20px</option>
+                    <option selected>32px</option>
+                    <option>50px</option>
+                    <option>64px</option>
+                    <option>100px</option>
+                    <option>128px</option>
+                </select>
+                color:
+                <select class="icon-color">
+                    <option></option>
+                    <option selected>rainbow</option>
+                    <option>green</option>
+                    <option>red</option>
+                    <option>blue</option>
+                </select>
+                background:
+                <select class="icon-background">
+                    <option></option>
+                    <option>#eee</option>
+                    <option>#fff</option>
+                    <option>#ccc</option>
+                    <option>#000</option>
+                </select>
+                radius:
+                <select class="icon-radius">
+                    <option></option>
+                    <option>5px</option>
+                    <option>10px</option>
+                    <option>20%</option>
+                    <option>50%</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <h1>Web Components Icons</h1>
+            <div class="filter flex-row">
+                <div class="searcher flex-row">
+                    <input type="text" class="keywords flex-auto" onfocus="this.select()" /> 
+                    <wci-tabler name="search" size="32px"></wci-tabler>
+                </div>
+            </div>
+            <div class="popular"></div>
+            <div class="view flex-auto flex-column">
+                <div class="grid-header flex-row">
+                    <div class="grid-stats flex-auto"></div>
+                </div>
+                <div class="grid flex-auto"></div>
+            </div>
+        </div>
     </div>
-    <script>
-        
-        const render = function() {
-            const list = JSON.parse('[{"name":"ant","total":639,"size":"203.4KB","gzip":"151.3KB","url":"https://github.com/ant-design/ant-design-icons","package":"@ant-design/icons-svg","version":"@4.2.1","license":"MIT"},{"name":"awesome","total":1385,"size":"473.3KB","gzip":"354.9KB","url":"https://github.com/FortAwesome/Font-Awesome","package":"@fortawesome/free-solid-svg-icons","version":"@6.1.1","license":"Font Awesome Free"},{"name":"blueprint","total":555,"size":"132.8KB","gzip":"97.7KB","url":"https://github.com/palantir/blueprint","package":"@blueprintjs/icons","version":"@4.2.0","license":"Apache 2.0"},{"name":"bootstrap","total":1668,"size":"358.3KB","gzip":"268.3KB","url":"https://github.com/twbs/icons","package":"bootstrap-icons","version":"@1.8.1","license":"MIT"},{"name":"box","total":1600,"size":"318.3KB","gzip":"238.1KB","url":"https://github.com/atisawd/boxicons","package":"boxicons","version":"@2.1.2","license":"MIT"},{"name":"carbon","total":1914,"size":"331.1KB","gzip":"247.5KB","url":"https://github.com/carbon-design-system/carbon","package":"@carbon/icons","version":"@11.0.1","license":"Apache 2.0"},{"name":"coreui","total":554,"size":"146.2KB","gzip":"107.8KB","url":"https://github.com/coreui/coreui-icons","package":"@coreui/icons","version":"@2.1.0","license":"CC BY 4.0"},{"name":"cssgg","total":704,"size":"92.5KB","gzip":"67.0KB","url":"https://github.com/astrit/css.gg","package":"css.gg","version":"@2.0.0","license":"MIT"},{"name":"eva","total":490,"size":"79.5KB","gzip":"57.4KB","url":"https://github.com/akveo/eva-icons","package":"eva-icons","version":"@1.1.3","license":"MIT"},{"name":"feather","total":287,"size":"33.1KB","gzip":"22.3KB","url":"https://github.com/feathericons/feather","package":"feather-icons","version":"@4.29.0","license":"MIT"},{"name":"flag","total":512,"size":"104.9KB","gzip":"76.7KB","url":"https://gitlab.com/catamphetamine/country-flag-icons","package":"country-flag-icons","version":"@1.4.25","license":"MIT"},{"name":"flat","total":329,"size":"92.7KB","gzip":"67.2KB","url":"https://github.com/icons8/flat-color-icons","package":"flat-color-icons","version":"@1.1.0","license":"MIT"},{"name":"fluent","total":3811,"size":"710.6KB","gzip":"533.3KB","url":"https://github.com/microsoft/fluentui-system-icons","package":"@fluentui/svg-icons","version":"@1.1.164","license":"MIT"},{"name":"grommet","total":615,"size":"120.7KB","gzip":"88.7KB","url":"https://github.com/FortAwesome/Font-Awesome","package":"grommet-icons","version":"@4.7.0","license":"Apache 2.0"},{"name":"hero","total":460,"size":"63.3KB","gzip":"45.2KB","url":"https://github.com/tailwindlabs/heroicons","package":"heroicons","version":"@1.0.6","license":"MIT"},{"name":"iconoir","total":939,"size":"124.6KB","gzip":"91.4KB","url":"https://github.com/lucaburgio/iconoir","package":"iconoir","version":"@1.0.0","license":"MIT"},{"name":"ionic","total":918,"size":"250.8KB","gzip":"187.1KB","url":"https://github.com/ionic-team/ionicons","package":"ionicons","version":"@6.0.1","license":"MIT"},{"name":"material","total":4172,"size":"505.5KB","gzip":"378.9KB","url":"https://github.com/marella/material-design-icons","package":"@material-design-icons/svg","version":"@0.10.8","license":"Apache 2.0"},{"name":"mdi","total":6696,"size":"1019.3KB","gzip":"766.0KB","url":"https://github.com/Templarian/MaterialDesign-SVG","package":"@mdi/svg","version":"@6.6.96","license":"Apache 2.0"},{"name":"mono","total":180,"size":"38.7KB","gzip":"26.7KB","url":"https://github.com/mono-company/mono-icons","package":"mono-icons","version":"@1.3.1","license":"MIT"},{"name":"oct","total":490,"size":"123.5KB","gzip":"90.8KB","url":"https://github.com/primer/octicons","package":"@primer/octicons","version":"@17.0.0","license":"MIT"},{"name":"park","total":2437,"size":"330.0KB","gzip":"246.7KB","url":"https://github.com/bytedance/IconPark","package":"@icon-park/svg","version":"@1.3.5","license":"Apache 2.0"},{"name":"remix","total":2271,"size":"320.1KB","gzip":"239.5KB","url":"https://github.com/Remix-Design/RemixIcon","package":"remixicon","version":"@2.5.0","license":"Apache 2.0"},{"name":"simple","total":2219,"size":"1.8MB","gzip":"1.4MB","url":"https://github.com/simple-icons/simple-icons","package":"simple-icons","version":"@6.16.0","license":"CC0 1.0"},{"name":"tabler","total":1649,"size":"143.3KB","gzip":"105.2KB","url":"https://github.com/tabler/tabler-icons","package":"@tabler/icons","version":"@1.60.0","license":"MIT"},{"name":"typ","total":336,"size":"111.1KB","gzip":"81.2KB","url":"https://github.com/stephenhutchings/typicons.font","package":"typicons.font","version":"@2.1.2","license":"SIL Open Font"},{"name":"vscode","total":408,"size":"116.9KB","gzip":"85.7KB","url":"https://github.com/microsoft/vscode-codicons","package":"@vscode/codicons","version":"@0.0.29","license":"MIT"}]');
-
-            const $list = document.querySelector('.package-list');
-            list.forEach(function(it) {
-                const name = it.name;
-                const $li = document.createElement('li');
-
-                const link = `${name}/preview/index.html`;
-
-                const $a = document.createElement('a');
-                $a.href = link;
-                $a.innerHTML = `${name}`;
-                $a.target = 'iframe';
-                $li.appendChild($a);
-
-                const $sp = document.createElement('span');
-                $sp.innerHTML = ` (${it.total})`;
-                $li.appendChild($sp);
-
-                $list.appendChild($li);
-                
-            });
-        };
-
-        render();
-        
-    </script>
+    <script src="js/metadata.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
