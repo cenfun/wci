@@ -37,9 +37,9 @@
             <ul class="wci-menu-packages"></ul>
         </div>
     </div>
-    <div class="wci-main flex-column">
+    <div class="wci-main flex-auto flex-column">
         <div class="wci-header">
-            <div class="wci-toolbar flex-auto">
+            <div class="wci-toolbar">
                 size:
                 <select class="wci-icon-size">
                     <option>16px</option>
@@ -75,12 +75,12 @@
                     <option>50%</option>
                 </select>
             </div>
+            <div class="wci-title"></div>
+            <div class="wci-stats"></div>
         </div>
-        <div class="flex-auto">
+        <div class="wci-view flex-auto">
             <div class="wci-package"></div>
             <div class="wci-finder flex-column">
-                <h1 class="wci-title">Web Components Icons</h1>
-                <div class="wci-stats"></div>
                 <div class="wci-filter flex-row">
                     <div class="wci-searcher flex-row">
                         <input type="text" class="wci-keywords flex-auto" onfocus="this.select()" /> 
@@ -88,9 +88,7 @@
                     </div>
                 </div>
                 <div class="wci-popular"></div>
-                <div class="wci-view flex-auto flex-column">
-                    <div class="wci-grid flex-auto"></div>
-                </div>
+                <div class="wci-grid flex-auto"></div>
             </div>
         </div>
     </div>
