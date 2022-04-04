@@ -1,7 +1,7 @@
 # wci-grommet
 Built from [grommet-icons@4.7.0](https://github.com/FortAwesome/Font-Awesome)  
 
-615 icons / size: 120.7KB / gzip: 88.7KB  
+615 icons / size: 120.8KB / gzip: 88.7KB  
 
 
 

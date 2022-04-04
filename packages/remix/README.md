@@ -1,7 +1,7 @@
 # wci-remix
 Built from [remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)  
 
-2271 icons / size: 320.1KB / gzip: 239.5KB  
+2271 icons / size: 320.2KB / gzip: 239.5KB  
 
 
 

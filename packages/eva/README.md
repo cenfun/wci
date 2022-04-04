@@ -1,7 +1,7 @@
 # wci-eva
 Built from [eva-icons@1.1.3](https://github.com/akveo/eva-icons)  
 
-490 icons / size: 79.5KB / gzip: 57.4KB  
+490 icons / size: 79.6KB / gzip: 57.5KB  
 
 
 

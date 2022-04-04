@@ -47,6 +47,10 @@ class IconElement extends HTMLElement {
         this.render();
     }
 
+    getIcon(id, key) {
+        return getIcon(id, key);
+    }
+
     render() {
 
         const name = this.getAttribute('name') || 'blank';
@@ -72,8 +76,8 @@ class IconElement extends HTMLElement {
             $overflow = 'overflow: hidden;';
         }
 
-        const fullSvg = getIcon(name, 'fullSvg');
-
+        this.svg = getIcon(name, 'fullSvg');
+        
         this.$style.textContent = `
             :host, svg {
                 display: block;
@@ -88,7 +92,7 @@ class IconElement extends HTMLElement {
             }
         `;
 
-        this.$container.innerHTML = fullSvg;
+        this.$container.innerHTML = this.svg;
 
     }
 }

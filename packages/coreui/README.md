@@ -1,7 +1,7 @@
 # wci-coreui
 Built from [@coreui/icons@2.1.0](https://github.com/coreui/coreui-icons)  
 
-554 icons / size: 146.2KB / gzip: 107.8KB  
+554 icons / size: 146.3KB / gzip: 107.8KB  
 
 
 

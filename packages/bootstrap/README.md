@@ -1,7 +1,7 @@
 # wci-bootstrap
 Built from [bootstrap-icons@1.8.1](https://github.com/twbs/icons)  
 
-1668 icons / size: 358.3KB / gzip: 268.3KB  
+1668 icons / size: 358.4KB / gzip: 268.3KB  
 
 
 

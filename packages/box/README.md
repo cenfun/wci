@@ -1,7 +1,7 @@
 # wci-box
 Built from [boxicons@2.1.2](https://github.com/atisawd/boxicons)  
 
-1600 icons / size: 318.3KB / gzip: 238.1KB  
+1600 icons / size: 318.4KB / gzip: 238.1KB  
 
 
 

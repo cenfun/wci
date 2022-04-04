@@ -111,35 +111,17 @@ a:hover {
     height: 25px;
 }
 
-.wci-menu-list {
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.wci-menu-grid .tg-turbogrid .tg-row .tg-tree-name {
+    cursor: pointer;
 }
 
-.wci-menu-item {
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 16px;
+.wci-menu-grid .tg-turbogrid .tg-scrollbar-track {
+    border-radius: 5px;
 }
 
-.wci-menu-packages {
-    margin: 0;
-    flex: auto;
-    overflow: auto;
-}
-
-.wci-menu-packages li {
-    height: 30px;
-    line-height: 30px;
-    font-size: 16px;
-}
-
-.wci-menu-packages span {
-    font-size: 12px;
-    color: #ccc;
-    margin-left: 5px;
+.wci-menu-grid .tg-turbogrid .tg-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #666;
 }
 
 .wci-main {
@@ -178,9 +160,32 @@ a:hover {
     padding: 20px;
 }
 
+.wci-title a:link,
+.wci-title a:visited {
+    margin-top: 8px;
+    display: block;
+    font-size: 16px;
+    color: #666;
+}
+
+.wci-title a:hover {
+    color: #0077cf;
+}
+
 .wci-stats {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.wci-stats a:link,
+.wci-stats a:visited {
+    font-size: 16px;
+}
+
+.wci-stats a:hover {
+    color: #0077cf;
 }
 
 .wci-view {
@@ -197,6 +202,7 @@ a:hover {
     height: 100%;
     border-radius: 5px;
     border: 1px solid #ccc;
+    padding: 5px;
 }
 
 .wci-package::after {
@@ -209,17 +215,15 @@ a:hover {
     float: left;
     margin: 4px;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .wci-icon-item:hover {
     border: 1px solid #ccc;
 }
 
-.wci-icon-item > * {
-    cursor: pointer;
-}
-
-.wci-icon-item div {
+.wci-icon-item-label {
+    margin-top: 5px;
     font-size: 11px;
     white-space: nowrap;
     overflow: hidden;
@@ -292,7 +296,9 @@ a:hover {
 }
 
 .wci-grid .tg-turbogrid .tg-cell.wci-icon {
-    padding: 5px 10px;
+    padding: 4px;
+    border-left: thin solid #ccc;
+    border-right: thin solid #ccc;
 }
 
 .wci-grid .tg-turbogrid .tg-cell.wci-textarea {

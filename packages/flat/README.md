@@ -1,7 +1,7 @@
 # wci-flat
 Built from [flat-color-icons@1.1.0](https://github.com/icons8/flat-color-icons)  
 
-329 icons / size: 92.7KB / gzip: 67.2KB  
+329 icons / size: 92.8KB / gzip: 67.2KB  
 
 Fixed Color
 
