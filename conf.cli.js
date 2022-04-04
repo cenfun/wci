@@ -220,9 +220,10 @@ module.exports = {
             console.log('generating README.md ....');
             //README.md
             let total = 0;
-            const readmeList = list.map(item => {
+            const readmeList = list.map((item, i) => {
                 total += item.total;
                 return [
+                    i + 1,
                     `[${item.name}](packages/${item.name})`,
                     item.total,
                     item.size,
@@ -231,11 +232,11 @@ module.exports = {
                     `[${item.package}@${item.version}](${item.url})`
                 ];
             });
-            readmeList.push(['[Total](https://cenfun.github.io/wci/)', total.toLocaleString(), '', '', '', '']);
+            readmeList.push(['', 'Total', total.toLocaleString(), '', '', '', '']);
  
             const readmeTable = getMarkDownTable({
-                headers: ['Name', 'Icons', 'Size', 'Gzip', 'License', 'Built from'],
-                columns: [32, 10, 10, 10, 15, 30],
+                headers: ['', 'Name', 'Icons', 'Size', 'Gzip', 'License', 'Built from'],
+                columns: [3, 32, 7, 10, 10, 20, 30],
                 rows: readmeList
             });
             let readmeContent = Util.readFileContentSync(path.resolve(__dirname, 'template/README.md'));

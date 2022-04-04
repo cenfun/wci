@@ -43,5 +43,5 @@ module.exports = {
         return dir;
     },
     readme: '',
-    license: 'Font Awesome Free'
+    license: 'CC BY 4.0'
 };
