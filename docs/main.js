@@ -113,6 +113,7 @@ const renderFinder = function(option, list, rows) {
         //showCheckbox: true,
         showRowNumber: false,
         bindWindowResize: true,
+        bindContainerResize: true,
         rowNotFound: '<div class="wci-not-found">Not found results</div>',
         rowFilter: function(rowData) {
             if (!keywords.length) {
@@ -422,7 +423,8 @@ const renderMenu = function(metadata, list) {
         frozenRow: 0,
         frozenRowHoverable: true,
         multiSelect: false,
-        bindWindowResize: true
+        bindWindowResize: true,
+        bindContainerResize: true
     });
 
     menuGrid.setData(menuData);
