@@ -109,10 +109,11 @@ a:hover {
 
 .wci-menu-title .wci {
     flex: auto;
+    font-size: 22px;
 }
 
 .wci-menu-title .github {
-    padding: 5px 0;
+    margin: 5px 0;
     width: 25px;
     height: 25px;
 }
