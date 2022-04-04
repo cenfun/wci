@@ -77,10 +77,15 @@ a:hover {
     white-space: nowrap;
 }
 
+.tg-turbogrid .tg-scrollbar .tg-scrollbar-track,
+.tg-turbogrid .tg-scrollbar .tg-scrollbar-thumb {
+    border-radius: 5px;
+}
+
 .wci-menu {
     width: 200px;
     background-color: #222;
-    color: #fff;
+    color: #eee;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -88,10 +93,15 @@ a:hover {
 
 .wci-menu a:visited,
 .wci-menu a:link {
+    color: #eee;
+    text-decoration: none;
+}
+
+.wci-menu a:hover {
     color: #fff;
 }
 
-.wci-menu-title {
+.wci-menu-header {
     font-size: 16px;
     font-weight: bold;
     padding: 0 20px 0 15px;
@@ -103,16 +113,16 @@ a:hover {
     background-color: #000;
 }
 
-.wci-menu-title svg {
+.wci-menu-header svg {
     display: block;
 }
 
-.wci-menu-title .wci {
+.wci-menu-header .wci {
     flex: auto;
     font-size: 22px;
 }
 
-.wci-menu-title .github {
+.wci-menu-header .github {
     margin: 5px 0;
     width: 25px;
     height: 25px;
@@ -122,13 +132,31 @@ a:hover {
     cursor: pointer;
 }
 
-.wci-menu-grid .tg-turbogrid .tg-scrollbar-track {
-    border-radius: 5px;
+.wci-menu-grid .tg-turbogrid .tg-scrollbar-thumb {
+    background-color: #666;
 }
 
-.wci-menu-grid .tg-turbogrid .tg-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #666;
+.wci-menu-grid .tg-turbogrid .tg-scrollbar-thumb:hover {
+    background-color: #999;
+}
+
+.wci-menu-footer {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background-color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wci-menu-footer a:visited,
+.wci-menu-footer a:link {
+    color: #999;
+}
+
+.wci-menu-footer a:hover {
+    color: #fff;
 }
 
 .wci-main {
@@ -167,15 +195,19 @@ a:hover {
     padding: 20px;
 }
 
-.wci-title a:link,
-.wci-title a:visited {
+.wci-link {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.wci-link a:link,
+.wci-link a:visited {
     margin-top: 8px;
-    display: block;
     font-size: 16px;
     color: #666;
 }
 
-.wci-title a:hover {
+.wci-link a:hover {
     color: #0077cf;
 }
 
@@ -295,18 +327,13 @@ a:hover {
 }
 
 .wci-grid .tg-turbogrid .tg-scrollbar-track {
-    border-radius: 5px;
     background-color: #f2f2f2;
-}
-
-.wci-grid .tg-turbogrid .tg-scrollbar-thumb {
-    border-radius: 5px;
 }
 
 .wci-grid .tg-turbogrid .tg-cell.wci-icon {
     padding: 4px;
-    border-left: thin solid #ccc;
-    border-right: thin solid #ccc;
+    border-left: thin solid #e5e5e5;
+    border-right: thin solid #e5e5e5;
 }
 
 .wci-grid .tg-turbogrid .tg-cell.wci-textarea {

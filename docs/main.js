@@ -100,9 +100,10 @@ const renderFinder = function(option, list, rows) {
 
     const total = rows.length;
 
-    $('.wci-title').innerHTML = 'Web Components Icons';
-    $('.wci-stats').innerHTML = `Total <b>${list.length}</b> packages and <b>${total.toLocaleString()}</b> icons`;
-   
+    $('.wci-info').innerHTML = `
+        <div class="wci-title">Web Components Icons</div>
+        <div class="wci-stats">Total <b>${list.length}</b> packages and <b>${total.toLocaleString()}</b> icons</div>
+    `;
 
     const cellSize = parseInt(option.size) + 10;
 
@@ -266,10 +267,13 @@ const renderList = function($container, list, option) {
 const renderPackage = function(option, item) {
     console.log(item);
 
-    $('.wci-title').innerHTML = `${item.name} <a class="wci-title-sub" href="${item.url}" target="_blank">${item.package}${item.version} - ${item.license}</a>`;
-    
     const bundle = `<a href="js/${item.tagName}.js" target="_blank">${item.tagName}.js</a>`;
-    $('.wci-stats').innerHTML = `bundle: ${bundle} / <b>${item.total}</b> icons / size: ${item.size} / gzip: ${item.gzip}`;
+
+    $('.wci-info').innerHTML = `
+        <div class="wci-title">${item.name}</div>
+        <div class="wci-link"><a href="${item.url}" target="_blank">${item.package}${item.version} - ${item.license}</a></div>
+        <div class="wci-stats">bundle: ${bundle} / <b>${item.total}</b> icons / size: ${item.size} / gzip: ${item.gzip}</div>
+    `;
     
     const $container = $('.wci-package');
     $container.innerHTML = '';
@@ -364,7 +368,11 @@ const getPopular = function(popularList) {
     })}`;
 };
 
-const renderMenu = function(list) {
+const renderMenu = function(metadata, list) {
+    const date = new Date(metadata.timestamp).toLocaleDateString();
+    const footer = `<a href="https://github.com/cenfun/wci" target="_blank">Latest: v${metadata.version} - ${date}</a>`;
+
+    $('.wci-menu-footer').innerHTML = footer;
 
     const menuData = {
         columns: [{
@@ -411,7 +419,8 @@ const renderMenu = function(list) {
     menuGrid.setOption({
         theme: 'dark',
         showHeader: false,
-        //frozenRow: 0,
+        frozenRow: 0,
+        frozenRowHoverable: true,
         multiSelect: false,
         bindWindowResize: true
     });
@@ -420,8 +429,9 @@ const renderMenu = function(list) {
     menuGrid.render();
 };
 
-const render = function(list) {
+const render = function(metadata) {
 
+    const list = metadata.list;
     list.forEach(function(item) {
         const lib = window[`wci-${item.name}`];
         item.tagName = lib.tagName;
@@ -430,7 +440,7 @@ const render = function(list) {
 
     console.log(list);
 
-    renderMenu(list);
+    renderMenu(metadata, list);
 
     const gridRows = [];
     list.forEach(function(item) {
@@ -503,8 +513,10 @@ const render = function(list) {
 
 const loadLibs = function() {
 
-    const wciMetadata = window.wciMetadata;
-    const libs = wciMetadata.libs;
+    const metadata = window.wciMetadata;
+    console.log(metadata);
+
+    const libs = metadata.libs;
     const total = libs.length;
 
     const $loading = $('.wci-loading');
@@ -517,7 +529,7 @@ const loadLibs = function() {
         $loadingLabel.innerHTML = `${per}% loaded ${item}`;
         if (loaded >= total) {
             $loading.style.display = 'none';
-            render(wciMetadata.list);
+            render(metadata);
         }
     };
             
