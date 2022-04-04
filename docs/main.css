@@ -10,6 +10,12 @@ body {
     flex-direction: row;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 a:hover {
     color: deepskyblue;
 }
@@ -191,13 +197,13 @@ a:hover {
 .wci-view {
     position: relative;
     overflow: hidden;
-    padding: 20px;
+    margin: 20px;
 }
 
 .wci-package {
     display: none;
     position: relative;
-    overflow: auto;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -282,6 +288,7 @@ a:hover {
 }
 
 .wci-grid {
+    margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }

@@ -17,7 +17,6 @@ const saveSVGFile = function(content, name) {
 
 const getColor = function(c, colorIndex) {
     const colors = [
-        'red',
         'orangered',
         'orange',
         'green',
@@ -73,13 +72,6 @@ const initGrid = function() {
 
     const Grid = window.turbogrid.Grid;
     grid = new Grid($('.wci-grid'));
-    // grid.bind('onDblClick', function(e, d) {
-    //     grid.setSelectedRow(d.row);
-    // });
-    // grid.bind('onSelectedChanged', function(e, d) {
-    //     const selectedRows = grid.getSelectedRows();
-    //     $('.selected-rows').innerHTML = selectedRows.length;
-    // });
     grid.bind('onClick', function(e, d) {
         const $target = d.e.target;
         if ($target.tagName === 'TEXTAREA') {
@@ -178,7 +170,7 @@ const renderFinder = function(option, list, rows) {
         }, {
             id: 'name',
             name: 'Name',
-            width: 260
+            width: 240
         }, {
             id: 'download',
             name: '',
