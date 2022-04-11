@@ -1,6 +1,6 @@
 {
     "name": "wci-tabler",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Web components icons built from @tabler/icons",
     "main": "dist/wci-tabler.js",
     "files": [

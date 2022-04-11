@@ -1,6 +1,6 @@
 {
     "name": "wci-awesome",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Web components icons built from @fortawesome/free-solid-svg-icons",
     "main": "dist/wci-awesome.js",
     "files": [

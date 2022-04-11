@@ -1,6 +1,6 @@
 {
     "name": "wci-park",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Web components icons built from @icon-park/svg",
     "main": "dist/wci-park.js",
     "files": [

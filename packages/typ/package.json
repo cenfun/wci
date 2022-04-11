@@ -1,6 +1,6 @@
 {
     "name": "wci-typ",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Web components icons built from typicons.font",
     "main": "dist/wci-typ.js",
     "files": [

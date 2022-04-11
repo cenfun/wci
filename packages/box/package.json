@@ -1,6 +1,6 @@
 {
     "name": "wci-box",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Web components icons built from boxicons",
     "main": "dist/wci-box.js",
     "files": [
