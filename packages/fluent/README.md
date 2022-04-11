@@ -1,7 +1,7 @@
 # wci-fluent
-Built from [@fluentui/svg-icons@1.1.164](https://github.com/microsoft/fluentui-system-icons)  
+Built from [@fluentui/svg-icons@1.1.166](https://github.com/microsoft/fluentui-system-icons)  
 
-3811 icons / size: 710.7KB / gzip: 533.3KB  
+3871 icons / size: 721.0KB / gzip: 540.7KB  
 
 
 

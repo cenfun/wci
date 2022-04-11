@@ -1,5 +1,5 @@
 # wci-carbon
-Built from [@carbon/icons@11.0.1](https://github.com/carbon-design-system/carbon)  
+Built from [@carbon/icons@11.0.2](https://github.com/carbon-design-system/carbon)  
 
 1914 icons / size: 331.1KB / gzip: 247.6KB  
 

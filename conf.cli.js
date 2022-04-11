@@ -134,9 +134,9 @@ module.exports = {
             let version = '';
             const json = Util.readJSONSync(packagePath);
             if (json) {
-                version = `@${json.version}`;
+                version = json.version;
             }
-            const packageNameVersion = `${option.package}${version}`;
+            const packageNameVersion = `${option.package}@${version}`;
             const packageUrl = option.url;
             const readme = option.readme.trim();
 

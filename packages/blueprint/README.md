@@ -1,5 +1,5 @@
 # wci-blueprint
-Built from [@blueprintjs/icons@4.2.0](https://github.com/palantir/blueprint)  
+Built from [@blueprintjs/icons@4.2.3](https://github.com/palantir/blueprint)  
 
 555 icons / size: 132.8KB / gzip: 97.8KB  
 

@@ -1,7 +1,7 @@
 # wci-simple
-Built from [simple-icons@6.17.0](https://github.com/simple-icons/simple-icons)  
+Built from [simple-icons@6.18.0](https://github.com/simple-icons/simple-icons)  
 
-2223 icons / size: 1.8MB / gzip: 1.4MB  
+2228 icons / size: 1.8MB / gzip: 1.4MB  
 
 
 
