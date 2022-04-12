@@ -172,8 +172,8 @@ module.exports = {
             });
             const page = await browser.newPage();
             await page.setViewportSize({
-                width: 1020,
-                height: 590
+                width: 970,
+                height: 600
             });
 
             const previewUrl = path.resolve(item.previewPath, 'index.html');
