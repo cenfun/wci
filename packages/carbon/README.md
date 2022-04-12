@@ -8,7 +8,7 @@ Built from [@carbon/icons@11.0.2](https://github.com/carbon-design-system/carbon
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/carbon/preview/](https://cenfun.github.io/wci/carbon/preview/)
+Online Page: [https://cenfun.github.io/wci/#carbon](https://cenfun.github.io/wci/#carbon)
 
 # Features
 * Web Components

@@ -8,7 +8,7 @@ No two-tone icons
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/ant/preview/](https://cenfun.github.io/wci/ant/preview/)
+Online Page: [https://cenfun.github.io/wci/#ant](https://cenfun.github.io/wci/#ant)
 
 # Features
 * Web Components

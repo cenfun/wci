@@ -8,7 +8,7 @@ Built from [boxicons@2.1.2](https://github.com/atisawd/boxicons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/box/preview/](https://cenfun.github.io/wci/box/preview/)
+Online Page: [https://cenfun.github.io/wci/#box](https://cenfun.github.io/wci/#box)
 
 # Features
 * Web Components

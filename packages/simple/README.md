@@ -8,7 +8,7 @@ Built from [simple-icons@6.18.0](https://github.com/simple-icons/simple-icons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/simple/preview/](https://cenfun.github.io/wci/simple/preview/)
+Online Page: [https://cenfun.github.io/wci/#simple](https://cenfun.github.io/wci/#simple)
 
 # Features
 * Web Components

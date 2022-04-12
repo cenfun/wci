@@ -8,7 +8,7 @@ Built from [@fortawesome/free-solid-svg-icons@6.1.1](https://github.com/FortAwes
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/awesome/preview/](https://cenfun.github.io/wci/awesome/preview/)
+Online Page: [https://cenfun.github.io/wci/#awesome](https://cenfun.github.io/wci/#awesome)
 
 # Features
 * Web Components

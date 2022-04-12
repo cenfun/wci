@@ -8,7 +8,7 @@ Built from [grommet-icons@4.7.0](https://github.com/FortAwesome/Font-Awesome)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/grommet/preview/](https://cenfun.github.io/wci/grommet/preview/)
+Online Page: [https://cenfun.github.io/wci/#grommet](https://cenfun.github.io/wci/#grommet)
 
 # Features
 * Web Components

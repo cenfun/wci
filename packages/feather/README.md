@@ -8,7 +8,7 @@ Built from [feather-icons@4.29.0](https://github.com/feathericons/feather)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/feather/preview/](https://cenfun.github.io/wci/feather/preview/)
+Online Page: [https://cenfun.github.io/wci/#feather](https://cenfun.github.io/wci/#feather)
 
 # Features
 * Web Components

@@ -8,7 +8,7 @@ No sharp icons
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/ionic/preview/](https://cenfun.github.io/wci/ionic/preview/)
+Online Page: [https://cenfun.github.io/wci/#ionic](https://cenfun.github.io/wci/#ionic)
 
 # Features
 * Web Components

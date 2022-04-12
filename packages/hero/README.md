@@ -8,7 +8,7 @@ Built from [heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/hero/preview/](https://cenfun.github.io/wci/hero/preview/)
+Online Page: [https://cenfun.github.io/wci/#hero](https://cenfun.github.io/wci/#hero)
 
 # Features
 * Web Components

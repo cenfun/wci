@@ -8,7 +8,7 @@ Built from [@coreui/icons@2.1.0](https://github.com/coreui/coreui-icons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/coreui/preview/](https://cenfun.github.io/wci/coreui/preview/)
+Online Page: [https://cenfun.github.io/wci/#coreui](https://cenfun.github.io/wci/#coreui)
 
 # Features
 * Web Components

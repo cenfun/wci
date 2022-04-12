@@ -8,7 +8,7 @@ Built from [{packageNameVersion}]({packageUrl})
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/{id}/preview/](https://cenfun.github.io/wci/{id}/preview/)
+Online Page: [https://cenfun.github.io/wci/#{id}](https://cenfun.github.io/wci/#{id})
 
 # Features
 * Web Components

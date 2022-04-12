@@ -8,7 +8,7 @@ Built from [eva-icons@1.1.3](https://github.com/akveo/eva-icons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/eva/preview/](https://cenfun.github.io/wci/eva/preview/)
+Online Page: [https://cenfun.github.io/wci/#eva](https://cenfun.github.io/wci/#eva)
 
 # Features
 * Web Components

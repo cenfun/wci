@@ -8,7 +8,7 @@ Built from [@blueprintjs/icons@4.2.3](https://github.com/palantir/blueprint)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/blueprint/preview/](https://cenfun.github.io/wci/blueprint/preview/)
+Online Page: [https://cenfun.github.io/wci/#blueprint](https://cenfun.github.io/wci/#blueprint)
 
 # Features
 * Web Components

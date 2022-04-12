@@ -8,7 +8,7 @@ Built from [@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicon
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/vscode/preview/](https://cenfun.github.io/wci/vscode/preview/)
+Online Page: [https://cenfun.github.io/wci/#vscode](https://cenfun.github.io/wci/#vscode)
 
 # Features
 * Web Components

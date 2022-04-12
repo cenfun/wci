@@ -8,7 +8,7 @@ Built from [@icon-park/svg@1.3.5](https://github.com/bytedance/IconPark)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/park/preview/](https://cenfun.github.io/wci/park/preview/)
+Online Page: [https://cenfun.github.io/wci/#park](https://cenfun.github.io/wci/#park)
 
 # Features
 * Web Components

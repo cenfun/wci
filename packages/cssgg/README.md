@@ -8,7 +8,7 @@ Built from [css.gg@2.0.0](https://github.com/astrit/css.gg)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/cssgg/preview/](https://cenfun.github.io/wci/cssgg/preview/)
+Online Page: [https://cenfun.github.io/wci/#cssgg](https://cenfun.github.io/wci/#cssgg)
 
 # Features
 * Web Components

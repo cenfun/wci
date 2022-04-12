@@ -8,7 +8,7 @@ Built from [bootstrap-icons@1.8.1](https://github.com/twbs/icons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/bootstrap/preview/](https://cenfun.github.io/wci/bootstrap/preview/)
+Online Page: [https://cenfun.github.io/wci/#bootstrap](https://cenfun.github.io/wci/#bootstrap)
 
 # Features
 * Web Components

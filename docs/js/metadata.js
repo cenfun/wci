@@ -1,8 +1,8 @@
 window.wciMetadata = {
-    "version": "1.0.4",
-    "commit": "64d381f",
+    "version": "1.0.5",
+    "commit": "16be641",
     "branch": "main",
-    "timestamp": "2022-04-11T14:57:04.408Z",
+    "timestamp": "2022-04-12T00:46:30.071Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -37,7 +37,7 @@ window.wciMetadata = {
     "list": [
         {
             "name": "ant",
-            "duration": 46399,
+            "duration": 13456,
             "total": 639,
             "size": "203.5KB",
             "gzip": "151.3KB",
@@ -48,7 +48,7 @@ window.wciMetadata = {
         },
         {
             "name": "awesome",
-            "duration": 47094,
+            "duration": 21434,
             "total": 1385,
             "size": "473.4KB",
             "gzip": "354.9KB",
@@ -59,7 +59,7 @@ window.wciMetadata = {
         },
         {
             "name": "blueprint",
-            "duration": 46248,
+            "duration": 13627,
             "total": 555,
             "size": "132.8KB",
             "gzip": "97.8KB",
@@ -70,7 +70,7 @@ window.wciMetadata = {
         },
         {
             "name": "bootstrap",
-            "duration": 47034,
+            "duration": 21389,
             "total": 1668,
             "size": "358.4KB",
             "gzip": "268.3KB",
@@ -81,7 +81,7 @@ window.wciMetadata = {
         },
         {
             "name": "box",
-            "duration": 45430,
+            "duration": 19178,
             "total": 1600,
             "size": "318.4KB",
             "gzip": "238.1KB",
@@ -92,7 +92,7 @@ window.wciMetadata = {
         },
         {
             "name": "carbon",
-            "duration": 46728,
+            "duration": 21953,
             "total": 1914,
             "size": "331.1KB",
             "gzip": "247.6KB",
@@ -103,7 +103,7 @@ window.wciMetadata = {
         },
         {
             "name": "coreui",
-            "duration": 45758,
+            "duration": 12707,
             "total": 554,
             "size": "146.3KB",
             "gzip": "107.8KB",
@@ -114,7 +114,7 @@ window.wciMetadata = {
         },
         {
             "name": "cssgg",
-            "duration": 44505,
+            "duration": 12823,
             "total": 704,
             "size": "92.5KB",
             "gzip": "67.0KB",
@@ -125,7 +125,7 @@ window.wciMetadata = {
         },
         {
             "name": "eva",
-            "duration": 6158,
+            "duration": 10489,
             "total": 490,
             "size": "79.6KB",
             "gzip": "57.5KB",
@@ -136,7 +136,7 @@ window.wciMetadata = {
         },
         {
             "name": "feather",
-            "duration": 4548,
+            "duration": 7584,
             "total": 287,
             "size": "33.2KB",
             "gzip": "22.3KB",
@@ -147,7 +147,7 @@ window.wciMetadata = {
         },
         {
             "name": "flag",
-            "duration": 10974,
+            "duration": 10818,
             "total": 512,
             "size": "105.0KB",
             "gzip": "76.8KB",
@@ -158,7 +158,7 @@ window.wciMetadata = {
         },
         {
             "name": "flat",
-            "duration": 7104,
+            "duration": 10123,
             "total": 329,
             "size": "92.8KB",
             "gzip": "67.2KB",
@@ -169,7 +169,7 @@ window.wciMetadata = {
         },
         {
             "name": "fluent",
-            "duration": 21666,
+            "duration": 33536,
             "total": 3871,
             "size": "721.0KB",
             "gzip": "540.7KB",
@@ -180,7 +180,7 @@ window.wciMetadata = {
         },
         {
             "name": "grommet",
-            "duration": 14177,
+            "duration": 9283,
             "total": 615,
             "size": "120.8KB",
             "gzip": "88.7KB",
@@ -191,7 +191,7 @@ window.wciMetadata = {
         },
         {
             "name": "hero",
-            "duration": 10487,
+            "duration": 8665,
             "total": 460,
             "size": "63.4KB",
             "gzip": "45.2KB",
@@ -202,7 +202,7 @@ window.wciMetadata = {
         },
         {
             "name": "iconoir",
-            "duration": 19342,
+            "duration": 12749,
             "total": 939,
             "size": "124.7KB",
             "gzip": "91.4KB",
@@ -213,7 +213,7 @@ window.wciMetadata = {
         },
         {
             "name": "ionic",
-            "duration": 17314,
+            "duration": 12201,
             "total": 918,
             "size": "250.8KB",
             "gzip": "187.1KB",
@@ -224,7 +224,7 @@ window.wciMetadata = {
         },
         {
             "name": "material",
-            "duration": 36984,
+            "duration": 28460,
             "total": 4172,
             "size": "505.5KB",
             "gzip": "378.9KB",
@@ -235,7 +235,7 @@ window.wciMetadata = {
         },
         {
             "name": "mdi",
-            "duration": 56970,
+            "duration": 35291,
             "total": 6696,
             "size": "1019.3KB",
             "gzip": "766.1KB",
@@ -246,7 +246,7 @@ window.wciMetadata = {
         },
         {
             "name": "mono",
-            "duration": 4480,
+            "duration": 6615,
             "total": 180,
             "size": "38.7KB",
             "gzip": "26.7KB",
@@ -257,7 +257,7 @@ window.wciMetadata = {
         },
         {
             "name": "oct",
-            "duration": 10335,
+            "duration": 8913,
             "total": 490,
             "size": "123.5KB",
             "gzip": "90.8KB",
@@ -268,7 +268,7 @@ window.wciMetadata = {
         },
         {
             "name": "park",
-            "duration": 50513,
+            "duration": 24869,
             "total": 2437,
             "size": "330.0KB",
             "gzip": "246.7KB",
@@ -279,7 +279,7 @@ window.wciMetadata = {
         },
         {
             "name": "remix",
-            "duration": 28106,
+            "duration": 17675,
             "total": 2271,
             "size": "320.2KB",
             "gzip": "239.5KB",
@@ -290,7 +290,7 @@ window.wciMetadata = {
         },
         {
             "name": "simple",
-            "duration": 22619,
+            "duration": 27816,
             "total": 2228,
             "size": "1.8MB",
             "gzip": "1.4MB",
@@ -301,7 +301,7 @@ window.wciMetadata = {
         },
         {
             "name": "tabler",
-            "duration": 15583,
+            "duration": 16379,
             "total": 1719,
             "size": "151.0KB",
             "gzip": "111.4KB",
@@ -312,7 +312,7 @@ window.wciMetadata = {
         },
         {
             "name": "typ",
-            "duration": 17040,
+            "duration": 7959,
             "total": 336,
             "size": "111.1KB",
             "gzip": "81.2KB",
@@ -323,7 +323,7 @@ window.wciMetadata = {
         },
         {
             "name": "vscode",
-            "duration": 17008,
+            "duration": 6160,
             "total": 408,
             "size": "116.9KB",
             "gzip": "85.7KB",

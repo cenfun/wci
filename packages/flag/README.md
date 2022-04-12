@@ -8,7 +8,7 @@ Built from [country-flag-icons@1.4.25](https://gitlab.com/catamphetamine/country
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/flag/preview/](https://cenfun.github.io/wci/flag/preview/)
+Online Page: [https://cenfun.github.io/wci/#flag](https://cenfun.github.io/wci/#flag)
 
 # Features
 * Web Components

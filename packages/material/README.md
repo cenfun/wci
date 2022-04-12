@@ -8,7 +8,7 @@ No sharp/round/two-tone icons
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/material/preview/](https://cenfun.github.io/wci/material/preview/)
+Online Page: [https://cenfun.github.io/wci/#material](https://cenfun.github.io/wci/#material)
 
 # Features
 * Web Components

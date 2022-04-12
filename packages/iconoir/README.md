@@ -8,7 +8,7 @@ Built from [iconoir@1.0.0](https://github.com/lucaburgio/iconoir)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/iconoir/preview/](https://cenfun.github.io/wci/iconoir/preview/)
+Online Page: [https://cenfun.github.io/wci/#iconoir](https://cenfun.github.io/wci/#iconoir)
 
 # Features
 * Web Components

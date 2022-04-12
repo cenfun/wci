@@ -8,7 +8,7 @@ Built from [mono-icons@1.3.1](https://github.com/mono-company/mono-icons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/mono/preview/](https://cenfun.github.io/wci/mono/preview/)
+Online Page: [https://cenfun.github.io/wci/#mono](https://cenfun.github.io/wci/#mono)
 
 # Features
 * Web Components

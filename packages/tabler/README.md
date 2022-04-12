@@ -8,7 +8,7 @@ Built from [@tabler/icons@1.63.0](https://github.com/tabler/tabler-icons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/tabler/preview/](https://cenfun.github.io/wci/tabler/preview/)
+Online Page: [https://cenfun.github.io/wci/#tabler](https://cenfun.github.io/wci/#tabler)
 
 # Features
 * Web Components

@@ -8,7 +8,7 @@ Built from [typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.fo
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/typ/preview/](https://cenfun.github.io/wci/typ/preview/)
+Online Page: [https://cenfun.github.io/wci/#typ](https://cenfun.github.io/wci/#typ)
 
 # Features
 * Web Components

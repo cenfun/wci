@@ -8,7 +8,7 @@ Built from [@mdi/svg@6.6.96](https://github.com/Templarian/MaterialDesign-SVG)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/mdi/preview/](https://cenfun.github.io/wci/mdi/preview/)
+Online Page: [https://cenfun.github.io/wci/#mdi](https://cenfun.github.io/wci/#mdi)
 
 # Features
 * Web Components

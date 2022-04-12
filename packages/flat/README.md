@@ -8,7 +8,7 @@ Fixed Color
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/flat/preview/](https://cenfun.github.io/wci/flat/preview/)
+Online Page: [https://cenfun.github.io/wci/#flat](https://cenfun.github.io/wci/#flat)
 
 # Features
 * Web Components

@@ -8,7 +8,7 @@ Built from [@primer/octicons@17.0.0](https://github.com/primer/octicons)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/oct/preview/](https://cenfun.github.io/wci/oct/preview/)
+Online Page: [https://cenfun.github.io/wci/#oct](https://cenfun.github.io/wci/#oct)
 
 # Features
 * Web Components

@@ -8,7 +8,7 @@ Built from [@fluentui/svg-icons@1.1.166](https://github.com/microsoft/fluentui-s
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/fluent/preview/](https://cenfun.github.io/wci/fluent/preview/)
+Online Page: [https://cenfun.github.io/wci/#fluent](https://cenfun.github.io/wci/#fluent)
 
 # Features
 * Web Components

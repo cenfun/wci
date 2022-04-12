@@ -8,7 +8,7 @@ Built from [remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/remix/preview/](https://cenfun.github.io/wci/remix/preview/)
+Online Page: [https://cenfun.github.io/wci/#remix](https://cenfun.github.io/wci/#remix)
 
 # Features
 * Web Components
