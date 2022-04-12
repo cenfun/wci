@@ -155,9 +155,8 @@
             }
         });
 
-        const renderList = function(list, length, size, color, background, radius) {
+        const getColor = function(c, colorIndex) {
             const colors = [
-                'red',
                 'orangered',
                 'orange',
                 'green',
@@ -165,6 +164,17 @@
                 'royalblue',
                 'darkorchid'
             ];
+
+            if (c === 'rainbow') {
+                const index = colorIndex % colors.length;
+                c = colors[index];
+                colorIndex += 1;
+            }
+
+            return c;
+        };
+
+        const renderList = function(list, length, size, color, background, radius) {
 
             const next = [];
 
@@ -183,11 +193,7 @@
                 $icon.setAttribute('name', item.id);
                 $icon.setAttribute('size', size);
                 if (color) {
-                    let c = color;
-                    if (c === 'rainbow') {
-                        const index = i % colors.length;
-                        c = colors[index];
-                    }
+                    const c = getColor(color, i);
                     $icon.setAttribute('color', c);
                 }
                 if (background) {
