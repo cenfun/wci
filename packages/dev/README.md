@@ -1,7 +1,7 @@
 # wci-dev
 Built from [devicons@1.8.0](https://github.com/vorillaz/devicons)  
 
-192 icons / size: 223.5KB / gzip: 166.4KB  
+192 icons / size: 234.2KB / gzip: 166.6KB  
 
 
 
