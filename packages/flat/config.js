@@ -4,9 +4,9 @@ module.exports = {
     dirs: 'node_modules/flat-color-icons/svg',
     readme: 'Fixed Color',
     license: 'MIT',
-    onSVGName: function(name) {
+    onSVGName: function(name, item) {
         name = name.toLowerCase();
         name = name.split('_').join('-');
-        return name;
+        return this.onSVGNameDefault(name, item);
     }
 };

@@ -10,6 +10,6 @@ module.exports = {
     onSVGName: function(name, item) {
         name = name.toLowerCase();
         name = name.split('_').join('-');
-        return name;
+        return this.onSVGNameDefault(name, item);
     }
 };

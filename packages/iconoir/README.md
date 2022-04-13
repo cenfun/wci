@@ -1,7 +1,7 @@
 # wci-iconoir
 Built from [iconoir@1.0.0](https://github.com/lucaburgio/iconoir)  
 
-939 icons / size: 124.7KB / gzip: 91.4KB  
+941 icons / size: 124.8KB / gzip: 91.5KB  
 
 
 

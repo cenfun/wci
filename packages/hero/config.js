@@ -9,6 +9,6 @@ module.exports = {
     license: 'MIT',
     onSVGName: function(name, item) {
         name = name.toLowerCase();
-        return `${name}-${item.namespace}`;
+        return this.onSVGNameDefault(name, item);
     }
 };

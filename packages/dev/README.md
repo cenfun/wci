@@ -1,14 +1,14 @@
-# wci-tabler
-Built from [@tabler/icons@1.64.0](https://github.com/tabler/tabler-icons)  
+# wci-dev
+Built from [devicons@1.8.0](https://github.com/vorillaz/devicons)  
 
-1747 icons / size: 152.9KB / gzip: 112.9KB  
+192 icons / size: 223.5KB / gzip: 166.4KB  
 
 
 
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/#tabler](https://cenfun.github.io/wci/#tabler)
+Online Page: [https://cenfun.github.io/wci/#dev](https://cenfun.github.io/wci/#dev)
 
 # Features
 * Web Components
@@ -17,13 +17,13 @@ Online Page: [https://cenfun.github.io/wci/#tabler](https://cenfun.github.io/wci
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-tabler
+npm install wci-dev
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-tabler";
+import { icon, getIcon } from "wci-dev";
 
-const $icon = document.createElement("wci-tabler");
+const $icon = document.createElement("wci-dev");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -38,10 +38,10 @@ icon.list.forEach(item => {
 # Browser Usage
 ```html
 
-<script src="path-to/wci-tabler/dist/wci-tabler.js"></script>
+<script src="path-to/wci-dev/dist/wci-dev.js"></script>
 
-<wci-tabler name="[icon-name]"></wci-tabler>
-<wci-tabler name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-tabler>
+<wci-dev name="[icon-name]"></wci-dev>
+<wci-dev name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-dev>
 ```
 see [preview/index.html](preview/index.html)
 

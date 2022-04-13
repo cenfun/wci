@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "16be641",
+    "commit": "b952d9d",
     "branch": "main",
-    "timestamp": "2022-04-12T00:46:30.071Z",
+    "timestamp": "2022-04-13T01:25:02.925Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -14,6 +14,7 @@ window.wciMetadata = {
         "wci-carbon.js",
         "wci-coreui.js",
         "wci-cssgg.js",
+        "wci-dev.js",
         "wci-eva.js",
         "wci-feather.js",
         "wci-flag.js",
@@ -37,7 +38,7 @@ window.wciMetadata = {
     "list": [
         {
             "name": "ant",
-            "duration": 13456,
+            "duration": 13953,
             "total": 639,
             "size": "203.5KB",
             "gzip": "151.3KB",
@@ -48,7 +49,7 @@ window.wciMetadata = {
         },
         {
             "name": "awesome",
-            "duration": 21434,
+            "duration": 23494,
             "total": 1385,
             "size": "473.4KB",
             "gzip": "354.9KB",
@@ -59,7 +60,7 @@ window.wciMetadata = {
         },
         {
             "name": "blueprint",
-            "duration": 13627,
+            "duration": 16014,
             "total": 555,
             "size": "132.8KB",
             "gzip": "97.8KB",
@@ -70,7 +71,7 @@ window.wciMetadata = {
         },
         {
             "name": "bootstrap",
-            "duration": 21389,
+            "duration": 23335,
             "total": 1668,
             "size": "358.4KB",
             "gzip": "268.3KB",
@@ -81,7 +82,7 @@ window.wciMetadata = {
         },
         {
             "name": "box",
-            "duration": 19178,
+            "duration": 21610,
             "total": 1600,
             "size": "318.4KB",
             "gzip": "238.1KB",
@@ -92,7 +93,7 @@ window.wciMetadata = {
         },
         {
             "name": "carbon",
-            "duration": 21953,
+            "duration": 23795,
             "total": 1914,
             "size": "331.1KB",
             "gzip": "247.6KB",
@@ -103,7 +104,7 @@ window.wciMetadata = {
         },
         {
             "name": "coreui",
-            "duration": 12707,
+            "duration": 15340,
             "total": 554,
             "size": "146.3KB",
             "gzip": "107.8KB",
@@ -114,7 +115,7 @@ window.wciMetadata = {
         },
         {
             "name": "cssgg",
-            "duration": 12823,
+            "duration": 14582,
             "total": 704,
             "size": "92.5KB",
             "gzip": "67.0KB",
@@ -124,8 +125,19 @@ window.wciMetadata = {
             "license": "MIT"
         },
         {
+            "name": "dev",
+            "duration": 12461,
+            "total": 192,
+            "size": "223.5KB",
+            "gzip": "166.4KB",
+            "url": "https://github.com/vorillaz/devicons",
+            "package": "devicons",
+            "version": "1.8.0",
+            "license": "MIT"
+        },
+        {
             "name": "eva",
-            "duration": 10489,
+            "duration": 11107,
             "total": 490,
             "size": "79.6KB",
             "gzip": "57.5KB",
@@ -136,7 +148,7 @@ window.wciMetadata = {
         },
         {
             "name": "feather",
-            "duration": 7584,
+            "duration": 9275,
             "total": 287,
             "size": "33.2KB",
             "gzip": "22.3KB",
@@ -147,7 +159,7 @@ window.wciMetadata = {
         },
         {
             "name": "flag",
-            "duration": 10818,
+            "duration": 11313,
             "total": 512,
             "size": "105.0KB",
             "gzip": "76.8KB",
@@ -158,7 +170,7 @@ window.wciMetadata = {
         },
         {
             "name": "flat",
-            "duration": 10123,
+            "duration": 10600,
             "total": 329,
             "size": "92.8KB",
             "gzip": "67.2KB",
@@ -169,7 +181,7 @@ window.wciMetadata = {
         },
         {
             "name": "fluent",
-            "duration": 33536,
+            "duration": 35169,
             "total": 3871,
             "size": "721.0KB",
             "gzip": "540.7KB",
@@ -180,7 +192,7 @@ window.wciMetadata = {
         },
         {
             "name": "grommet",
-            "duration": 9283,
+            "duration": 10743,
             "total": 615,
             "size": "120.8KB",
             "gzip": "88.7KB",
@@ -191,7 +203,7 @@ window.wciMetadata = {
         },
         {
             "name": "hero",
-            "duration": 8665,
+            "duration": 8632,
             "total": 460,
             "size": "63.4KB",
             "gzip": "45.2KB",
@@ -202,10 +214,10 @@ window.wciMetadata = {
         },
         {
             "name": "iconoir",
-            "duration": 12749,
-            "total": 939,
-            "size": "124.7KB",
-            "gzip": "91.4KB",
+            "duration": 14027,
+            "total": 941,
+            "size": "124.8KB",
+            "gzip": "91.5KB",
             "url": "https://github.com/lucaburgio/iconoir",
             "package": "iconoir",
             "version": "1.0.0",
@@ -213,7 +225,7 @@ window.wciMetadata = {
         },
         {
             "name": "ionic",
-            "duration": 12201,
+            "duration": 14276,
             "total": 918,
             "size": "250.8KB",
             "gzip": "187.1KB",
@@ -224,7 +236,7 @@ window.wciMetadata = {
         },
         {
             "name": "material",
-            "duration": 28460,
+            "duration": 29701,
             "total": 4172,
             "size": "505.5KB",
             "gzip": "378.9KB",
@@ -235,7 +247,7 @@ window.wciMetadata = {
         },
         {
             "name": "mdi",
-            "duration": 35291,
+            "duration": 37317,
             "total": 6696,
             "size": "1019.3KB",
             "gzip": "766.1KB",
@@ -246,7 +258,7 @@ window.wciMetadata = {
         },
         {
             "name": "mono",
-            "duration": 6615,
+            "duration": 8102,
             "total": 180,
             "size": "38.7KB",
             "gzip": "26.7KB",
@@ -257,7 +269,7 @@ window.wciMetadata = {
         },
         {
             "name": "oct",
-            "duration": 8913,
+            "duration": 9882,
             "total": 490,
             "size": "123.5KB",
             "gzip": "90.8KB",
@@ -268,7 +280,7 @@ window.wciMetadata = {
         },
         {
             "name": "park",
-            "duration": 24869,
+            "duration": 27379,
             "total": 2437,
             "size": "330.0KB",
             "gzip": "246.7KB",
@@ -279,7 +291,7 @@ window.wciMetadata = {
         },
         {
             "name": "remix",
-            "duration": 17675,
+            "duration": 18339,
             "total": 2271,
             "size": "320.2KB",
             "gzip": "239.5KB",
@@ -290,7 +302,7 @@ window.wciMetadata = {
         },
         {
             "name": "simple",
-            "duration": 27816,
+            "duration": 28358,
             "total": 2228,
             "size": "1.8MB",
             "gzip": "1.4MB",
@@ -301,18 +313,18 @@ window.wciMetadata = {
         },
         {
             "name": "tabler",
-            "duration": 16379,
-            "total": 1719,
-            "size": "151.0KB",
-            "gzip": "111.4KB",
+            "duration": 17743,
+            "total": 1747,
+            "size": "152.9KB",
+            "gzip": "112.9KB",
             "url": "https://github.com/tabler/tabler-icons",
             "package": "@tabler/icons",
-            "version": "1.63.0",
+            "version": "1.64.0",
             "license": "MIT"
         },
         {
             "name": "typ",
-            "duration": 7959,
+            "duration": 7576,
             "total": 336,
             "size": "111.1KB",
             "gzip": "81.2KB",
@@ -323,7 +335,7 @@ window.wciMetadata = {
         },
         {
             "name": "vscode",
-            "duration": 6160,
+            "duration": 8245,
             "total": 408,
             "size": "116.9KB",
             "gzip": "85.7KB",

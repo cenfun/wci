@@ -7,9 +7,10 @@ module.exports = {
     onSVGDocument: function($svg) {
         $svg.attr('fill', 'currentColor');
     },
-    onSVGName: function(name) {
+    onSVGName: function(name, item) {
         //replace -- to -
         name = name.split(/-+/).join('-');
-        return name.toLowerCase();
+        name = name.toLowerCase();
+        return this.onSVGNameDefault(name, item);
     }
 };

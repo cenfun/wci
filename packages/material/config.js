@@ -13,6 +13,6 @@ module.exports = {
     onSVGName: function(name, item) {
         name = name.toLowerCase();
         name = name.split('_').join('-');
-        return `${name}-${item.namespace}`;
+        return this.onSVGNameDefault(name, item);
     }
 };

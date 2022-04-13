@@ -1,14 +1,12 @@
 module.exports = {
-    package: 'iconoir',
-    url: 'https://github.com/lucaburgio/iconoir',
-    dirs: [
-        'node_modules/iconoir/icons'
-    ],
+    package: 'devicons',
+    url: 'https://github.com/vorillaz/devicons',
+    dirs: 'node_modules/devicons/!SVG',
     readme: '',
     license: 'MIT',
     onSVGName: function(name, item) {
         name = name.toLowerCase();
-        name = name.split(/\s+/).join('-');
+        name = name.split('_').join('-');
         return this.onSVGNameDefault(name, item);
     }
 };
