@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "b952d9d",
+    "commit": "d43d189",
     "branch": "main",
-    "timestamp": "2022-04-13T01:25:02.925Z",
+    "timestamp": "2022-04-14T00:09:26.299Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -38,7 +38,7 @@ window.wciMetadata = {
     "list": [
         {
             "name": "ant",
-            "duration": 13953,
+            "duration": 21793,
             "total": 639,
             "size": "203.5KB",
             "gzip": "151.3KB",
@@ -49,10 +49,10 @@ window.wciMetadata = {
         },
         {
             "name": "awesome",
-            "duration": 23494,
+            "duration": 16554,
             "total": 1385,
-            "size": "473.4KB",
-            "gzip": "354.9KB",
+            "size": "472.6KB",
+            "gzip": "354.4KB",
             "url": "https://github.com/FortAwesome/Font-Awesome",
             "package": "@fortawesome/free-solid-svg-icons",
             "version": "6.1.1",
@@ -60,7 +60,7 @@ window.wciMetadata = {
         },
         {
             "name": "blueprint",
-            "duration": 16014,
+            "duration": 30690,
             "total": 555,
             "size": "132.8KB",
             "gzip": "97.8KB",
@@ -71,7 +71,7 @@ window.wciMetadata = {
         },
         {
             "name": "bootstrap",
-            "duration": 23335,
+            "duration": 33569,
             "total": 1668,
             "size": "358.4KB",
             "gzip": "268.3KB",
@@ -82,7 +82,7 @@ window.wciMetadata = {
         },
         {
             "name": "box",
-            "duration": 21610,
+            "duration": 29760,
             "total": 1600,
             "size": "318.4KB",
             "gzip": "238.1KB",
@@ -93,7 +93,7 @@ window.wciMetadata = {
         },
         {
             "name": "carbon",
-            "duration": 23795,
+            "duration": 16783,
             "total": 1914,
             "size": "331.1KB",
             "gzip": "247.6KB",
@@ -104,7 +104,7 @@ window.wciMetadata = {
         },
         {
             "name": "coreui",
-            "duration": 15340,
+            "duration": 17728,
             "total": 554,
             "size": "146.3KB",
             "gzip": "107.8KB",
@@ -115,7 +115,7 @@ window.wciMetadata = {
         },
         {
             "name": "cssgg",
-            "duration": 14582,
+            "duration": 17693,
             "total": 704,
             "size": "92.5KB",
             "gzip": "67.0KB",
@@ -126,10 +126,10 @@ window.wciMetadata = {
         },
         {
             "name": "dev",
-            "duration": 12461,
+            "duration": 10827,
             "total": 192,
-            "size": "223.5KB",
-            "gzip": "166.4KB",
+            "size": "223.9KB",
+            "gzip": "166.6KB",
             "url": "https://github.com/vorillaz/devicons",
             "package": "devicons",
             "version": "1.8.0",
@@ -137,7 +137,7 @@ window.wciMetadata = {
         },
         {
             "name": "eva",
-            "duration": 11107,
+            "duration": 10099,
             "total": 490,
             "size": "79.6KB",
             "gzip": "57.5KB",
@@ -148,7 +148,7 @@ window.wciMetadata = {
         },
         {
             "name": "feather",
-            "duration": 9275,
+            "duration": 8998,
             "total": 287,
             "size": "33.2KB",
             "gzip": "22.3KB",
@@ -159,7 +159,7 @@ window.wciMetadata = {
         },
         {
             "name": "flag",
-            "duration": 11313,
+            "duration": 13328,
             "total": 512,
             "size": "105.0KB",
             "gzip": "76.8KB",
@@ -170,7 +170,7 @@ window.wciMetadata = {
         },
         {
             "name": "flat",
-            "duration": 10600,
+            "duration": 10111,
             "total": 329,
             "size": "92.8KB",
             "gzip": "67.2KB",
@@ -181,7 +181,7 @@ window.wciMetadata = {
         },
         {
             "name": "fluent",
-            "duration": 35169,
+            "duration": 76578,
             "total": 3871,
             "size": "721.0KB",
             "gzip": "540.7KB",
@@ -192,7 +192,7 @@ window.wciMetadata = {
         },
         {
             "name": "grommet",
-            "duration": 10743,
+            "duration": 10061,
             "total": 615,
             "size": "120.8KB",
             "gzip": "88.7KB",
@@ -203,7 +203,7 @@ window.wciMetadata = {
         },
         {
             "name": "hero",
-            "duration": 8632,
+            "duration": 6116,
             "total": 460,
             "size": "63.4KB",
             "gzip": "45.2KB",
@@ -214,7 +214,7 @@ window.wciMetadata = {
         },
         {
             "name": "iconoir",
-            "duration": 14027,
+            "duration": 15380,
             "total": 941,
             "size": "124.8KB",
             "gzip": "91.5KB",
@@ -225,7 +225,7 @@ window.wciMetadata = {
         },
         {
             "name": "ionic",
-            "duration": 14276,
+            "duration": 21995,
             "total": 918,
             "size": "250.8KB",
             "gzip": "187.1KB",
@@ -236,7 +236,7 @@ window.wciMetadata = {
         },
         {
             "name": "material",
-            "duration": 29701,
+            "duration": 45369,
             "total": 4172,
             "size": "505.5KB",
             "gzip": "378.9KB",
@@ -247,7 +247,7 @@ window.wciMetadata = {
         },
         {
             "name": "mdi",
-            "duration": 37317,
+            "duration": 64981,
             "total": 6696,
             "size": "1019.3KB",
             "gzip": "766.1KB",
@@ -258,7 +258,7 @@ window.wciMetadata = {
         },
         {
             "name": "mono",
-            "duration": 8102,
+            "duration": 4940,
             "total": 180,
             "size": "38.7KB",
             "gzip": "26.7KB",
@@ -269,7 +269,7 @@ window.wciMetadata = {
         },
         {
             "name": "oct",
-            "duration": 9882,
+            "duration": 7504,
             "total": 490,
             "size": "123.5KB",
             "gzip": "90.8KB",
@@ -280,7 +280,7 @@ window.wciMetadata = {
         },
         {
             "name": "park",
-            "duration": 27379,
+            "duration": 59177,
             "total": 2437,
             "size": "330.0KB",
             "gzip": "246.7KB",
@@ -291,7 +291,7 @@ window.wciMetadata = {
         },
         {
             "name": "remix",
-            "duration": 18339,
+            "duration": 21862,
             "total": 2271,
             "size": "320.2KB",
             "gzip": "239.5KB",
@@ -302,7 +302,7 @@ window.wciMetadata = {
         },
         {
             "name": "simple",
-            "duration": 28358,
+            "duration": 62010,
             "total": 2228,
             "size": "1.8MB",
             "gzip": "1.4MB",
@@ -313,7 +313,7 @@ window.wciMetadata = {
         },
         {
             "name": "tabler",
-            "duration": 17743,
+            "duration": 11356,
             "total": 1747,
             "size": "152.9KB",
             "gzip": "112.9KB",
@@ -324,7 +324,7 @@ window.wciMetadata = {
         },
         {
             "name": "typ",
-            "duration": 7576,
+            "duration": 9995,
             "total": 336,
             "size": "111.1KB",
             "gzip": "81.2KB",
@@ -335,7 +335,7 @@ window.wciMetadata = {
         },
         {
             "name": "vscode",
-            "duration": 8245,
+            "duration": 7878,
             "total": 408,
             "size": "116.9KB",
             "gzip": "85.7KB",

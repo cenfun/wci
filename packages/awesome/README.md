@@ -1,7 +1,7 @@
 # wci-awesome
 Built from [@fortawesome/free-solid-svg-icons@6.1.1](https://github.com/FortAwesome/Font-Awesome)  
 
-1385 icons / size: 473.4KB / gzip: 354.9KB  
+1385 icons / size: 472.6KB / gzip: 354.4KB  
 
 
 

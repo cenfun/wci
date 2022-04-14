@@ -5,14 +5,14 @@
 |   |Name                            |Icons  |Size      |Gzip      |License             |Built from                    
 |---|--------------------------------|-------|----------|----------|--------------------|------------------------------
 |1  |[ant](packages/ant)             |639    |203.5KB   |151.3KB   |MIT                 |[@ant-design/icons-svg@4.2.1](https://github.com/ant-design/ant-design-icons)
-|2  |[awesome](packages/awesome)     |1385   |473.4KB   |354.9KB   |CC BY 4.0           |[@fortawesome/free-solid-svg-icons@6.1.1](https://github.com/FortAwesome/Font-Awesome)
+|2  |[awesome](packages/awesome)     |1385   |472.6KB   |354.4KB   |CC BY 4.0           |[@fortawesome/free-solid-svg-icons@6.1.1](https://github.com/FortAwesome/Font-Awesome)
 |3  |[blueprint](packages/blueprint) |555    |132.8KB   |97.8KB    |Apache 2.0          |[@blueprintjs/icons@4.2.3](https://github.com/palantir/blueprint)
 |4  |[bootstrap](packages/bootstrap) |1668   |358.4KB   |268.3KB   |MIT                 |[bootstrap-icons@1.8.1](https://github.com/twbs/icons)
 |5  |[box](packages/box)             |1600   |318.4KB   |238.1KB   |MIT                 |[boxicons@2.1.2](https://github.com/atisawd/boxicons)
 |6  |[carbon](packages/carbon)       |1914   |331.1KB   |247.6KB   |Apache 2.0          |[@carbon/icons@11.0.2](https://github.com/carbon-design-system/carbon)
 |7  |[coreui](packages/coreui)       |554    |146.3KB   |107.8KB   |CC BY 4.0           |[@coreui/icons@2.1.0](https://github.com/coreui/coreui-icons)
 |8  |[cssgg](packages/cssgg)         |704    |92.5KB    |67.0KB    |MIT                 |[css.gg@2.0.0](https://github.com/astrit/css.gg)
-|9  |[dev](packages/dev)             |192    |223.5KB   |166.4KB   |MIT                 |[devicons@1.8.0](https://github.com/vorillaz/devicons)
+|9  |[dev](packages/dev)             |192    |223.9KB   |166.6KB   |MIT                 |[devicons@1.8.0](https://github.com/vorillaz/devicons)
 |10 |[eva](packages/eva)             |490    |79.6KB    |57.5KB    |MIT                 |[eva-icons@1.1.3](https://github.com/akveo/eva-icons)
 |11 |[feather](packages/feather)     |287    |33.2KB    |22.3KB    |MIT                 |[feather-icons@4.29.0](https://github.com/feathericons/feather)
 |12 |[flag](packages/flag)           |512    |105.0KB   |76.8KB    |MIT                 |[country-flag-icons@1.4.25](https://gitlab.com/catamphetamine/country-flag-icons)

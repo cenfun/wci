@@ -30,8 +30,8 @@ module.exports = {
             const w = icon[0];
             const h = icon[1];
             const d = icon[4];
-            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" fill="currentColor">
-                <path d="${d}"/>
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}">
+                <path fill="currentColor" d="${d}"/>
             </svg>
             `;
   
