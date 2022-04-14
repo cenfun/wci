@@ -272,7 +272,7 @@ const renderPackage = function(option, item) {
 
     $('.wci-info').innerHTML = `
         <div class="wci-title">${item.name}</div>
-        <div class="wci-link"><a href="${item.url}" target="_blank">${item.package}${item.version} - ${item.license}</a></div>
+        <div class="wci-link"><a href="${item.url}" target="_blank">${item.package}@${item.version} - ${item.license}</a></div>
         <div class="wci-stats">bundle: ${bundle} / <b>${item.total}</b> icons / size: ${item.size} / gzip: ${item.gzip}</div>
     `;
     
