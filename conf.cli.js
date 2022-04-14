@@ -16,25 +16,34 @@ const copyFiles = (templateList, replaceData, componentPath, Util) => {
 const getMarkDownTable = function(d) {
     //console.log(d);
     const lines = [];
-    if (d.headers) {
-        const line = [''];
-        d.headers.forEach((c, i) => {
-            const w = d.columns[i];
-            line.push(c.padEnd(w, ' '));
-        });
-        lines.push(line.join('|'));
-    }
+
+    const header = [''];
+    d.columns.forEach((c, i) => {
+        const cn = c.name || '';
+        header.push(cn.padEnd(c.width, ' '));
+    });
+    lines.push(header.join('|'));
+
     const line = [''];
-    d.columns.forEach(w => {
-        line.push(''.padEnd(w, '-'));
+    d.columns.forEach(c => {
+        if (c.align === 'right') {
+            line.push(`${''.padEnd(c.width - 1, '-')}:`);
+        } else {
+            line.push(''.padEnd(c.width, '-'));
+        }
+        
     });
     lines.push(line.join('|'));
 
     d.rows.forEach((r) => {
         const row = [''];
-        d.columns.forEach((w, i) => {
+        d.columns.forEach((c, i) => {
             const s = `${r[i]}`;
-            row.push(s.padEnd(w, ' '));
+            if (c.align === 'right') {
+                row.push(s.padStart(c.width, ' '));
+            } else {
+                row.push(s.padEnd(c.width, ' '));
+            }
         });
         lines.push(row.join('|'));
     });
@@ -225,7 +234,7 @@ module.exports = {
                 return [
                     i + 1,
                     `[${item.name}](packages/${item.name})`,
-                    item.total,
+                    item.total.toLocaleString(),
                     item.size,
                     item.gzip,
                     item.license,
@@ -235,8 +244,32 @@ module.exports = {
             readmeList.push(['', 'Total', total.toLocaleString(), '', '', '', '']);
  
             const readmeTable = getMarkDownTable({
-                headers: ['', 'Name', 'Icons', 'Size', 'Gzip', 'License', 'Built from'],
-                columns: [3, 32, 7, 10, 10, 20, 30],
+                columns: [{
+                    name: '',
+                    width: 2,
+                    align: 'right'
+                }, {
+                    name: 'Name',
+                    width: 32
+                }, {
+                    name: 'Icons',
+                    width: 7,
+                    align: 'right'
+                }, {
+                    name: 'Size',
+                    width: 8,
+                    align: 'right'
+                }, {
+                    name: 'Gzip',
+                    width: 8,
+                    align: 'right'
+                }, {
+                    name: 'License',
+                    width: 15
+                }, {
+                    name: 'Built from',
+                    width: 35
+                }],
                 rows: readmeList
             });
             let readmeContent = Util.readFileContentSync(path.resolve(__dirname, 'template/README.md'));
