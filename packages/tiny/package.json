@@ -1,0 +1,15 @@
+{
+    "name": "wci-tiny",
+    "version": "1.0.5",
+    "description": "Web components icons built from super-tiny-icons",
+    "main": "dist/wci-tiny.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

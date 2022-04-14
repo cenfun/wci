@@ -528,7 +528,7 @@ const loadLibs = function() {
     const loadHandler = function(item) {
         loaded += 1;
         const per = Math.round(loaded / total * 100);
-        $loadingLabel.innerHTML = `${per}% loaded ${item}`;
+        $loadingLabel.innerHTML = `${item} ... ${per}% loaded`;
         if (loaded >= total) {
             $loading.style.display = 'none';
             render(metadata);

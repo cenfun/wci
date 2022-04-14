@@ -30,6 +30,7 @@
 |24|[remix](packages/remix)         |  2,271| 320.2KB| 239.5KB|Apache 2.0     |[remixicon@2.5.0](https://github.com/Remix-Design/RemixIcon)
 |25|[simple](packages/simple)       |  2,228|   1.8MB|   1.4MB|CC0 1.0        |[simple-icons@6.18.0](https://github.com/simple-icons/simple-icons)
 |26|[tabler](packages/tabler)       |  1,747| 152.9KB| 112.9KB|MIT            |[@tabler/icons@1.64.0](https://github.com/tabler/tabler-icons)
-|27|[typ](packages/typ)             |    336| 111.1KB|  81.2KB|SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
-|28|[vscode](packages/vscode)       |    408| 116.9KB|  85.7KB|MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
-|  |Total                           | 38,599|        |        |               |                                   
+|27|[tiny](packages/tiny)           |    275|  86.1KB|  62.5KB|MIT            |[super-tiny-icons@0.4.0](https://github.com/edent/SuperTinyIcons)
+|28|[typ](packages/typ)             |    336| 111.1KB|  81.2KB|SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
+|29|[vscode](packages/vscode)       |    408| 116.9KB|  85.7KB|MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
+|  |Total                           | 38,874|        |        |               |                                   

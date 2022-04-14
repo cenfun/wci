@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "cfc6ee6",
+    "commit": "b2929b4",
     "branch": "main",
-    "timestamp": "2022-04-14T00:56:47.252Z",
+    "timestamp": "2022-04-14T14:05:21.613Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -32,6 +32,7 @@ window.wciMetadata = {
         "wci-remix.js",
         "wci-simple.js",
         "wci-tabler.js",
+        "wci-tiny.js",
         "wci-typ.js",
         "wci-vscode.js"
     ],
@@ -294,6 +295,16 @@ window.wciMetadata = {
             "url": "https://github.com/tabler/tabler-icons",
             "package": "@tabler/icons",
             "version": "1.64.0",
+            "license": "MIT"
+        },
+        {
+            "name": "tiny",
+            "total": 275,
+            "size": "86.1KB",
+            "gzip": "62.5KB",
+            "url": "https://github.com/edent/SuperTinyIcons",
+            "package": "super-tiny-icons",
+            "version": "0.4.0",
             "license": "MIT"
         },
         {
