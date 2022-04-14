@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "b2929b4",
+    "commit": "e402e8a",
     "branch": "main",
-    "timestamp": "2022-04-14T14:05:21.613Z",
+    "timestamp": "2022-04-14T14:21:42.864Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -20,6 +20,7 @@ window.wciMetadata = {
         "wci-flag.js",
         "wci-flat.js",
         "wci-fluent.js",
+        "wci-foundation.js",
         "wci-grommet.js",
         "wci-hero.js",
         "wci-iconoir.js",
@@ -175,6 +176,16 @@ window.wciMetadata = {
             "url": "https://github.com/microsoft/fluentui-system-icons",
             "package": "@fluentui/svg-icons",
             "version": "1.1.166",
+            "license": "MIT"
+        },
+        {
+            "name": "foundation",
+            "total": 283,
+            "size": "151.7KB",
+            "gzip": "112.1KB",
+            "url": "https://github.com/zurb/foundation-icon-fonts",
+            "package": "foundation-icons",
+            "version": "1.0.1",
             "license": "MIT"
         },
         {
