@@ -1,6 +1,6 @@
 {
     "name": "wci-ant",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Web components icons built from @ant-design/icons-svg",
     "main": "dist/wci-ant.js",
     "files": [

@@ -1,6 +1,6 @@
 {
     "name": "wci-foundation",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Web components icons built from foundation-icons",
     "main": "dist/wci-foundation.js",
     "files": [

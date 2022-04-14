@@ -1,6 +1,6 @@
 {
     "name": "wci-maki",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Web components icons built from @mapbox/maki",
     "main": "dist/wci-maki.js",
     "files": [
