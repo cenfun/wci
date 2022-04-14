@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "d43d189",
+    "commit": "cfc6ee6",
     "branch": "main",
-    "timestamp": "2022-04-14T00:09:26.299Z",
+    "timestamp": "2022-04-14T00:56:47.252Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -38,7 +38,6 @@ window.wciMetadata = {
     "list": [
         {
             "name": "ant",
-            "duration": 21793,
             "total": 639,
             "size": "203.5KB",
             "gzip": "151.3KB",
@@ -49,7 +48,6 @@ window.wciMetadata = {
         },
         {
             "name": "awesome",
-            "duration": 16554,
             "total": 1385,
             "size": "472.6KB",
             "gzip": "354.4KB",
@@ -60,7 +58,6 @@ window.wciMetadata = {
         },
         {
             "name": "blueprint",
-            "duration": 30690,
             "total": 555,
             "size": "132.8KB",
             "gzip": "97.8KB",
@@ -71,7 +68,6 @@ window.wciMetadata = {
         },
         {
             "name": "bootstrap",
-            "duration": 33569,
             "total": 1668,
             "size": "358.4KB",
             "gzip": "268.3KB",
@@ -82,7 +78,6 @@ window.wciMetadata = {
         },
         {
             "name": "box",
-            "duration": 29760,
             "total": 1600,
             "size": "318.4KB",
             "gzip": "238.1KB",
@@ -93,7 +88,6 @@ window.wciMetadata = {
         },
         {
             "name": "carbon",
-            "duration": 16783,
             "total": 1914,
             "size": "331.1KB",
             "gzip": "247.6KB",
@@ -104,7 +98,6 @@ window.wciMetadata = {
         },
         {
             "name": "coreui",
-            "duration": 17728,
             "total": 554,
             "size": "146.3KB",
             "gzip": "107.8KB",
@@ -115,7 +108,6 @@ window.wciMetadata = {
         },
         {
             "name": "cssgg",
-            "duration": 17693,
             "total": 704,
             "size": "92.5KB",
             "gzip": "67.0KB",
@@ -126,7 +118,6 @@ window.wciMetadata = {
         },
         {
             "name": "dev",
-            "duration": 10827,
             "total": 192,
             "size": "223.9KB",
             "gzip": "166.6KB",
@@ -137,7 +128,6 @@ window.wciMetadata = {
         },
         {
             "name": "eva",
-            "duration": 10099,
             "total": 490,
             "size": "79.6KB",
             "gzip": "57.5KB",
@@ -148,7 +138,6 @@ window.wciMetadata = {
         },
         {
             "name": "feather",
-            "duration": 8998,
             "total": 287,
             "size": "33.2KB",
             "gzip": "22.3KB",
@@ -159,7 +148,6 @@ window.wciMetadata = {
         },
         {
             "name": "flag",
-            "duration": 13328,
             "total": 512,
             "size": "105.0KB",
             "gzip": "76.8KB",
@@ -170,7 +158,6 @@ window.wciMetadata = {
         },
         {
             "name": "flat",
-            "duration": 10111,
             "total": 329,
             "size": "92.8KB",
             "gzip": "67.2KB",
@@ -181,7 +168,6 @@ window.wciMetadata = {
         },
         {
             "name": "fluent",
-            "duration": 76578,
             "total": 3871,
             "size": "721.0KB",
             "gzip": "540.7KB",
@@ -192,7 +178,6 @@ window.wciMetadata = {
         },
         {
             "name": "grommet",
-            "duration": 10061,
             "total": 615,
             "size": "120.8KB",
             "gzip": "88.7KB",
@@ -203,7 +188,6 @@ window.wciMetadata = {
         },
         {
             "name": "hero",
-            "duration": 6116,
             "total": 460,
             "size": "63.4KB",
             "gzip": "45.2KB",
@@ -214,7 +198,6 @@ window.wciMetadata = {
         },
         {
             "name": "iconoir",
-            "duration": 15380,
             "total": 941,
             "size": "124.8KB",
             "gzip": "91.5KB",
@@ -225,7 +208,6 @@ window.wciMetadata = {
         },
         {
             "name": "ionic",
-            "duration": 21995,
             "total": 918,
             "size": "250.8KB",
             "gzip": "187.1KB",
@@ -236,7 +218,6 @@ window.wciMetadata = {
         },
         {
             "name": "material",
-            "duration": 45369,
             "total": 4172,
             "size": "505.5KB",
             "gzip": "378.9KB",
@@ -247,7 +228,6 @@ window.wciMetadata = {
         },
         {
             "name": "mdi",
-            "duration": 64981,
             "total": 6696,
             "size": "1019.3KB",
             "gzip": "766.1KB",
@@ -258,7 +238,6 @@ window.wciMetadata = {
         },
         {
             "name": "mono",
-            "duration": 4940,
             "total": 180,
             "size": "38.7KB",
             "gzip": "26.7KB",
@@ -269,7 +248,6 @@ window.wciMetadata = {
         },
         {
             "name": "oct",
-            "duration": 7504,
             "total": 490,
             "size": "123.5KB",
             "gzip": "90.8KB",
@@ -280,7 +258,6 @@ window.wciMetadata = {
         },
         {
             "name": "park",
-            "duration": 59177,
             "total": 2437,
             "size": "330.0KB",
             "gzip": "246.7KB",
@@ -291,7 +268,6 @@ window.wciMetadata = {
         },
         {
             "name": "remix",
-            "duration": 21862,
             "total": 2271,
             "size": "320.2KB",
             "gzip": "239.5KB",
@@ -302,7 +278,6 @@ window.wciMetadata = {
         },
         {
             "name": "simple",
-            "duration": 62010,
             "total": 2228,
             "size": "1.8MB",
             "gzip": "1.4MB",
@@ -313,7 +288,6 @@ window.wciMetadata = {
         },
         {
             "name": "tabler",
-            "duration": 11356,
             "total": 1747,
             "size": "152.9KB",
             "gzip": "112.9KB",
@@ -324,7 +298,6 @@ window.wciMetadata = {
         },
         {
             "name": "typ",
-            "duration": 9995,
             "total": 336,
             "size": "111.1KB",
             "gzip": "81.2KB",
@@ -335,7 +308,6 @@ window.wciMetadata = {
         },
         {
             "name": "vscode",
-            "duration": 7878,
             "total": 408,
             "size": "116.9KB",
             "gzip": "85.7KB",

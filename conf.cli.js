@@ -218,7 +218,6 @@ module.exports = {
                 }
                 return {
                     name: job.name,
-                    duration: job.duration,
                     ... job.metadata
                 };
             });
