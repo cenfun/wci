@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "0f0285e",
+    "commit": "0603189",
     "branch": "main",
-    "timestamp": "2022-04-14T14:41:21.225Z",
+    "timestamp": "2022-04-14T14:53:03.948Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -36,7 +36,8 @@ window.wciMetadata = {
         "wci-tabler.js",
         "wci-tiny.js",
         "wci-typ.js",
-        "wci-vscode.js"
+        "wci-vscode.js",
+        "wci-zond.js"
     ],
     "list": [
         {
@@ -348,6 +349,16 @@ window.wciMetadata = {
             "package": "@vscode/codicons",
             "version": "0.0.29",
             "license": "MIT"
+        },
+        {
+            "name": "zond",
+            "total": 297,
+            "size": "35.6KB",
+            "gzip": "24.1KB",
+            "url": "https://www.zondicons.com/",
+            "package": "zondicons",
+            "version": "1.2.0",
+            "license": "CC BY 4.0"
         }
     ]
 };

@@ -35,4 +35,5 @@
 |29|[tiny](packages/tiny)           |    275|  86.1KB|  62.5KB|MIT            |[super-tiny-icons@0.4.0](https://github.com/edent/SuperTinyIcons)
 |30|[typ](packages/typ)             |    336| 111.1KB|  81.2KB|SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
 |31|[vscode](packages/vscode)       |    408| 116.9KB|  85.7KB|MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
-|  |Total                           | 39,648|        |        |               |                                   
+|32|[zond](packages/zond)           |    297|  35.6KB|  24.1KB|CC BY 4.0      |[zondicons@1.2.0](https://www.zondicons.com/)
+|  |Total                           | 39,945|        |        |               |                                   

@@ -40,7 +40,8 @@
         "remixicon": "^2.5.0",
         "simple-icons": "^6.18.0",
         "super-tiny-icons": "^0.4.0",
-        "typicons.font": "^2.1.2"
+        "typicons.font": "^2.1.2",
+        "zondicons": "^1.2.0"
     },
     "devDependencies": {
         "eslint": "^8.13.0",
