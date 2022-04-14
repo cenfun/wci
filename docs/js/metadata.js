@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "e402e8a",
+    "commit": "0f0285e",
     "branch": "main",
-    "timestamp": "2022-04-14T14:21:42.864Z",
+    "timestamp": "2022-04-14T14:41:21.225Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -23,6 +23,7 @@ window.wciMetadata = {
         "wci-foundation.js",
         "wci-grommet.js",
         "wci-hero.js",
+        "wci-icomoon.js",
         "wci-iconoir.js",
         "wci-ionic.js",
         "wci-material.js",
@@ -207,6 +208,16 @@ window.wciMetadata = {
             "package": "heroicons",
             "version": "1.0.6",
             "license": "MIT"
+        },
+        {
+            "name": "icomoon",
+            "total": 491,
+            "size": "119.0KB",
+            "gzip": "87.4KB",
+            "url": "https://github.com/Keyamoon/IcoMoon-Free",
+            "package": "icomoon-free-npm",
+            "version": "0.0.0",
+            "license": "CC BY 4.0"
         },
         {
             "name": "iconoir",

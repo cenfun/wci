@@ -1,0 +1,15 @@
+{
+    "name": "wci-icomoon",
+    "version": "1.0.5",
+    "description": "Web components icons built from icomoon-free-npm",
+    "main": "dist/wci-icomoon.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
