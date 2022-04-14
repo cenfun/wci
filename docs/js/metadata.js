@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.5",
-    "commit": "0603189",
+    "commit": "1433285",
     "branch": "main",
-    "timestamp": "2022-04-14T14:53:03.948Z",
+    "timestamp": "2022-04-14T15:28:35.880Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -26,6 +26,7 @@ window.wciMetadata = {
         "wci-icomoon.js",
         "wci-iconoir.js",
         "wci-ionic.js",
+        "wci-maki.js",
         "wci-material.js",
         "wci-mdi.js",
         "wci-mono.js",
@@ -239,6 +240,16 @@ window.wciMetadata = {
             "package": "ionicons",
             "version": "6.0.1",
             "license": "MIT"
+        },
+        {
+            "name": "maki",
+            "total": 204,
+            "size": "57.3KB",
+            "gzip": "40.5KB",
+            "url": "https://github.com/mapbox/maki",
+            "package": "@mapbox/maki",
+            "version": "7.1.0",
+            "license": "CC0 1.0"
         },
         {
             "name": "material",

@@ -1,0 +1,15 @@
+{
+    "name": "wci-maki",
+    "version": "1.0.5",
+    "description": "Web components icons built from @mapbox/maki",
+    "main": "dist/wci-maki.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
