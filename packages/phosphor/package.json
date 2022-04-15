@@ -1,0 +1,15 @@
+{
+    "name": "wci-phosphor",
+    "version": "1.0.6",
+    "description": "Web components icons built from phosphor-icons",
+    "main": "dist/wci-phosphor.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
