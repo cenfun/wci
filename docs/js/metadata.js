@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "eebc7f1",
+    "commit": "d2fdb96",
     "branch": "main",
-    "timestamp": "2022-04-15T14:20:18.599Z",
+    "timestamp": "2022-04-15T14:54:28.264Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -25,6 +25,7 @@ window.wciMetadata = {
         "wci-hero.js",
         "wci-icomoon.js",
         "wci-iconoir.js",
+        "wci-ikonate.js",
         "wci-ionic.js",
         "wci-maki.js",
         "wci-material.js",
@@ -230,6 +231,16 @@ window.wciMetadata = {
             "url": "https://github.com/lucaburgio/iconoir",
             "package": "iconoir",
             "version": "1.0.0",
+            "license": "MIT"
+        },
+        {
+            "name": "ikonate",
+            "total": 283,
+            "size": "34.4KB",
+            "gzip": "23.2KB",
+            "url": "https://github.com/mikolajdobrucki/ikonate",
+            "package": "ikonate",
+            "version": "1.1.1",
             "license": "MIT"
         },
         {
