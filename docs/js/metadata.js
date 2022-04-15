@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "3f847b0",
+    "commit": "eebc7f1",
     "branch": "main",
-    "timestamp": "2022-04-14T16:01:31.433Z",
+    "timestamp": "2022-04-15T14:20:18.599Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -38,6 +38,7 @@ window.wciMetadata = {
         "wci-tiny.js",
         "wci-typ.js",
         "wci-vscode.js",
+        "wci-weather.js",
         "wci-zond.js"
     ],
     "list": [
@@ -360,6 +361,16 @@ window.wciMetadata = {
             "package": "@vscode/codicons",
             "version": "0.0.29",
             "license": "MIT"
+        },
+        {
+            "name": "weather",
+            "total": 219,
+            "size": "144.7KB",
+            "gzip": "106.6KB",
+            "url": "https://github.com/erikflowers/weather-icons",
+            "package": "weather-icons-npm",
+            "version": "10.0.0",
+            "license": "SIL OFL 1.1"
         },
         {
             "name": "zond",

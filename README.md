@@ -36,5 +36,6 @@
 |30|[tiny](packages/tiny)           |    275|  86.1KB|  62.5KB|MIT            |[super-tiny-icons@0.4.0](https://github.com/edent/SuperTinyIcons)
 |31|[typ](packages/typ)             |    336| 111.1KB|  81.2KB|SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
 |32|[vscode](packages/vscode)       |    408| 116.9KB|  85.7KB|MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
-|33|[zond](packages/zond)           |    297|  35.6KB|  24.1KB|CC BY 4.0      |[zondicons@1.2.0](https://www.zondicons.com/)
-|  |Total                           | 40,149|        |        |               |                                   
+|33|[weather](packages/weather)     |    219| 144.7KB| 106.6KB|SIL OFL 1.1    |[weather-icons-npm@10.0.0](https://github.com/erikflowers/weather-icons)
+|34|[zond](packages/zond)           |    297|  35.6KB|  24.1KB|CC BY 4.0      |[zondicons@1.2.0](https://www.zondicons.com/)
+|  |Total                           | 40,368|        |        |               |                                   

@@ -1,8 +1,8 @@
 {
-    "name": "wci-carbon",
+    "name": "wci-weather",
     "version": "1.0.6",
-    "description": "Web components icons built from @carbon/icons",
-    "main": "dist/wci-carbon.js",
+    "description": "Web components icons built from weather-icons-npm",
+    "main": "dist/wci-weather.js",
     "files": [
         "dist",
         "preview"

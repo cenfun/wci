@@ -42,6 +42,7 @@
         "simple-icons": "^6.18.0",
         "super-tiny-icons": "^0.4.0",
         "typicons.font": "^2.1.2",
+        "weather-icons-npm": "^10.0.0",
         "zondicons": "^1.2.0"
     },
     "devDependencies": {
@@ -52,7 +53,7 @@
         "eslint-plugin-vue": "^8.6.0",
         "file-saver": "^2.0.5",
         "postcss": "^8.4.12",
-        "postcss-html": "^1.3.1",
+        "postcss-html": "^1.4.1",
         "postcss-scss": "^4.0.3",
         "stylelint": "^14.6.1",
         "stylelint-config-recommended": "^7.0.0",
