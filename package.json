@@ -22,6 +22,7 @@
         "@material-design-icons/svg": "^0.10.8",
         "@mdi/svg": "^6.6.96",
         "@primer/octicons": "^17.0.0",
+        "@radix-ui/react-icons": "^1.1.0",
         "@tabler/icons": "^1.64.0",
         "@vscode/codicons": "^0.0.29",
         "akar-icons": "^1.9.15",
