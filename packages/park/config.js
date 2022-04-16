@@ -21,20 +21,21 @@ module.exports = {
             fs.mkdirSync(dir);
         }
 
-        const Pack = require('@icon-park/svg');
-        const keys = Object.keys(Pack);
+        const bundle = require('@icon-park/svg');
+        const keys = Object.keys(bundle);
+        //console.log(keys);
         keys.forEach(k => {
             if (k === 'setConfig' || k === 'DEFAULT_ICON_CONFIGS') {
                 return;
             }
 
-            const fun = Pack[k];
-            if (typeof fun !== 'function') {
+            const v = bundle[k];
+            if (typeof v !== 'function') {
                 console.log(k);
                 return;
             }
 
-            const svg = fun({});
+            const svg = v({});
             if (svg) {
                 fs.writeFileSync(path.resolve(dir, `${pascalToKebabCase(k)}.svg`), svg);
             }
