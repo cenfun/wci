@@ -1,11 +1,12 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "e742316",
+    "commit": "f5f7da0",
     "branch": "main",
-    "timestamp": "2022-04-16T08:24:17.649Z",
+    "timestamp": "2022-04-16T12:54:32.668Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
+        "wci-akar.js",
         "wci-ant.js",
         "wci-awesome.js",
         "wci-blueprint.js",
@@ -16,6 +17,7 @@ window.wciMetadata = {
         "wci-crypto.js",
         "wci-cssgg.js",
         "wci-dev.js",
+        "wci-element.js",
         "wci-entypo.js",
         "wci-eva.js",
         "wci-feather.js",
@@ -29,6 +31,8 @@ window.wciMetadata = {
         "wci-iconoir.js",
         "wci-ikonate.js",
         "wci-ionic.js",
+        "wci-lucide.js",
+        "wci-majest.js",
         "wci-maki.js",
         "wci-material.js",
         "wci-mdi.js",
@@ -36,16 +40,30 @@ window.wciMetadata = {
         "wci-oct.js",
         "wci-park.js",
         "wci-phosphor.js",
+        "wci-pixelart.js",
+        "wci-radix.js",
         "wci-remix.js",
         "wci-simple.js",
         "wci-tabler.js",
+        "wci-teeny.js",
         "wci-tiny.js",
         "wci-typ.js",
+        "wci-unicons.js",
         "wci-vscode.js",
         "wci-weather.js",
         "wci-zond.js"
     ],
     "list": [
+        {
+            "name": "akar",
+            "total": 379,
+            "size": "81.3KB",
+            "gzip": "58.8KB",
+            "url": "https://github.com/artcoholic/akar-icons",
+            "package": "akar-icons",
+            "version": "1.9.15",
+            "license": "MIT"
+        },
         {
             "name": "ant",
             "total": 639,
@@ -144,6 +162,16 @@ window.wciMetadata = {
             "url": "https://github.com/vorillaz/devicons",
             "package": "devicons",
             "version": "1.8.0",
+            "license": "MIT"
+        },
+        {
+            "name": "element",
+            "total": 283,
+            "size": "67.9KB",
+            "gzip": "48.8KB",
+            "url": "https://github.com/element-plus/element-plus-icons",
+            "package": "@element-plus/icons-svg",
+            "version": "1.1.4",
             "license": "MIT"
         },
         {
@@ -277,6 +305,26 @@ window.wciMetadata = {
             "license": "MIT"
         },
         {
+            "name": "lucide",
+            "total": 589,
+            "size": "56.7KB",
+            "gzip": "40.2KB",
+            "url": "https://github.com/lucide-icons/lucide",
+            "package": "lucide",
+            "version": "0.30.0",
+            "license": "ISC"
+        },
+        {
+            "name": "majest",
+            "total": 760,
+            "size": "116.0KB",
+            "gzip": "85.0KB",
+            "url": "https://github.com/halfmage/majesticons",
+            "package": "majesticons",
+            "version": "2.1.1",
+            "license": "MIT"
+        },
+        {
             "name": "maki",
             "total": 204,
             "size": "57.3KB",
@@ -347,6 +395,26 @@ window.wciMetadata = {
             "license": "MIT"
         },
         {
+            "name": "pixelart",
+            "total": 460,
+            "size": "41.0KB",
+            "gzip": "28.0KB",
+            "url": "https://github.com/halfmage/pixelarticons",
+            "package": "pixelarticons",
+            "version": "1.5.0",
+            "license": "MIT"
+        },
+        {
+            "name": "radix",
+            "total": 318,
+            "size": "83.6KB",
+            "gzip": "60.6KB",
+            "url": "https://github.com/radix-ui/icons",
+            "package": "@radix-ui/react-icons",
+            "version": "1.1.0",
+            "license": "MIT"
+        },
+        {
             "name": "remix",
             "total": 2271,
             "size": "320.2KB",
@@ -377,6 +445,16 @@ window.wciMetadata = {
             "license": "MIT"
         },
         {
+            "name": "teeny",
+            "total": 1200,
+            "size": "200.3KB",
+            "gzip": "148.8KB",
+            "url": "https://github.com/teenyicons/teenyicons",
+            "package": "teenyicons",
+            "version": "0.4.1",
+            "license": "MIT"
+        },
+        {
             "name": "tiny",
             "total": 275,
             "size": "86.1KB",
@@ -395,6 +473,16 @@ window.wciMetadata = {
             "package": "typicons.font",
             "version": "2.1.2",
             "license": "SIL Open Font"
+        },
+        {
+            "name": "unicons",
+            "total": 1395,
+            "size": "268.1KB",
+            "gzip": "200.0KB",
+            "url": "https://github.com/Iconscout/unicons",
+            "package": "@iconscout/unicons",
+            "version": "4.0.1",
+            "license": "MIT"
         },
         {
             "name": "vscode",

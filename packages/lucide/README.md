@@ -1,7 +1,7 @@
 # wci-lucide
 Built from [lucide@0.30.0](https://github.com/lucide-icons/lucide)  
 
-589 icons / size: 67.1KB / gzip: 40.3KB  
+589 icons / size: 56.7KB / gzip: 40.2KB  
 
 
 

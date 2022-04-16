@@ -1,7 +1,7 @@
 # wci-unicons
 Built from [@iconscout/unicons@4.0.1](https://github.com/Iconscout/unicons)  
 
-1395 icons / size: 278.5KB / gzip: 200.0KB  
+1395 icons / size: 268.1KB / gzip: 200.0KB  
 
 
 

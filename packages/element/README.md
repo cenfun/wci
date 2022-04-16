@@ -1,7 +1,7 @@
 # wci-element
 Built from [@element-plus/icons-svg@1.1.4](https://github.com/element-plus/element-plus-icons)  
 
-283 icons / size: 78.4KB / gzip: 48.8KB  
+283 icons / size: 67.9KB / gzip: 48.8KB  
 
 
 

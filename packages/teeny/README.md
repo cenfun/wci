@@ -1,7 +1,7 @@
 # wci-teeny
 Built from [teenyicons@0.4.1](https://github.com/teenyicons/teenyicons)  
 
-1200 icons / size: 210.6KB / gzip: 148.8KB  
+1200 icons / size: 200.3KB / gzip: 148.8KB  
 
 
 

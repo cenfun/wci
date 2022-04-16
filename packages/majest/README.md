@@ -1,7 +1,7 @@
 # wci-majest
 Built from [majesticons@2.1.1](https://github.com/halfmage/majesticons)  
 
-760 icons / size: 126.4KB / gzip: 85.0KB  
+760 icons / size: 116.0KB / gzip: 85.0KB  
 
 
 

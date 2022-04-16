@@ -1,7 +1,7 @@
 # wci-radix
 Built from [@radix-ui/react-icons@1.1.0](https://github.com/radix-ui/icons)  
 
-318 icons / size: 94.0KB / gzip: 60.6KB  
+318 icons / size: 83.6KB / gzip: 60.6KB  
 
 
 

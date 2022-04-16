@@ -1,7 +1,7 @@
 # wci-pixelart
 Built from [pixelarticons@1.5.0](https://github.com/halfmage/pixelarticons)  
 
-460 icons / size: 51.4KB / gzip: 28.1KB  
+460 icons / size: 41.0KB / gzip: 28.0KB  
 
 
 
