@@ -5,5 +5,9 @@ module.exports = {
         'node_modules/@coreui/icons/svg/free'
     ],
     readme: '',
-    license: 'CC BY 4.0'
+    license: 'CC BY 4.0',
+    onSVGName: function(name, item) {
+        name = name.replace(/^cil-/i, '');
+        return this.onSVGNameDefault(name, item);
+    }
 };
