@@ -1,7 +1,7 @@
 # wci-crypto
 Built from [cryptocurrency-icons@0.18.0](https://github.com/spothq/cryptocurrency-icons)  
 
-471 icons / size: 349.1KB / gzip: 253.6KB  
+471 icons / size: 338.7KB / gzip: 253.5KB  
 
 
 

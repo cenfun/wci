@@ -1,7 +1,7 @@
 # wci-phosphor
 Built from [phosphor-icons@1.4.2](https://github.com/phosphor-icons/phosphor-icons)  
 
-5235 icons / size: 908.2KB / gzip: 676.9KB  
+5235 icons / size: 900.3KB / gzip: 676.9KB  
 
 
 

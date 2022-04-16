@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "d2fdb96",
+    "commit": "e742316",
     "branch": "main",
-    "timestamp": "2022-04-15T14:54:28.264Z",
+    "timestamp": "2022-04-16T08:24:17.649Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -13,8 +13,10 @@ window.wciMetadata = {
         "wci-box.js",
         "wci-carbon.js",
         "wci-coreui.js",
+        "wci-crypto.js",
         "wci-cssgg.js",
         "wci-dev.js",
+        "wci-entypo.js",
         "wci-eva.js",
         "wci-feather.js",
         "wci-flag.js",
@@ -33,6 +35,7 @@ window.wciMetadata = {
         "wci-mono.js",
         "wci-oct.js",
         "wci-park.js",
+        "wci-phosphor.js",
         "wci-remix.js",
         "wci-simple.js",
         "wci-tabler.js",
@@ -106,12 +109,22 @@ window.wciMetadata = {
         {
             "name": "coreui",
             "total": 554,
-            "size": "146.3KB",
-            "gzip": "107.8KB",
+            "size": "146.1KB",
+            "gzip": "107.6KB",
             "url": "https://github.com/coreui/coreui-icons",
             "package": "@coreui/icons",
             "version": "2.1.0",
             "license": "CC BY 4.0"
+        },
+        {
+            "name": "crypto",
+            "total": 471,
+            "size": "338.7KB",
+            "gzip": "253.5KB",
+            "url": "https://github.com/spothq/cryptocurrency-icons",
+            "package": "cryptocurrency-icons",
+            "version": "0.18.0",
+            "license": "CC0 1.0"
         },
         {
             "name": "cssgg",
@@ -132,6 +145,16 @@ window.wciMetadata = {
             "package": "devicons",
             "version": "1.8.0",
             "license": "MIT"
+        },
+        {
+            "name": "entypo",
+            "total": 411,
+            "size": "122.7KB",
+            "gzip": "90.2KB",
+            "url": "https://github.com/hypermodules/entypo",
+            "package": "entypo",
+            "version": "2.2.1",
+            "license": "ISC"
         },
         {
             "name": "eva",
@@ -312,6 +335,16 @@ window.wciMetadata = {
             "package": "@icon-park/svg",
             "version": "1.3.5",
             "license": "Apache 2.0"
+        },
+        {
+            "name": "phosphor",
+            "total": 5235,
+            "size": "900.3KB",
+            "gzip": "676.9KB",
+            "url": "https://github.com/phosphor-icons/phosphor-icons",
+            "package": "phosphor-icons",
+            "version": "1.4.2",
+            "license": "MIT"
         },
         {
             "name": "remix",

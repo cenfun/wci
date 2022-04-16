@@ -1,7 +1,7 @@
 # wci-entypo
 Built from [entypo@2.2.1](https://github.com/hypermodules/entypo)  
 
-411 icons / size: 133.1KB / gzip: 90.3KB  
+411 icons / size: 122.7KB / gzip: 90.2KB  
 
 
 
