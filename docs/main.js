@@ -369,11 +369,18 @@ const getPopular = function(popularList) {
     })}`;
 };
 
-const renderMenu = function(metadata, list) {
-    const date = new Date(metadata.timestamp).toLocaleDateString();
-    const footer = `<a href="https://github.com/cenfun/wci" target="_blank">Latest: v${metadata.version} - ${date}</a>`;
+let menuGrid;
+const renderMenu = function(metadata) {
+    const turbogrid = window.turbogrid;
+    if (!turbogrid) {
+        return;
+    }
 
-    $('.wci-menu-footer').innerHTML = footer;
+    if (menuGrid) {
+        return;
+    }
+
+    const Grid = window.turbogrid.Grid;
 
     const menuData = {
         columns: [{
@@ -398,7 +405,7 @@ const renderMenu = function(metadata, list) {
             total: '',
             hash: 'finder',
             selectable: true,
-            subs: list.map(it => {
+            subs: metadata.list.map(it => {
                 return {
                     name: it.name,
                     total: it.total.toLocaleString()
@@ -408,8 +415,7 @@ const renderMenu = function(metadata, list) {
     };
 
 
-    const Grid = window.turbogrid.Grid;
-    const menuGrid = new Grid($('.wci-menu-grid'));
+    menuGrid = new Grid($('.wci-menu-grid'));
 
     menuGrid.bind('onClick', function(e, d) {
         const rowItem = menuGrid.getRowItem(d.row);
@@ -429,6 +435,11 @@ const renderMenu = function(metadata, list) {
 
     menuGrid.setData(menuData);
     menuGrid.render();
+
+    const date = new Date(metadata.timestamp).toLocaleDateString();
+    const footer = `<a href="https://github.com/cenfun/wci" target="_blank">Latest: v${metadata.version} - ${date}</a>`;
+    $('.wci-menu-footer').innerHTML = footer;
+
 };
 
 const render = function(metadata) {
@@ -436,13 +447,12 @@ const render = function(metadata) {
     const list = metadata.list;
     list.forEach(function(item) {
         const lib = window[`wci-${item.name}`];
+        if (!lib) {
+            return;
+        }
         item.tagName = lib.tagName;
         item.icon = lib.icon;
     });
-
-    console.log(list);
-
-    renderMenu(metadata, list);
 
     const gridRows = [];
     list.forEach(function(item) {
@@ -529,6 +539,7 @@ const loadLibs = function() {
         loaded += 1;
         const per = Math.round(loaded / total * 100);
         $loadingLabel.innerHTML = `${item} ... ${per}% loaded`;
+        renderMenu(metadata);
         if (loaded >= total) {
             $loading.style.display = 'none';
             render(metadata);
