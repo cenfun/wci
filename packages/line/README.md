@@ -1,14 +1,14 @@
-# wci-jam
-Built from [jam-icons@2.0.0](https://github.com/michaelampr/jam)  
+# wci-line
+Built from [line-awesome@1.3.0](https://github.com/icons8/line-awesome)  
 
-896 icons / size: 195.7KB / gzip: 145.1KB  
+1544 icons / size: 515.3KB / gzip: 386.3KB  
 
 
 
 # Preview
 ![screenshot](preview/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/#jam](https://cenfun.github.io/wci/#jam)
+Online Page: [https://cenfun.github.io/wci/#line](https://cenfun.github.io/wci/#line)
 
 # Features
 * Web Components
@@ -17,13 +17,13 @@ Online Page: [https://cenfun.github.io/wci/#jam](https://cenfun.github.io/wci/#j
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-jam
+npm install wci-line
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-jam";
+import { icon, getIcon } from "wci-line";
 
-const $icon = document.createElement("wci-jam");
+const $icon = document.createElement("wci-line");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
@@ -38,10 +38,10 @@ icon.list.forEach(item => {
 # Browser Usage
 ```html
 
-<script src="path-to/wci-jam/dist/wci-jam.js"></script>
+<script src="path-to/wci-line/dist/wci-line.js"></script>
 
-<wci-jam name="[icon-name]"></wci-jam>
-<wci-jam name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-jam>
+<wci-line name="[icon-name]"></wci-line>
+<wci-line name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-line>
 ```
 see [preview/index.html](preview/index.html)
 

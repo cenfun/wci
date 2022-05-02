@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "dd6d3c0",
+    "commit": "0582b0f",
     "branch": "main",
-    "timestamp": "2022-05-02T10:54:45.193Z",
+    "timestamp": "2022-05-02T11:34:13.568Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -32,6 +32,8 @@ window.wciMetadata = {
         "wci-iconoir.js",
         "wci-ikonate.js",
         "wci-ionic.js",
+        "wci-jam.js",
+        "wci-line.js",
         "wci-lucide.js",
         "wci-majest.js",
         "wci-maki.js",
@@ -315,6 +317,26 @@ window.wciMetadata = {
             "url": "https://github.com/ionic-team/ionicons",
             "package": "ionicons",
             "version": "6.0.1",
+            "license": "MIT"
+        },
+        {
+            "name": "jam",
+            "total": 896,
+            "size": "195.7KB",
+            "gzip": "145.1KB",
+            "url": "https://github.com/michaelampr/jam",
+            "package": "jam-icons",
+            "version": "2.0.0",
+            "license": "MIT"
+        },
+        {
+            "name": "line",
+            "total": 1544,
+            "size": "515.3KB",
+            "gzip": "386.3KB",
+            "url": "https://github.com/icons8/line-awesome",
+            "package": "line-awesome",
+            "version": "1.3.0",
             "license": "MIT"
         },
         {
