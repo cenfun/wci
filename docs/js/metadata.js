@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "61a2a94",
+    "commit": "dd6d3c0",
     "branch": "main",
-    "timestamp": "2022-05-02T10:29:32.669Z",
+    "timestamp": "2022-05-02T10:54:45.193Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -50,6 +50,7 @@ window.wciMetadata = {
         "wci-teeny.js",
         "wci-tiny.js",
         "wci-typ.js",
+        "wci-uiw.js",
         "wci-unicons.js",
         "wci-vscode.js",
         "wci-weather.js",
@@ -495,6 +496,16 @@ window.wciMetadata = {
             "package": "typicons.font",
             "version": "2.1.2",
             "license": "SIL Open Font"
+        },
+        {
+            "name": "uiw",
+            "total": 214,
+            "size": "88.9KB",
+            "gzip": "64.7KB",
+            "url": "https://github.com/uiwjs/icons",
+            "package": "@uiw/icons",
+            "version": "2.6.7",
+            "license": "MIT"
         },
         {
             "name": "unicons",

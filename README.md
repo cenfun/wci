@@ -48,8 +48,9 @@
 |42|[teeny](packages/teeny)         |  1,200| 200.3KB| 148.8KB|MIT            |[teenyicons@0.4.1](https://github.com/teenyicons/teenyicons)
 |43|[tiny](packages/tiny)           |    275|  86.1KB|  62.5KB|MIT            |[super-tiny-icons@0.4.0](https://github.com/edent/SuperTinyIcons)
 |44|[typ](packages/typ)             |    336| 111.1KB|  81.2KB|SIL Open Font  |[typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)
-|45|[unicons](packages/unicons)     |  1,395| 268.1KB| 200.0KB|MIT            |[@iconscout/unicons@4.0.1](https://github.com/Iconscout/unicons)
-|46|[vscode](packages/vscode)       |    408| 116.9KB|  85.7KB|MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
-|47|[weather](packages/weather)     |    219| 144.7KB| 106.6KB|SIL OFL 1.1    |[weather-icons-npm@10.0.0](https://github.com/erikflowers/weather-icons)
-|48|[zond](packages/zond)           |    297|  35.6KB|  24.1KB|CC BY 4.0      |[zondicons@1.2.0](https://www.zondicons.com/)
-|  |Total                           | 53,177|        |        |               |                                   
+|45|[uiw](packages/uiw)             |    214|  88.9KB|  64.7KB|MIT            |[@uiw/icons@2.6.7](https://github.com/uiwjs/icons)
+|46|[unicons](packages/unicons)     |  1,395| 268.1KB| 200.0KB|MIT            |[@iconscout/unicons@4.0.1](https://github.com/Iconscout/unicons)
+|47|[vscode](packages/vscode)       |    408| 116.9KB|  85.7KB|MIT            |[@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)
+|48|[weather](packages/weather)     |    219| 144.7KB| 106.6KB|SIL OFL 1.1    |[weather-icons-npm@10.0.0](https://github.com/erikflowers/weather-icons)
+|49|[zond](packages/zond)           |    297|  35.6KB|  24.1KB|CC BY 4.0      |[zondicons@1.2.0](https://www.zondicons.com/)
+|  |Total                           | 53,391|        |        |               |                                   
