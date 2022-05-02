@@ -1,0 +1,15 @@
+{
+    "name": "wci-jam",
+    "version": "1.0.6",
+    "description": "Web components icons built from jam-icons",
+    "main": "dist/wci-jam.js",
+    "files": [
+        "dist",
+        "preview"
+    ],
+    "repository": {
+        "url": "https://github.com/cenfun/wci.git"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
