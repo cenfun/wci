@@ -1,6 +1,6 @@
 {
     "name": "wci-radix",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from @radix-ui/react-icons",
     "main": "dist/wci-radix.js",
     "files": [

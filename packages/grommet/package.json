@@ -1,6 +1,6 @@
 {
     "name": "wci-grommet",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from grommet-icons",
     "main": "dist/wci-grommet.js",
     "files": [

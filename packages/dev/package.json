@@ -1,6 +1,6 @@
 {
     "name": "wci-dev",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from devicons",
     "main": "dist/wci-dev.js",
     "files": [

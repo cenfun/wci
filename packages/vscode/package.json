@@ -1,6 +1,6 @@
 {
     "name": "wci-vscode",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from @vscode/codicons",
     "main": "dist/wci-vscode.js",
     "files": [

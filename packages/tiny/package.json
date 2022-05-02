@@ -1,6 +1,6 @@
 {
     "name": "wci-tiny",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from super-tiny-icons",
     "main": "dist/wci-tiny.js",
     "files": [

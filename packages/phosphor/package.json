@@ -1,6 +1,6 @@
 {
     "name": "wci-phosphor",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from phosphor-icons",
     "main": "dist/wci-phosphor.js",
     "files": [

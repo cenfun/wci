@@ -1,6 +1,6 @@
 {
     "name": "wci-carbon",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from @carbon/icons",
     "main": "dist/wci-carbon.js",
     "files": [

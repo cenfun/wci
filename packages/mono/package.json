@@ -1,6 +1,6 @@
 {
     "name": "wci-mono",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from mono-icons",
     "main": "dist/wci-mono.js",
     "files": [

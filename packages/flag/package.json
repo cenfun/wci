@@ -1,6 +1,6 @@
 {
     "name": "wci-flag",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from country-flag-icons",
     "main": "dist/wci-flag.js",
     "files": [

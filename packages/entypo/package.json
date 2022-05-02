@@ -1,6 +1,6 @@
 {
     "name": "wci-entypo",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from entypo",
     "main": "dist/wci-entypo.js",
     "files": [

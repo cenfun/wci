@@ -1,6 +1,6 @@
 {
     "name": "wci-jam",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from jam-icons",
     "main": "dist/wci-jam.js",
     "files": [

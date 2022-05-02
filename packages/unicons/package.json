@@ -1,6 +1,6 @@
 {
     "name": "wci-unicons",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from @iconscout/unicons",
     "main": "dist/wci-unicons.js",
     "files": [

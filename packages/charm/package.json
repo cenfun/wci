@@ -1,6 +1,6 @@
 {
     "name": "wci-charm",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from charm-icons",
     "main": "dist/wci-charm.js",
     "files": [

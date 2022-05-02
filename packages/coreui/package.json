@@ -1,6 +1,6 @@
 {
     "name": "wci-coreui",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Web components icons built from @coreui/icons",
     "main": "dist/wci-coreui.js",
     "files": [
