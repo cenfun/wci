@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "4bcf438",
+    "commit": "7aadf99",
     "branch": "main",
-    "timestamp": "2022-05-02T09:54:44.619Z",
+    "timestamp": "2022-05-02T10:24:51.869Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -13,6 +13,7 @@ window.wciMetadata = {
         "wci-bootstrap.js",
         "wci-box.js",
         "wci-carbon.js",
+        "wci-charm.js",
         "wci-coreui.js",
         "wci-crypto.js",
         "wci-cssgg.js",
@@ -123,6 +124,16 @@ window.wciMetadata = {
             "package": "@carbon/icons",
             "version": "11.2.0",
             "license": "Apache 2.0"
+        },
+        {
+            "name": "charm",
+            "total": 250,
+            "size": "29.2KB",
+            "gzip": "19.2KB",
+            "url": "https://github.com/jaynewey/charm-icons",
+            "package": "charm-icons",
+            "version": "0.14.0",
+            "license": "MIT"
         },
         {
             "name": "coreui",
