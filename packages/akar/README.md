@@ -1,5 +1,5 @@
 # wci-akar
-Built from [akar-icons@1.9.15](https://github.com/artcoholic/akar-icons)  
+Built from [akar-icons@1.9.16](https://github.com/artcoholic/akar-icons)  
 
 379 icons / size: 81.3KB / gzip: 58.8KB  
 

@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "f5f7da0",
+    "commit": "4bcf438",
     "branch": "main",
-    "timestamp": "2022-04-16T12:54:32.668Z",
+    "timestamp": "2022-05-02T09:54:44.619Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -61,7 +61,7 @@ window.wciMetadata = {
             "gzip": "58.8KB",
             "url": "https://github.com/artcoholic/akar-icons",
             "package": "akar-icons",
-            "version": "1.9.15",
+            "version": "1.9.16",
             "license": "MIT"
         },
         {
@@ -91,7 +91,7 @@ window.wciMetadata = {
             "gzip": "97.8KB",
             "url": "https://github.com/palantir/blueprint",
             "package": "@blueprintjs/icons",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "license": "Apache 2.0"
         },
         {
@@ -121,7 +121,7 @@ window.wciMetadata = {
             "gzip": "247.6KB",
             "url": "https://github.com/carbon-design-system/carbon",
             "package": "@carbon/icons",
-            "version": "11.0.2",
+            "version": "11.2.0",
             "license": "Apache 2.0"
         },
         {
@@ -211,7 +211,7 @@ window.wciMetadata = {
             "gzip": "76.8KB",
             "url": "https://gitlab.com/catamphetamine/country-flag-icons",
             "package": "country-flag-icons",
-            "version": "1.4.25",
+            "version": "1.4.26",
             "license": "MIT"
         },
         {
@@ -226,12 +226,12 @@ window.wciMetadata = {
         },
         {
             "name": "fluent",
-            "total": 3871,
-            "size": "721.0KB",
-            "gzip": "540.7KB",
+            "total": 3935,
+            "size": "732.4KB",
+            "gzip": "549.8KB",
             "url": "https://github.com/microsoft/fluentui-system-icons",
             "package": "@fluentui/svg-icons",
-            "version": "1.1.166",
+            "version": "1.1.167",
             "license": "MIT"
         },
         {
@@ -276,12 +276,12 @@ window.wciMetadata = {
         },
         {
             "name": "iconoir",
-            "total": 941,
-            "size": "124.8KB",
-            "gzip": "91.5KB",
+            "total": 1091,
+            "size": "141.9KB",
+            "gzip": "104.5KB",
             "url": "https://github.com/lucaburgio/iconoir",
             "package": "iconoir",
-            "version": "1.0.0",
+            "version": "4.9.1",
             "license": "MIT"
         },
         {
@@ -306,12 +306,12 @@ window.wciMetadata = {
         },
         {
             "name": "lucide",
-            "total": 589,
-            "size": "56.7KB",
-            "gzip": "40.2KB",
+            "total": 595,
+            "size": "57.3KB",
+            "gzip": "40.6KB",
             "url": "https://github.com/lucide-icons/lucide",
             "package": "lucide",
-            "version": "0.30.0",
+            "version": "0.35.0",
             "license": "ISC"
         },
         {
@@ -336,12 +336,12 @@ window.wciMetadata = {
         },
         {
             "name": "material",
-            "total": 4172,
-            "size": "505.5KB",
-            "gzip": "378.9KB",
+            "total": 4246,
+            "size": "519.7KB",
+            "gzip": "389.5KB",
             "url": "https://github.com/marella/material-design-icons",
             "package": "@material-design-icons/svg",
-            "version": "0.10.8",
+            "version": "0.10.9",
             "license": "Apache 2.0"
         },
         {
@@ -426,22 +426,22 @@ window.wciMetadata = {
         },
         {
             "name": "simple",
-            "total": 2228,
+            "total": 2240,
             "size": "1.8MB",
             "gzip": "1.4MB",
             "url": "https://github.com/simple-icons/simple-icons",
             "package": "simple-icons",
-            "version": "6.18.0",
+            "version": "6.20.0",
             "license": "CC0 1.0"
         },
         {
             "name": "tabler",
-            "total": 1747,
-            "size": "152.9KB",
-            "gzip": "112.9KB",
+            "total": 1978,
+            "size": "178.1KB",
+            "gzip": "131.7KB",
             "url": "https://github.com/tabler/tabler-icons",
             "package": "@tabler/icons",
-            "version": "1.64.0",
+            "version": "1.68.0",
             "license": "MIT"
         },
         {

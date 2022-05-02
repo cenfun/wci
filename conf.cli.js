@@ -174,6 +174,11 @@ module.exports = {
                 stats
             }, componentPath, Util);
 
+            //save metadata
+            const metadataPath = path.resolve(item.outputPath, 'metadata.json');
+            Util.writeJSONSync(metadataPath, metadata);
+            
+
             //generate screenshot
             const browser = await Util.launchBrowser({
                 debug: false,
@@ -211,14 +216,20 @@ module.exports = {
 
             //console.log(option);
 
-            let buildENV;
-            const list = option.jobList.map(job => {
-                if (!buildENV) {
-                    buildENV = job.buildENV;
-                }
+            const buildENV = option.jobList[0].buildENV;
+            const componentsRoot = option.workerOption.componentsRoot;
+
+            //console.log(buildENV, componentsRoot);
+
+            const buildPath = Util.getSetting('buildPath');
+
+            const dirs = fs.readdirSync(componentsRoot);
+            
+            const list = dirs.map(dir => {
+                const metadata = Util.readJSONSync(path.resolve(componentsRoot, dir, buildPath, 'metadata.json'));
                 return {
-                    name: job.name,
-                    ... job.metadata
+                    name: dir,
+                    ... metadata
                 };
             });
 

@@ -42,7 +42,7 @@ module.exports = {
 
         const bundle = require('lucide');
         const keys = Object.keys(bundle);
-        console.log(keys);
+        //console.log(keys);
         keys.forEach(k => {
             if (k === 'createElement' || k === 'createIcons' || k === 'icons') {
                 return;
