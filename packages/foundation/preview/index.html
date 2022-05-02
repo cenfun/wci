@@ -174,7 +174,7 @@
             return c;
         };
 
-        const renderList = function(list, length, size, color, background, radius) {
+        const renderList = function(list, length, index, size, color, background, radius) {
 
             const next = [];
 
@@ -193,7 +193,8 @@
                 $icon.setAttribute('name', item.id);
                 $icon.setAttribute('size', size);
                 if (color) {
-                    const c = getColor(color, i);
+                    const c = getColor(color, index);
+                    index += 1;
                     $icon.setAttribute('color', c);
                 }
                 if (background) {
@@ -216,7 +217,7 @@
 
             if (next.length) {
                 setTimeout(function() {
-                    renderList(next, length, size, color, background, radius);
+                    renderList(next, length, index, size, color, background, radius);
                 });
             }
         };
@@ -241,7 +242,7 @@
                 return 0;
             });
 
-            renderList(list, 500, size, color, background, radius);
+            renderList(list, 600, 0, size, color, background, radius);
 
         };
 

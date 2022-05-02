@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "0582b0f",
+    "commit": "22bd5cb",
     "branch": "main",
-    "timestamp": "2022-05-02T11:34:13.568Z",
+    "timestamp": "2022-05-02T12:18:19.345Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
