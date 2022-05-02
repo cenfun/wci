@@ -1,8 +1,8 @@
 window.wciMetadata = {
     "version": "1.0.6",
-    "commit": "7aadf99",
+    "commit": "61a2a94",
     "branch": "main",
-    "timestamp": "2022-05-02T10:24:51.869Z",
+    "timestamp": "2022-05-02T10:29:32.669Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
@@ -42,6 +42,7 @@ window.wciMetadata = {
         "wci-park.js",
         "wci-phosphor.js",
         "wci-pixelart.js",
+        "wci-prime.js",
         "wci-radix.js",
         "wci-remix.js",
         "wci-simple.js",
@@ -413,6 +414,16 @@ window.wciMetadata = {
             "url": "https://github.com/halfmage/pixelarticons",
             "package": "pixelarticons",
             "version": "1.5.0",
+            "license": "MIT"
+        },
+        {
+            "name": "prime",
+            "total": 238,
+            "size": "54.3KB",
+            "gzip": "38.5KB",
+            "url": "https://github.com/primefaces/primeicons",
+            "package": "primeicons",
+            "version": "5.0.0",
             "license": "MIT"
         },
         {
