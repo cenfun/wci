@@ -444,6 +444,22 @@ const renderMenu = function(metadata) {
 
     const Grid = window.turbogrid.Grid;
 
+    const rows = metadata.list.map(it => {
+        return {
+            name: it.name,
+            total: it.total.toLocaleString()
+        };
+    });
+
+    rows.unshift({
+        name: 'Icon Finder',
+        total: '',
+        hash: 'finder',
+        selectable: true,
+        rowType: 'group',
+        subs: []
+    });
+
     const menuData = {
         columns: [{
             id: 'name',
@@ -455,25 +471,7 @@ const renderMenu = function(metadata) {
             width: 60,
             dataType: 'number'
         }],
-        rows: [{
-            name: 'Icon Finder',
-            total: '',
-            hash: 'finder',
-            selectable: true,
-            rowType: 'group',
-            subs: []
-        }, {
-            name: 'Packages',
-            total: '',
-            hash: 'finder',
-            selectable: true,
-            subs: metadata.list.map(it => {
-                return {
-                    name: it.name,
-                    total: it.total.toLocaleString()
-                };
-            })
-        }]
+        rows
     };
 
 
