@@ -6,7 +6,60 @@ const copyContent = function(content) {
     navigator.clipboard.writeText(content);
 };
 
-const saveSVGFile = function(content, name) {
+const iconAttrs = ['size', 'color', 'background', 'radius'];
+const getOption = function() {
+    const option = {};
+    iconAttrs.forEach(function(key) {
+        const value = $(`.wci-icon-${key}`).value;
+        sessionStorage.setItem(`wci-icon-${key}`, value);
+        option[key] = value;
+    });
+    return option;
+};
+
+const setOption = function() {
+    iconAttrs.forEach(function(key) {
+        const value = sessionStorage.getItem(`wci-icon-${key}`);
+        if (value) {
+            $(`.wci-icon-${key}`).value = value;
+        }
+    });
+};
+
+setOption();
+
+const savePNG = function(name) {
+    content = content.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
+    const dataUrl = `data:image/svg+xml; charset=utf8, ${encodeURIComponent(content)}`;
+    //console.log(dataUrl);
+
+    const option = getOption();
+    const size = parseInt(option.size);
+
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    canvas.style.cssText = 'position:absolute;top:0;right:0;';
+    const ctx = canvas.getContext('2d');
+    document.body.appendChild(canvas);
+
+    const img = document.createElement('img');
+    img.width = size;
+    img.height = size;
+    img.src = dataUrl;
+    img.onload = function() {
+        ctx.drawImage(img, 0, 0);
+        document.body.removeChild(img);
+        canvas.toBlob(function(blob) {
+            window.saveAs(blob, `${name}.png`);
+            document.body.removeChild(canvas);
+        });
+    };
+    document.body.appendChild(img);
+
+};
+
+const saveSVG = function(content, name) {
     //add xmlns
     content = content.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
     const blob = new Blob([content], {
@@ -14,6 +67,7 @@ const saveSVGFile = function(content, name) {
     });
     window.saveAs(blob, `${name}.svg`);
 };
+
 
 const getColor = function(c, colorIndex) {
     const colors = [
@@ -38,28 +92,6 @@ const getIcon = function(r, size, color, background, radius) {
     const c = getColor(color, r.tg_g_index);
     return `<${r.tag} name="${r.name}" size="${size}" color="${c}" background="${background}" radius="${radius}"></${r.tag}>`;
 };
-
-const iconAttrs = ['size', 'color', 'background', 'radius'];
-const getOption = function() {
-    const option = {};
-    iconAttrs.forEach(function(key) {
-        const value = $(`.wci-icon-${key}`).value;
-        sessionStorage.setItem(`wci-icon-${key}`, value);
-        option[key] = value;
-    });
-    return option;
-};
-
-const setOption = function() {
-    iconAttrs.forEach(function(key) {
-        const value = sessionStorage.getItem(`wci-icon-${key}`);
-        if (value) {
-            $(`.wci-icon-${key}`).value = value;
-        }
-    });
-};
-
-setOption();
 
 
 let grid;
@@ -88,7 +120,12 @@ const initGrid = function() {
         }
         if ($target.classList.contains('wci-icon-download')) {
             const row = grid.getRowItem(d.row);
-            saveSVGFile(row.svg, row.name);
+            const type = $target.getAttribute('name');
+            if (type === 'png') {
+                savePNG(row.name);
+                return;
+            }
+            saveSVG(row.svg, row.name);
         }
     });
     grid.showLoading();
@@ -148,8 +185,11 @@ const renderFinder = function(option, list, rows) {
             }
             return `<textarea spellcheck="false">${this.getFormatter('icon')(v, r)}</textarea>`;
         },
-        download: function(v) {
-            return '<wci-tabler class="wci-icon-action wci-icon-download" name="download" size="16px" title="download svg file"></wci-tabler>';
+        downloadSvg: function(v) {
+            return '<wci-carbon class="wci-icon-action wci-icon-download" name="svg" size="16px" title="download svg file"></wci-carbon>';
+        },
+        downloadPng: function(v) {
+            return '<wci-carbon class="wci-icon-action wci-icon-download" name="png" size="16px" title="download png file"></wci-carbon>';
         }
     });
     grid.setData({
@@ -174,11 +214,19 @@ const renderFinder = function(option, list, rows) {
             name: 'Name',
             width: 240
         }, {
-            id: 'download',
+            id: 'downloadSvg',
             name: '',
             align: 'center',
-            formatter: 'download',
-            width: 50
+            formatter: 'downloadSvg',
+            resizable: false,
+            width: 30
+        }, {
+            id: 'downloadPng',
+            name: '',
+            align: 'center',
+            formatter: 'downloadPng',
+            resizable: false,
+            width: 30
         }, {
             id: 'svg',
             name: 'Pure SVG',
@@ -508,7 +556,7 @@ const render = function(metadata) {
     $('.wci-package').addEventListener('click', function(e) {
         const $elem = e.target;
         if ($elem.tagName.includes('-')) {
-            saveSVGFile($elem.svg, $elem.parentNode.title);
+            saveSVG($elem.svg, $elem.parentNode.title);
         }
     });
 
