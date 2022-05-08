@@ -30,7 +30,7 @@ setOption();
 
 const savePNG = function(content, name) {
     content = content.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
-    const dataUrl = `data:image/svg+xml; charset=utf8, ${encodeURIComponent(content)}`;
+    const dataUrl = `data:image/svg+xml;charset=utf8,${encodeURIComponent(content)}`;
     //console.log(dataUrl);
 
     const option = getOption();
@@ -183,6 +183,11 @@ const renderFinder = function(option, list, rows) {
             if (c.id === 'svg') {
                 return `<textarea spellcheck="false">${v}</textarea>`;
             }
+            if (c.id === 'dataUrl') {
+                const content = r.svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
+                const dataUrl = `data:image/svg+xml;charset=utf8,${encodeURIComponent(content)}`;
+                return `<textarea spellcheck="false">${dataUrl}</textarea>`;
+            }
             return `<textarea spellcheck="false">${this.getFormatter('icon')(v, r)}</textarea>`;
         },
         downloadSvg: function(v) {
@@ -236,6 +241,14 @@ const renderFinder = function(option, list, rows) {
             width: 260,
             maxWidth: 1000
         }, {
+            id: 'dataUrl',
+            name: 'Data URL',
+            columnClass: 'wci-textarea',
+            formatter: 'textarea',
+            sortable: false,
+            width: 260,
+            maxWidth: 1000
+        }, {
             id: 'wc',
             name: 'Web component',
             columnClass: 'wci-textarea',
@@ -253,6 +266,7 @@ const renderFinder = function(option, list, rows) {
             name: '',
             align: 'center',
             formatter: 'copy',
+            sortable: false,
             width: 50
         }],
         rows
