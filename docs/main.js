@@ -28,7 +28,7 @@ const setOption = function() {
 
 setOption();
 
-const savePNG = function(name) {
+const savePNG = function(content, name) {
     content = content.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
     const dataUrl = `data:image/svg+xml; charset=utf8, ${encodeURIComponent(content)}`;
     //console.log(dataUrl);
@@ -122,7 +122,7 @@ const initGrid = function() {
             const row = grid.getRowItem(d.row);
             const type = $target.getAttribute('name');
             if (type === 'png') {
-                savePNG(row.name);
+                savePNG(row.svg, row.name);
                 return;
             }
             saveSVG(row.svg, row.name);
