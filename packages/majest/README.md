@@ -1,12 +1,12 @@
 # wci-majest
 Built from [majesticons@2.1.1](https://github.com/halfmage/majesticons)  
 
-760 icons / size: 116.0KB / gzip: 85.0KB  
+760 icons / size: 112.8KB / gzip: 83.9KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#majest](https://cenfun.github.io/wci/#majest)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-majest name="[icon-name]"></wci-majest>
 <wci-majest name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-majest>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

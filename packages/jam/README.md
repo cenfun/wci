@@ -1,12 +1,12 @@
 # wci-jam
 Built from [jam-icons@2.0.0](https://github.com/michaelampr/jam)  
 
-896 icons / size: 195.7KB / gzip: 145.1KB  
+896 icons / size: 192.6KB / gzip: 144.1KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#jam](https://cenfun.github.io/wci/#jam)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-jam name="[icon-name]"></wci-jam>
 <wci-jam name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-jam>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

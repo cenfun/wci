@@ -1,12 +1,12 @@
 # wci-flag
-Built from [country-flag-icons@1.4.26](https://gitlab.com/catamphetamine/country-flag-icons)  
+Built from [country-flag-icons@1.5.5](https://gitlab.com/catamphetamine/country-flag-icons)  
 
-512 icons / size: 105.0KB / gzip: 76.8KB  
+512 icons / size: 102.0KB / gzip: 75.7KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#flag](https://cenfun.github.io/wci/#flag)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-flag name="[icon-name]"></wci-flag>
 <wci-flag name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-flag>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

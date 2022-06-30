@@ -1,12 +1,12 @@
 # wci-coreui
 Built from [@coreui/icons@2.1.0](https://github.com/coreui/coreui-icons)  
 
-554 icons / size: 146.1KB / gzip: 107.6KB  
+554 icons / size: 143.0KB / gzip: 106.5KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#coreui](https://cenfun.github.io/wci/#coreui)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-coreui name="[icon-name]"></wci-coreui>
 <wci-coreui name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-coreui>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-blueprint
-Built from [@blueprintjs/icons@4.2.4](https://github.com/palantir/blueprint)  
+Built from [@blueprintjs/icons@4.3.0](https://github.com/palantir/blueprint)  
 
-555 icons / size: 132.8KB / gzip: 97.8KB  
+556 icons / size: 130.2KB / gzip: 97.0KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#blueprint](https://cenfun.github.io/wci/#blueprint)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-blueprint name="[icon-name]"></wci-blueprint>
 <wci-blueprint name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-blueprint>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

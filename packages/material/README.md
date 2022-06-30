@@ -1,12 +1,12 @@
 # wci-material
-Built from [@material-design-icons/svg@0.10.9](https://github.com/marella/material-design-icons)  
+Built from [@material-design-icons/svg@0.11.3](https://github.com/marella/material-design-icons)  
 
-4246 icons / size: 519.7KB / gzip: 389.5KB  
+4248 icons / size: 517.5KB / gzip: 389.2KB  
 
 No sharp/round/two-tone icons
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#material](https://cenfun.github.io/wci/#material)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-material name="[icon-name]"></wci-material>
 <wci-material name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-material>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-mdi
-Built from [@mdi/svg@6.6.96](https://github.com/Templarian/MaterialDesign-SVG)  
+Built from [@mdi/svg@6.8.96](https://github.com/Templarian/MaterialDesign-SVG)  
 
-6696 icons / size: 1019.3KB / gzip: 766.1KB  
+6896 icons / size: 1.0MB / gzip: 790.6KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#mdi](https://cenfun.github.io/wci/#mdi)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-mdi name="[icon-name]"></wci-mdi>
 <wci-mdi name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-mdi>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

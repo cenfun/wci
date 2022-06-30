@@ -1,12 +1,12 @@
 # wci-line
 Built from [line-awesome@1.3.0](https://github.com/icons8/line-awesome)  
 
-1544 icons / size: 515.3KB / gzip: 386.3KB  
+1544 icons / size: 512.2KB / gzip: 385.3KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#line](https://cenfun.github.io/wci/#line)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-line name="[icon-name]"></wci-line>
 <wci-line name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-line>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -3,7 +3,7 @@ const path = require('path');
 
 const copyFiles = (templateList, replaceData, componentPath, Util) => {
     const templatePath = path.resolve('./template/package');
-    templateList.forEach(file => {
+    templateList.forEach((file) => {
         const absPath = path.resolve(templatePath, file);
         const relPath = path.relative(templatePath, absPath);
         const toPath = path.resolve(componentPath, relPath);
@@ -25,13 +25,13 @@ const getMarkDownTable = function(d) {
     lines.push(header.join('|'));
 
     const line = [''];
-    d.columns.forEach(c => {
+    d.columns.forEach((c) => {
         if (c.align === 'right') {
             line.push(`${''.padEnd(c.width - 1, '-')}:`);
         } else {
             line.push(''.padEnd(c.width, '-'));
         }
-        
+
     });
     lines.push(line.join('|'));
 
@@ -53,23 +53,25 @@ const getMarkDownTable = function(d) {
 
 module.exports = {
 
-    addPreCommitHook: false,
-
-    webpackConfig: (conf, Util) => {
-
-        conf.devtool = false;
-
-        return conf;
+    precommit: {
+        gitHook: false
     },
 
-    hooks: {
+    build: {
 
-        beforeBuildAll: (list, Util) => {
+        webpackConfig: (conf, Util) => {
+
+            conf.devtool = false;
+
+            return conf;
+        },
+
+        beforeAll: (list, Util) => {
 
             return 0;
         },
 
-        beforeBuild: (item, Util) => {
+        before: (item, Util) => {
 
             const componentPath = item.componentPath;
 
@@ -123,11 +125,11 @@ module.exports = {
                 version,
                 packageName: option.package
             }, componentPath, Util);
-            
+
             return 0;
         },
 
-        afterBuild: async (item, Util) => {
+        after: async (item, Util) => {
 
             const componentPath = item.componentPath;
             const option = require(path.resolve(componentPath, 'config.js'));
@@ -137,7 +139,7 @@ module.exports = {
             }
 
             const metadata = item.metadata;
-            
+
             const id = item.name;
             const packagePath = path.resolve(`node_modules/${option.package}/package.json`);
             let version = '';
@@ -164,7 +166,7 @@ module.exports = {
             metadata.license = option.license;
 
             copyFiles([
-                'preview/index.html',
+                'public/index.html',
                 'README.md'
             ], {
                 id,
@@ -175,9 +177,9 @@ module.exports = {
             }, componentPath, Util);
 
             //save metadata
-            const metadataPath = path.resolve(item.outputPath, 'metadata.json');
+            const metadataPath = path.resolve(item.buildPath, 'metadata.json');
             Util.writeJSONSync(metadataPath, metadata);
-            
+
 
             //generate screenshot
             const browser = await Util.launchBrowser({
@@ -190,14 +192,14 @@ module.exports = {
                 height: 600
             });
 
-            const previewUrl = path.resolve(item.previewPath, 'index.html');
-            await page.goto(previewUrl);
+            const devUrl = path.resolve(item.devPath, 'index.html');
+            await page.goto(devUrl);
 
             await page.evaluate(() => {
                 document.body.style.overflow = 'hidden';
             });
 
-            const screenshotPath = path.resolve(item.previewPath, 'screenshot.png');
+            const screenshotPath = path.resolve(item.devPath, 'screenshot.png');
             await page.screenshot({
                 //fullPage: true,
                 path: screenshotPath
@@ -208,7 +210,7 @@ module.exports = {
             return 0;
         },
 
-        afterBuildAll: (option, Util) => {
+        afterAll: (option, Util) => {
 
             if (!Util.option.minify) {
                 return 0;
@@ -216,16 +218,16 @@ module.exports = {
 
             //console.log(option);
 
-            const buildENV = option.jobList[0].buildENV;
+            const env = option.jobList[0].env;
             const componentsRoot = option.workerOption.componentsRoot;
 
             //console.log(buildENV, componentsRoot);
 
-            const buildPath = Util.getSetting('buildPath');
+            const buildPath = Util.getConfig('build.path');
 
             const dirs = fs.readdirSync(componentsRoot);
-            
-            const list = dirs.map(dir => {
+
+            const list = dirs.map((dir) => {
                 const metadata = Util.readJSONSync(path.resolve(componentsRoot, dir, buildPath, 'metadata.json'));
                 return {
                     name: dir,
@@ -252,7 +254,7 @@ module.exports = {
                 ];
             });
             readmeList.push(['', 'Total', total.toLocaleString(), '', '', '', '']);
- 
+
             const readmeTable = getMarkDownTable({
                 columns: [{
                     name: '',
@@ -287,7 +289,7 @@ module.exports = {
             const readmePath = path.resolve(__dirname, 'README.md');
             Util.writeFileContentSync(readmePath, readmeContent);
             console.log('generated README.md');
-    
+
             //================================================================================
             console.log('generating docs ....');
 
@@ -306,15 +308,15 @@ module.exports = {
                 'filesaver.js': 'node_modules/file-saver/dist/FileSaver.min.js'
             };
 
-            Object.keys(vendors).forEach(key => {
+            Object.keys(vendors).forEach((key) => {
                 fs.copyFileSync(path.resolve(__dirname, vendors[key]), path.resolve(jsPath, key));
                 libs.push(key);
                 console.log(`copied ${key}`);
             });
-          
+
 
             //copy packages
-            list.forEach(p => {
+            list.forEach((p) => {
                 const fn = `wci-${p.name}.js`;
                 fs.copyFileSync(path.resolve(__dirname, `packages/${p.name}/dist/${fn}`), path.resolve(jsPath, fn));
                 libs.push(fn);
@@ -325,7 +327,7 @@ module.exports = {
             console.log('generating metadata ....');
             const metadataPath = path.resolve(jsPath, 'metadata.js');
             const metadata = {
-                ... buildENV,
+                ... env,
                 libs,
                 list
             };

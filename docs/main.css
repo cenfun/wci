@@ -128,15 +128,15 @@ a:hover {
     height: 25px;
 }
 
-.wci-menu-grid .tg-turbogrid .tg-row .tg-tree-name {
+.wci-menu-grid .tg-row .tg-tree-name {
     cursor: pointer;
 }
 
-.wci-menu-grid .tg-turbogrid .tg-scrollbar-thumb {
+.wci-menu-grid .tg-pane .tg-scrollbar-thumb {
     background-color: #666;
 }
 
-.wci-menu-grid .tg-turbogrid .tg-scrollbar-thumb:hover {
+.wci-menu-grid .tg-pane .tg-scrollbar-thumb:hover {
     background-color: #999;
 }
 
@@ -283,24 +283,32 @@ a:hover {
 }
 
 .wci-searcher {
-    border-radius: 10px;
-    padding: 10px 15px;
     width: 100%;
-    background-color: #eee;
+    position: relative;
 }
 
 .wci-keywords {
-    border: none;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 10px 45px 10px 15px;
+    background-color: #eee;
     height: 32px;
     line-height: 32px;
     outline: none;
-    margin-right: 5px;
     font-size: 18px;
-    background-color: transparent;
+    box-sizing: content-box;
+    display: block;
+    width: calc(100% - 60px);
 }
 
 .wci-keywords:focus {
-    border: none;
+    border: 2px solid lightblue;
+}
+
+.wci-searcher-icon {
+    position: absolute;
+    right: 10px;
+    top: 13px;
 }
 
 .wci-popular {

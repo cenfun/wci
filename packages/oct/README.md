@@ -1,12 +1,12 @@
 # wci-oct
-Built from [@primer/octicons@17.0.0](https://github.com/primer/octicons)  
+Built from [@primer/octicons@17.3.0](https://github.com/primer/octicons)  
 
-490 icons / size: 123.5KB / gzip: 90.8KB  
+506 icons / size: 129.5KB / gzip: 96.5KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#oct](https://cenfun.github.io/wci/#oct)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-oct name="[icon-name]"></wci-oct>
 <wci-oct name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-oct>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

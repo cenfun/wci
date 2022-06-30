@@ -1,12 +1,12 @@
 # wci-teeny
 Built from [teenyicons@0.4.1](https://github.com/teenyicons/teenyicons)  
 
-1200 icons / size: 200.3KB / gzip: 148.8KB  
+1200 icons / size: 197.1KB / gzip: 147.7KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#teeny](https://cenfun.github.io/wci/#teeny)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-teeny name="[icon-name]"></wci-teeny>
 <wci-teeny name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-teeny>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

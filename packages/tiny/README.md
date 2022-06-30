@@ -1,12 +1,12 @@
 # wci-tiny
 Built from [super-tiny-icons@0.4.0](https://github.com/edent/SuperTinyIcons)  
 
-275 icons / size: 86.1KB / gzip: 62.5KB  
+275 icons / size: 82.9KB / gzip: 61.4KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#tiny](https://cenfun.github.io/wci/#tiny)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-tiny name="[icon-name]"></wci-tiny>
 <wci-tiny name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-tiny>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

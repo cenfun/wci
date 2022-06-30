@@ -1,12 +1,12 @@
 # wci-crypto
 Built from [cryptocurrency-icons@0.18.0](https://github.com/spothq/cryptocurrency-icons)  
 
-471 icons / size: 338.7KB / gzip: 253.5KB  
+471 icons / size: 335.6KB / gzip: 252.4KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#crypto](https://cenfun.github.io/wci/#crypto)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-crypto name="[icon-name]"></wci-crypto>
 <wci-crypto name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-crypto>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

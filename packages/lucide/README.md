@@ -1,12 +1,12 @@
 # wci-lucide
-Built from [lucide@0.35.0](https://github.com/lucide-icons/lucide)  
+Built from [lucide@0.72.0](https://github.com/lucide-icons/lucide)  
 
-595 icons / size: 57.3KB / gzip: 40.6KB  
+777 icons / size: 70.7KB / gzip: 52.1KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#lucide](https://cenfun.github.io/wci/#lucide)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-lucide name="[icon-name]"></wci-lucide>
 <wci-lucide name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-lucide>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

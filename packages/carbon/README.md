@@ -1,12 +1,12 @@
 # wci-carbon
-Built from [@carbon/icons@11.2.0](https://github.com/carbon-design-system/carbon)  
+Built from [@carbon/icons@11.5.0](https://github.com/carbon-design-system/carbon)  
 
-1914 icons / size: 331.1KB / gzip: 247.6KB  
+1930 icons / size: 334.4KB / gzip: 251.4KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#carbon](https://cenfun.github.io/wci/#carbon)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-carbon name="[icon-name]"></wci-carbon>
 <wci-carbon name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-carbon>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-mono
 Built from [mono-icons@1.3.1](https://github.com/mono-company/mono-icons)  
 
-180 icons / size: 38.7KB / gzip: 26.7KB  
+180 icons / size: 35.6KB / gzip: 25.5KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#mono](https://cenfun.github.io/wci/#mono)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-mono name="[icon-name]"></wci-mono>
 <wci-mono name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-mono>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

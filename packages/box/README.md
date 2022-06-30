@@ -1,12 +1,12 @@
 # wci-box
 Built from [boxicons@2.1.2](https://github.com/atisawd/boxicons)  
 
-1600 icons / size: 318.4KB / gzip: 238.1KB  
+1600 icons / size: 315.2KB / gzip: 237.0KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#box](https://cenfun.github.io/wci/#box)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-box name="[icon-name]"></wci-box>
 <wci-box name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-box>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

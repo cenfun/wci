@@ -1,12 +1,12 @@
 # wci-eva
 Built from [eva-icons@1.1.3](https://github.com/akveo/eva-icons)  
 
-490 icons / size: 79.6KB / gzip: 57.5KB  
+490 icons / size: 76.5KB / gzip: 56.4KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#eva](https://cenfun.github.io/wci/#eva)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-eva name="[icon-name]"></wci-eva>
 <wci-eva name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-eva>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

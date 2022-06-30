@@ -89,7 +89,7 @@ const getColor = function(c, colorIndex) {
 };
 
 const getIcon = function(r, size, color, background, radius) {
-    const c = getColor(color, r.tg_g_index);
+    const c = getColor(color, r.tg_index);
     return `<${r.tag} name="${r.name}" size="${size}" color="${c}" background="${background}" radius="${radius}"></${r.tag}>`;
 };
 
@@ -147,8 +147,6 @@ const renderFinder = function(option, list, rows) {
     grid.setOption({
         rowHeight: cellSize,
         frozenColumn: 1,
-        //showCheckbox: true,
-        showRowNumber: false,
         bindWindowResize: true,
         bindContainerResize: true,
         rowNotFound: '<div class="wci-not-found">Not found results</div>',
@@ -211,7 +209,7 @@ const renderFinder = function(option, list, rows) {
             width: cellSize,
             minWidth: cellSize,
             align: 'center',
-            columnClass: 'wci-icon',
+            classMap: 'wci-icon',
             formatter: 'icon',
             sortable: false
         }, {
@@ -235,7 +233,7 @@ const renderFinder = function(option, list, rows) {
         }, {
             id: 'svg',
             name: 'Pure SVG',
-            columnClass: 'wci-textarea',
+            classMap: 'wci-textarea',
             formatter: 'textarea',
             sortable: false,
             width: 260,
@@ -243,7 +241,7 @@ const renderFinder = function(option, list, rows) {
         }, {
             id: 'dataUrl',
             name: 'Data URL',
-            columnClass: 'wci-textarea',
+            classMap: 'wci-textarea',
             formatter: 'textarea',
             sortable: false,
             width: 260,
@@ -251,7 +249,7 @@ const renderFinder = function(option, list, rows) {
         }, {
             id: 'wc',
             name: 'Web component',
-            columnClass: 'wci-textarea',
+            classMap: 'wci-textarea',
             formatter: 'textarea',
             sortable: false,
             width: 260,
@@ -316,7 +314,7 @@ const renderList = function($container, list, option) {
         $container.appendChild($div);
 
         option.index += 1;
-        
+
     });
 
     if (next.length) {
@@ -337,7 +335,7 @@ const renderPackage = function(option, item) {
         <div class="wci-link"><a href="${item.url}" target="_blank">${item.package}@${item.version} - ${item.license}</a></div>
         <div class="wci-stats">bundle: ${bundle} / <b>${item.total}</b> icons / size: ${item.size} / gzip: ${item.gzip}</div>
     `;
-    
+
     const $container = $('.wci-package');
     $container.innerHTML = '';
 
@@ -361,7 +359,7 @@ const renderPackage = function(option, item) {
 };
 
 const renderView = function(list, gridRows) {
-    
+
     const hash = location.hash.substr(1);
     //console.log(hash);
     const $package = $('.wci-package');
@@ -375,7 +373,7 @@ const renderView = function(list, gridRows) {
 
 
     if (hash) {
-        const item = list.find(it => it.name === hash);
+        const item = list.find((it) => it.name === hash);
         if (item) {
             $package.style.display = 'block';
             renderPackage(option, item);
@@ -390,7 +388,7 @@ const renderView = function(list, gridRows) {
 
 const popularMap = {};
 const addPopular = function(n) {
-    n.split('-').forEach(w => {
+    n.split('-').forEach((w) => {
         if (w.length < 2) {
             return;
         }
@@ -404,7 +402,7 @@ const addPopular = function(n) {
 
 const initPopular = function() {
     const popularList = [];
-    Object.keys(popularMap).map(k => {
+    Object.keys(popularMap).map((k) => {
         const num = popularMap[k];
         if (num > 10) {
             popularList.push(k);
@@ -426,7 +424,7 @@ const getPopular = function(popularList) {
         }
     }
 
-    return `Popular: ${list.map(item => {
+    return `Popular: ${list.map((item) => {
         return `<span>${item}</span>`;
     })}`;
 };
@@ -444,7 +442,7 @@ const renderMenu = function(metadata) {
 
     const Grid = window.turbogrid.Grid;
 
-    const rows = metadata.list.map(it => {
+    const rows = metadata.list.map((it) => {
         return {
             name: it.name,
             total: it.total.toLocaleString()
@@ -455,16 +453,15 @@ const renderMenu = function(metadata) {
         name: 'Icon Finder',
         total: '',
         hash: 'finder',
-        selectable: true,
-        rowType: 'group',
-        subs: []
+        type: 'finder',
+        selectable: true
     });
 
     const menuData = {
         columns: [{
             id: 'name',
             name: 'Name',
-            width: 120
+            width: 98
         }, {
             id: 'total',
             name: 'Total',
@@ -478,17 +475,32 @@ const renderMenu = function(metadata) {
     menuGrid = new Grid($('.wci-menu-grid'));
 
     menuGrid.bind('onClick', function(e, d) {
-        const rowItem = menuGrid.getRowItem(d.row);
+        if (!d.rowNode) {
+            return;
+        }
+        const rowItem = d.rowItem;
         document.location.hash = rowItem.hash || rowItem.name;
-        menuGrid.setSelectedRow(d.row);
+        menuGrid.setRowSelected(rowItem, d.e);
+    });
+
+    menuGrid.setFormatter({
+        rowNumber: function(value, rowItem, columnItem, cellNode) {
+            const defaultFormatter = this.getDefaultFormatter('rowNumber');
+            if (rowItem.type === 'finder') {
+                return '<svg pointer-events="none" width="100%" height="100%" viewBox="0 0 24 24"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor"><path d="M0 0h24v24H0z" stroke="none"/><circle cx="10" cy="10" r="7"/><path d="m21 21-6-6"/></g></svg>';
+            }
+            return defaultFormatter(value, rowItem, columnItem, cellNode);
+        }
     });
 
     menuGrid.setOption({
         theme: 'dark',
-        showHeader: false,
+        headerVisible: false,
         frozenRow: 0,
         frozenRowHoverable: true,
-        multiSelect: false,
+        selectMultiple: false,
+        rowNumberVisible: true,
+        rowNumberWidth: 30,
         bindWindowResize: true,
         bindContainerResize: true
     });
@@ -516,7 +528,7 @@ const render = function(metadata) {
 
     const gridRows = [];
     list.forEach(function(item) {
-        item.icon.list.forEach(ic => {
+        item.icon.list.forEach((ic) => {
 
             const iconName = ic.id;
             addPopular(iconName);
@@ -605,7 +617,7 @@ const loadLibs = function() {
             render(metadata);
         }
     };
-            
+
     libs.forEach(function(item, i) {
         const $script = document.createElement('script');
         $script.src = `js/${item}`;

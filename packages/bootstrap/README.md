@@ -1,12 +1,12 @@
 # wci-bootstrap
-Built from [bootstrap-icons@1.8.1](https://github.com/twbs/icons)  
+Built from [bootstrap-icons@1.8.3](https://github.com/twbs/icons)  
 
-1668 icons / size: 358.4KB / gzip: 268.3KB  
+1668 icons / size: 355.6KB / gzip: 267.4KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#bootstrap](https://cenfun.github.io/wci/#bootstrap)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-bootstrap name="[icon-name]"></wci-bootstrap>
 <wci-bootstrap name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-bootstrap>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

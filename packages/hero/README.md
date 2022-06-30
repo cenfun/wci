@@ -1,12 +1,12 @@
 # wci-hero
 Built from [heroicons@1.0.6](https://github.com/tailwindlabs/heroicons)  
 
-460 icons / size: 63.4KB / gzip: 45.2KB  
+460 icons / size: 60.3KB / gzip: 44.1KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#hero](https://cenfun.github.io/wci/#hero)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-hero name="[icon-name]"></wci-hero>
 <wci-hero name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-hero>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

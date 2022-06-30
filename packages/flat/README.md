@@ -1,12 +1,12 @@
 # wci-flat
 Built from [flat-color-icons@1.1.0](https://github.com/icons8/flat-color-icons)  
 
-329 icons / size: 92.8KB / gzip: 67.2KB  
+329 icons / size: 89.7KB / gzip: 66.2KB  
 
 Fixed Color
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#flat](https://cenfun.github.io/wci/#flat)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-flat name="[icon-name]"></wci-flat>
 <wci-flat name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-flat>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

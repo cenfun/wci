@@ -1,12 +1,12 @@
 # wci-fluent
-Built from [@fluentui/svg-icons@1.1.167](https://github.com/microsoft/fluentui-system-icons)  
+Built from [@fluentui/svg-icons@1.1.174](https://github.com/microsoft/fluentui-system-icons)  
 
-3935 icons / size: 732.4KB / gzip: 549.8KB  
+4003 icons / size: 737.9KB / gzip: 555.1KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#fluent](https://cenfun.github.io/wci/#fluent)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-fluent name="[icon-name]"></wci-fluent>
 <wci-fluent name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-fluent>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

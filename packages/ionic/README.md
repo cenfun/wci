@@ -1,12 +1,12 @@
 # wci-ionic
-Built from [ionicons@6.0.1](https://github.com/ionic-team/ionicons)  
+Built from [ionicons@6.0.2](https://github.com/ionic-team/ionicons)  
 
-918 icons / size: 250.8KB / gzip: 187.1KB  
+918 icons / size: 247.7KB / gzip: 186.0KB  
 
 No sharp icons
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#ionic](https://cenfun.github.io/wci/#ionic)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-ionic name="[icon-name]"></wci-ionic>
 <wci-ionic name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-ionic>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

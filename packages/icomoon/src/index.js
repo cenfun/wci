@@ -26,7 +26,7 @@ class IconElement extends HTMLElement {
     static get observedAttributes() {
         return ['name', 'size', 'color', 'radius', 'background'];
     }
-    
+
     constructor() {
         super();
         const shadow = this.attachShadow({
@@ -38,7 +38,7 @@ class IconElement extends HTMLElement {
         this.$container = document.createElement('div');
         shadow.appendChild(this.$container);
     }
-  
+
     connectedCallback() {
         this.render();
     }
@@ -77,7 +77,7 @@ class IconElement extends HTMLElement {
         }
 
         this.svg = getIcon(name, 'fullSvg');
-        
+
         this.$style.textContent = `
             :host, svg {
                 display: block;

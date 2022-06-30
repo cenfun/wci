@@ -1,12 +1,12 @@
 # wci-charm
-Built from [charm-icons@0.14.0](https://github.com/jaynewey/charm-icons)  
+Built from [charm-icons@0.15.0](https://github.com/jaynewey/charm-icons)  
 
-250 icons / size: 29.2KB / gzip: 19.2KB  
+255 icons / size: 26.4KB / gzip: 18.4KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#charm](https://cenfun.github.io/wci/#charm)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-charm name="[icon-name]"></wci-charm>
 <wci-charm name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-charm>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

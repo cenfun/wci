@@ -1,12 +1,12 @@
 # wci-typ
 Built from [typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)  
 
-336 icons / size: 111.1KB / gzip: 81.2KB  
+336 icons / size: 108.0KB / gzip: 80.2KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#typ](https://cenfun.github.io/wci/#typ)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-typ name="[icon-name]"></wci-typ>
 <wci-typ name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-typ>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-simple
-Built from [simple-icons@6.20.0](https://github.com/simple-icons/simple-icons)  
+Built from [simple-icons@7.3.0](https://github.com/simple-icons/simple-icons)  
 
-2240 icons / size: 1.8MB / gzip: 1.4MB  
+2274 icons / size: 1.9MB / gzip: 1.4MB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#simple](https://cenfun.github.io/wci/#simple)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-simple name="[icon-name]"></wci-simple>
 <wci-simple name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-simple>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

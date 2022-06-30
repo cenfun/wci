@@ -1,12 +1,12 @@
 # wci-tabler
-Built from [@tabler/icons@1.68.0](https://github.com/tabler/tabler-icons)  
+Built from [@tabler/icons@1.72.0](https://github.com/tabler/tabler-icons)  
 
-1978 icons / size: 178.1KB / gzip: 131.7KB  
+2052 icons / size: 183.0KB / gzip: 137.0KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#tabler](https://cenfun.github.io/wci/#tabler)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-tabler name="[icon-name]"></wci-tabler>
 <wci-tabler name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-tabler>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

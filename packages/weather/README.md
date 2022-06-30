@@ -1,12 +1,12 @@
 # wci-weather
 Built from [weather-icons-npm@10.0.0](https://github.com/erikflowers/weather-icons)  
 
-219 icons / size: 144.7KB / gzip: 106.6KB  
+219 icons / size: 141.6KB / gzip: 105.5KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#weather](https://cenfun.github.io/wci/#weather)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-weather name="[icon-name]"></wci-weather>
 <wci-weather name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-weather>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

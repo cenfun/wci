@@ -1,12 +1,12 @@
 # wci-prime
 Built from [primeicons@5.0.0](https://github.com/primefaces/primeicons)  
 
-238 icons / size: 54.3KB / gzip: 38.5KB  
+238 icons / size: 51.2KB / gzip: 37.3KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#prime](https://cenfun.github.io/wci/#prime)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-prime name="[icon-name]"></wci-prime>
 <wci-prime name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-prime>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-uiw
 Built from [@uiw/icons@2.6.7](https://github.com/uiwjs/icons)  
 
-214 icons / size: 88.9KB / gzip: 64.7KB  
+214 icons / size: 85.7KB / gzip: 63.5KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#uiw](https://cenfun.github.io/wci/#uiw)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-uiw name="[icon-name]"></wci-uiw>
 <wci-uiw name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-uiw>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

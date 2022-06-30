@@ -1,12 +1,12 @@
 # wci-ikonate
 Built from [ikonate@1.1.1](https://github.com/mikolajdobrucki/ikonate)  
 
-283 icons / size: 34.4KB / gzip: 23.2KB  
+283 icons / size: 31.3KB / gzip: 22.1KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#ikonate](https://cenfun.github.io/wci/#ikonate)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-ikonate name="[icon-name]"></wci-ikonate>
 <wci-ikonate name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-ikonate>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

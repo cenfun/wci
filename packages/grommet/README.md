@@ -1,12 +1,12 @@
 # wci-grommet
 Built from [grommet-icons@4.7.0](https://github.com/FortAwesome/Font-Awesome)  
 
-615 icons / size: 120.8KB / gzip: 88.7KB  
+615 icons / size: 117.6KB / gzip: 87.5KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#grommet](https://cenfun.github.io/wci/#grommet)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-grommet name="[icon-name]"></wci-grommet>
 <wci-grommet name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-grommet>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

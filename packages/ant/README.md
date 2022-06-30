@@ -1,12 +1,12 @@
 # wci-ant
 Built from [@ant-design/icons-svg@4.2.1](https://github.com/ant-design/ant-design-icons)  
 
-639 icons / size: 203.5KB / gzip: 151.3KB  
+639 icons / size: 200.3KB / gzip: 150.1KB  
 
 No two-tone icons
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#ant](https://cenfun.github.io/wci/#ant)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-ant name="[icon-name]"></wci-ant>
 <wci-ant name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-ant>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

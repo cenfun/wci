@@ -1,12 +1,12 @@
 # wci-akar
-Built from [akar-icons@1.9.16](https://github.com/artcoholic/akar-icons)  
+Built from [akar-icons@1.9.18](https://github.com/artcoholic/akar-icons)  
 
-379 icons / size: 81.3KB / gzip: 58.8KB  
+385 icons / size: 79.2KB / gzip: 58.5KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#akar](https://cenfun.github.io/wci/#akar)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-akar name="[icon-name]"></wci-akar>
 <wci-akar name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-akar>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-entypo
 Built from [entypo@2.2.1](https://github.com/hypermodules/entypo)  
 
-411 icons / size: 122.7KB / gzip: 90.2KB  
+411 icons / size: 119.6KB / gzip: 89.1KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#entypo](https://cenfun.github.io/wci/#entypo)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-entypo name="[icon-name]"></wci-entypo>
 <wci-entypo name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-entypo>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-awesome
 Built from [@fortawesome/free-solid-svg-icons@6.1.1](https://github.com/FortAwesome/Font-Awesome)  
 
-1385 icons / size: 472.6KB / gzip: 354.4KB  
+1385 icons / size: 469.5KB / gzip: 353.2KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#awesome](https://cenfun.github.io/wci/#awesome)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-awesome name="[icon-name]"></wci-awesome>
 <wci-awesome name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-awesome>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

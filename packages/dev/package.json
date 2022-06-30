@@ -5,7 +5,7 @@
     "main": "dist/wci-dev.js",
     "files": [
         "dist",
-        "preview"
+        "public"
     ],
     "repository": {
         "url": "https://github.com/cenfun/wci.git"

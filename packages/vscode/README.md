@@ -1,12 +1,12 @@
 # wci-vscode
-Built from [@vscode/codicons@0.0.29](https://github.com/microsoft/vscode-codicons)  
+Built from [@vscode/codicons@0.0.31](https://github.com/microsoft/vscode-codicons)  
 
-408 icons / size: 116.9KB / gzip: 85.7KB  
+411 icons / size: 113.9KB / gzip: 84.7KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#vscode](https://cenfun.github.io/wci/#vscode)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-vscode name="[icon-name]"></wci-vscode>
 <wci-vscode name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-vscode>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

@@ -1,12 +1,12 @@
 # wci-dev
 Built from [devicons@1.8.0](https://github.com/vorillaz/devicons)  
 
-192 icons / size: 223.9KB / gzip: 166.6KB  
+192 icons / size: 220.7KB / gzip: 165.6KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#dev](https://cenfun.github.io/wci/#dev)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-dev name="[icon-name]"></wci-dev>
 <wci-dev name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-dev>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)

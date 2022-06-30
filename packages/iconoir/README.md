@@ -1,12 +1,12 @@
 # wci-iconoir
-Built from [iconoir@4.9.1](https://github.com/lucaburgio/iconoir)  
+Built from [iconoir@5.0.0](https://github.com/lucaburgio/iconoir)  
 
-1091 icons / size: 141.9KB / gzip: 104.5KB  
+1151 icons / size: 146.5KB / gzip: 109.3KB  
 
 
 
-# Preview
-![screenshot](preview/screenshot.png)
+# Screenshot
+![screenshot](public/screenshot.png)
 
 Online Page: [https://cenfun.github.io/wci/#iconoir](https://cenfun.github.io/wci/#iconoir)
 
@@ -43,7 +43,7 @@ icon.list.forEach(item => {
 <wci-iconoir name="[icon-name]"></wci-iconoir>
 <wci-iconoir name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-iconoir>
 ```
-see [preview/index.html](preview/index.html)
+see [public/index.html](public/index.html)
 
 ## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
 * Optimized with [svgo](https://github.com/svg/svgo)
