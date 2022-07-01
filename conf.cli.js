@@ -191,6 +191,20 @@ module.exports = {
 
             await page.evaluate(() => {
                 document.body.style.overflow = 'hidden';
+                const style = document.createElement('style');
+                style.innerHTML = `
+                    body::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        display: block;
+                        height: 50px;
+                        width: 100%;
+                        background-image: linear-gradient(to bottom, rgb(255 255 255 / 0%), #fff);
+                    }
+                `;
+                document.body.appendChild(style);
             });
 
             const screenshotPath = path.resolve(item.devPath, 'screenshot.png');

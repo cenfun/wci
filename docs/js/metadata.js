@@ -2,9 +2,9 @@ window.wciMetadata = {
     "minify": true,
     "registry": "https://registry.npmjs.org/",
     "version": "1.0.7",
-    "commit": "6053919",
+    "commit": "ccc8e3c",
     "branch": "main",
-    "timestamp": "2022-07-01T04:15:34.823Z",
+    "timestamp": "2022-07-01T05:59:20.120Z",
     "libs": [
         "turbogrid.js",
         "filesaver.js",
