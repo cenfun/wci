@@ -155,10 +155,11 @@ const renderFinder = function(option, list, rows) {
             if (!keywords.length) {
                 return true;
             }
-            const str = rowData.name;
+            const iconName = rowData.name;
+            const parts = iconName.split('-');
             for (let i = 0; i < keywords.length; i++) {
                 const keyword = keywords[i];
-                if (str.indexOf(keyword) !== -1) {
+                if (parts.includes(keyword) || iconName.startsWith(keyword)) {
                     return true;
                 }
             }
@@ -425,9 +426,11 @@ const getPopular = function(popularList) {
         }
     }
 
-    return `Popular: ${list.map((item) => {
+    const ks = list.map((item) => {
         return `<span>${item}</span>`;
-    })}`;
+    });
+
+    return `Popular: ${ks} <i></i>`;
 };
 
 let menuGrid;
@@ -567,9 +570,15 @@ const renderStart = function(metadata) {
 
     const $popular = $('.wci-popular');
     $popular.addEventListener('click', function(e) {
-        if (e.target.tagName === 'SPAN') {
+        const tagName = e.target.tagName.toLowerCase();
+        if (tagName === 'span') {
             $keywords.value = e.target.innerText;
             keywordsHandler();
+            return;
+        }
+
+        if (tagName === 'i') {
+            $popular.innerHTML = getPopular(popularList);
         }
     });
     $popular.innerHTML = getPopular(popularList);
