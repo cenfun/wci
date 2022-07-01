@@ -1,7 +1,7 @@
 # wci-eva
 Built from [eva-icons@1.1.3](https://github.com/akveo/eva-icons)  
 
-490 icons / size: 76.5KB / gzip: 56.4KB  
+490 icons / size: 75.3KB / gzip: 55.6KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-eva
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-eva";
+import { icons, getIcon } from "wci-eva";
 
 const $icon = document.createElement("wci-eva");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

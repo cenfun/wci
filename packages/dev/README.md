@@ -1,7 +1,7 @@
 # wci-dev
 Built from [devicons@1.8.0](https://github.com/vorillaz/devicons)  
 
-192 icons / size: 220.7KB / gzip: 165.6KB  
+192 icons / size: 219.7KB / gzip: 164.9KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-dev
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-dev";
+import { icons, getIcon } from "wci-dev";
 
 const $icon = document.createElement("wci-dev");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

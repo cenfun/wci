@@ -1,7 +1,7 @@
 # wci-oct
 Built from [@primer/octicons@17.3.0](https://github.com/primer/octicons)  
 
-506 icons / size: 129.5KB / gzip: 96.5KB  
+506 icons / size: 128.2KB / gzip: 95.6KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-oct
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-oct";
+import { icons, getIcon } from "wci-oct";
 
 const $icon = document.createElement("wci-oct");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

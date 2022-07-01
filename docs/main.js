@@ -31,7 +31,8 @@ setOption();
 const savePNG = function(content, name) {
     content = content.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
     const dataUrl = `data:image/svg+xml;charset=utf8,${encodeURIComponent(content)}`;
-    //console.log(dataUrl);
+    let minifier;
+    console.log(minifier);
 
     const option = getOption();
     const size = parseInt(option.size);
@@ -146,7 +147,7 @@ const renderFinder = function(option, list, rows) {
 
     grid.setOption({
         rowHeight: cellSize,
-        frozenColumn: 1,
+        frozenColumn: 2,
         bindWindowResize: true,
         bindContainerResize: true,
         rowNotFound: '<div class="wci-not-found">Not found results</div>',
@@ -215,7 +216,7 @@ const renderFinder = function(option, list, rows) {
         }, {
             id: 'name',
             name: 'Name',
-            width: 240
+            width: 150
         }, {
             id: 'downloadSvg',
             name: '',
@@ -286,10 +287,10 @@ const renderList = function($container, list, option) {
 
         const $div = document.createElement('div');
         $div.className = 'wci-icon-item';
-        $div.title = item.id;
+        $div.title = item.name;
 
         const $icon = document.createElement(option.tagName);
-        $icon.setAttribute('name', item.id);
+        $icon.setAttribute('name', item.name);
         $icon.setAttribute('size', option.size);
         if (option.color) {
             const color = getColor(option.color, option.index);
@@ -307,7 +308,7 @@ const renderList = function($container, list, option) {
             const $name = document.createElement('div');
             $name.className = 'wci-icon-item-label';
             $name.style.width = option.size;
-            $name.innerText = item.id;
+            $name.innerText = item.name;
             $div.appendChild($name);
         }
 
@@ -339,12 +340,12 @@ const renderPackage = function(option, item) {
     const $container = $('.wci-package');
     $container.innerHTML = '';
 
-    const list = item.icon.list;
+    const list = item.icons;
     list.sort(function(a, b) {
-        if (a.id > b.id) {
+        if (a.name > b.name) {
             return 1;
         }
-        if (a.id < b.id) {
+        if (a.name < b.name) {
             return -1;
         }
         return 0;
@@ -514,7 +515,7 @@ const renderMenu = function(metadata) {
 
 };
 
-const render = function(metadata) {
+const renderStart = function(metadata) {
 
     const list = metadata.list;
     list.forEach(function(item) {
@@ -523,21 +524,21 @@ const render = function(metadata) {
             return;
         }
         item.tagName = lib.tagName;
-        item.icon = lib.icon;
+        item.icons = lib.icons;
     });
 
     const gridRows = [];
     list.forEach(function(item) {
-        item.icon.list.forEach((ic) => {
+        item.icons.forEach((ic) => {
 
-            const iconName = ic.id;
+            const iconName = ic.name;
             addPopular(iconName);
 
             gridRows.push({
                 tag: item.tagName,
                 name: iconName,
                 package: item.name,
-                svg: ic.fullSvg
+                svg: ic.svg
             });
         });
     });
@@ -614,7 +615,7 @@ const loadLibs = function() {
         renderMenu(metadata);
         if (loaded >= total) {
             $loading.style.display = 'none';
-            render(metadata);
+            renderStart(metadata);
         }
     };
 

@@ -1,4 +1,4 @@
-# wci-{id}
+# wci-{name}
 Built from [{packageNameVersion}]({packageUrl})  
 
 {stats}  
@@ -8,7 +8,7 @@ Built from [{packageNameVersion}]({packageUrl})
 # Screenshot
 ![screenshot](public/screenshot.png)
 
-Online Page: [https://cenfun.github.io/wci/#{id}](https://cenfun.github.io/wci/#{id})
+Online Page: [https://cenfun.github.io/wci/#{name}](https://cenfun.github.io/wci/#{name})
 
 # Features
 * Web Components
@@ -17,35 +17,33 @@ Online Page: [https://cenfun.github.io/wci/#{id}](https://cenfun.github.io/wci/#
 * High Compressed Bundle
 # Installation
 ```sh
-npm install wci-{id}
+npm install wci-{name}
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-{id}";
+import { icons, getIcon } from "wci-{name}";
 
-const $icon = document.createElement("wci-{id}");
+const $icon = document.createElement("wci-{name}");
 $icon.setAttribute("name", "[icon-name]");
 $icon.setAttribute("size", "64px");
 $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
 ```html
 
-<script src="path-to/wci-{id}/dist/wci-{id}.js"></script>
+<script src="path-to/wci-{name}/dist/wci-{name}.js"></script>
 
-<wci-{id} name="[icon-name]"></wci-{id}>
-<wci-{id} name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-{id}>
+<wci-{name} name="[icon-name]"></wci-{name}>
+<wci-{name} name="[icon-name]" size="64px" color="#000" style="background:#f5f5f5;"></wci-{name}>
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

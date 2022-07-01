@@ -1,7 +1,7 @@
 # wci-entypo
 Built from [entypo@2.2.1](https://github.com/hypermodules/entypo)  
 
-411 icons / size: 119.6KB / gzip: 89.1KB  
+411 icons / size: 118.6KB / gzip: 88.4KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-entypo
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-entypo";
+import { icons, getIcon } from "wci-entypo";
 
 const $icon = document.createElement("wci-entypo");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

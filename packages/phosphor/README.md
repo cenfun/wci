@@ -1,7 +1,7 @@
 # wci-phosphor
 Built from [phosphor-icons@1.4.2](https://github.com/phosphor-icons/phosphor-icons)  
 
-5235 icons / size: 897.2KB / gzip: 675.7KB  
+5235 icons / size: 896.5KB / gzip: 674.7KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-phosphor
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-phosphor";
+import { icons, getIcon } from "wci-phosphor";
 
 const $icon = document.createElement("wci-phosphor");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

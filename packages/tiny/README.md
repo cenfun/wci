@@ -1,7 +1,7 @@
 # wci-tiny
 Built from [super-tiny-icons@0.4.0](https://github.com/edent/SuperTinyIcons)  
 
-275 icons / size: 82.9KB / gzip: 61.4KB  
+275 icons / size: 81.7KB / gzip: 60.5KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-tiny
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-tiny";
+import { icons, getIcon } from "wci-tiny";
 
 const $icon = document.createElement("wci-tiny");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

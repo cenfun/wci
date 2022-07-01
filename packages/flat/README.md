@@ -1,7 +1,7 @@
 # wci-flat
 Built from [flat-color-icons@1.1.0](https://github.com/icons8/flat-color-icons)  
 
-329 icons / size: 89.7KB / gzip: 66.2KB  
+329 icons / size: 88.4KB / gzip: 65.3KB  
 
 Fixed Color
 
@@ -21,7 +21,7 @@ npm install wci-flat
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-flat";
+import { icons, getIcon } from "wci-flat";
 
 const $icon = document.createElement("wci-flat");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

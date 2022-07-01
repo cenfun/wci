@@ -1,7 +1,7 @@
 # wci-vscode
 Built from [@vscode/codicons@0.0.31](https://github.com/microsoft/vscode-codicons)  
 
-411 icons / size: 113.9KB / gzip: 84.7KB  
+411 icons / size: 112.7KB / gzip: 83.9KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-vscode
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-vscode";
+import { icons, getIcon } from "wci-vscode";
 
 const $icon = document.createElement("wci-vscode");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

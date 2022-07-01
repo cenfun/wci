@@ -1,7 +1,7 @@
 # wci-park
 Built from [@icon-park/svg@1.4.1](https://github.com/bytedance/IconPark)  
 
-2658 icons / size: 346.8KB / gzip: 260.8KB  
+2658 icons / size: 345.8KB / gzip: 260.1KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-park
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-park";
+import { icons, getIcon } from "wci-park";
 
 const $icon = document.createElement("wci-park");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

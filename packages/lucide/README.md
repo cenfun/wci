@@ -1,7 +1,7 @@
 # wci-lucide
 Built from [lucide@0.72.0](https://github.com/lucide-icons/lucide)  
 
-777 icons / size: 70.7KB / gzip: 52.1KB  
+777 icons / size: 69.7KB / gzip: 51.5KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-lucide
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-lucide";
+import { icons, getIcon } from "wci-lucide";
 
 const $icon = document.createElement("wci-lucide");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

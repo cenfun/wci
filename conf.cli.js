@@ -89,9 +89,9 @@ module.exports = {
             const fullName = item.fullName;
 
             //compress svg
-            const svgToSymbol = require('svg-to-symbol');
+            const svgMinifier = require('svg-minifier');
             const config = {
-                name: fullName,
+                namespace: fullName,
                 dirs,
                 outputDir: `${componentPath}/src/dist`
             };
@@ -104,15 +104,10 @@ module.exports = {
             if (option.onSVGName) {
                 config.onSVGName = option.onSVGName;
             }
-            const result = svgToSymbol(config);
-
-            if (!result.metadata) {
-                console.error('ERROR: Failed to generate svg symbol file');
-                return 1;
-            }
+            const metadata = svgMinifier(config);
 
             item.metadata = {
-                total: result.metadata.list.length
+                total: metadata.icons.length
             };
 
             const version = require('./package.json').version;
@@ -121,7 +116,7 @@ module.exports = {
                 'src/index.js',
                 'package.json'
             ], {
-                id: item.name,
+                name: item.name,
                 version,
                 packageName: option.package
             }, componentPath, Util);
@@ -140,7 +135,6 @@ module.exports = {
 
             const metadata = item.metadata;
 
-            const id = item.name;
             const packagePath = path.resolve(`node_modules/${option.package}/package.json`);
             let version = '';
             const json = Util.readJSONSync(packagePath);
@@ -169,7 +163,7 @@ module.exports = {
                 'public/index.html',
                 'README.md'
             ], {
-                id,
+                name: item.name,
                 packageNameVersion,
                 packageUrl,
                 readme,

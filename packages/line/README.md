@@ -1,7 +1,7 @@
 # wci-line
 Built from [line-awesome@1.3.0](https://github.com/icons8/line-awesome)  
 
-1544 icons / size: 512.2KB / gzip: 385.3KB  
+1544 icons / size: 511.2KB / gzip: 384.7KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-line
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-line";
+import { icons, getIcon } from "wci-line";
 
 const $icon = document.createElement("wci-line");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

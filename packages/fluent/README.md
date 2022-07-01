@@ -1,7 +1,7 @@
 # wci-fluent
 Built from [@fluentui/svg-icons@1.1.174](https://github.com/microsoft/fluentui-system-icons)  
 
-4003 icons / size: 737.9KB / gzip: 555.1KB  
+4003 icons / size: 737.9KB / gzip: 555.2KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-fluent
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-fluent";
+import { icons, getIcon } from "wci-fluent";
 
 const $icon = document.createElement("wci-fluent");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

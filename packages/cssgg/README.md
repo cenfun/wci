@@ -1,7 +1,7 @@
 # wci-cssgg
 Built from [css.gg@2.0.0](https://github.com/astrit/css.gg)  
 
-704 icons / size: 89.4KB / gzip: 66.0KB  
+704 icons / size: 88.3KB / gzip: 65.2KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-cssgg
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-cssgg";
+import { icons, getIcon } from "wci-cssgg";
 
 const $icon = document.createElement("wci-cssgg");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

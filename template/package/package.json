@@ -1,8 +1,8 @@
 {
-    "name": "wci-{id}",
+    "name": "wci-{name}",
     "version": "{version}",
     "description": "Web components icons built from {packageName}",
-    "main": "dist/wci-{id}.js",
+    "main": "dist/wci-{name}.js",
     "files": [
         "dist",
         "public"

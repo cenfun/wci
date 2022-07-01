@@ -1,7 +1,7 @@
 # wci-uiw
 Built from [@uiw/icons@2.6.7](https://github.com/uiwjs/icons)  
 
-214 icons / size: 85.7KB / gzip: 63.5KB  
+214 icons / size: 84.6KB / gzip: 62.7KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-uiw
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-uiw";
+import { icons, getIcon } from "wci-uiw";
 
 const $icon = document.createElement("wci-uiw");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

@@ -1,7 +1,7 @@
 # wci-box
 Built from [boxicons@2.1.2](https://github.com/atisawd/boxicons)  
 
-1600 icons / size: 315.2KB / gzip: 237.0KB  
+1600 icons / size: 314.1KB / gzip: 236.3KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-box
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-box";
+import { icons, getIcon } from "wci-box";
 
 const $icon = document.createElement("wci-box");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

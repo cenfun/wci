@@ -1,7 +1,7 @@
 # wci-carbon
 Built from [@carbon/icons@11.5.0](https://github.com/carbon-design-system/carbon)  
 
-1930 icons / size: 334.4KB / gzip: 251.4KB  
+1930 icons / size: 333.3KB / gzip: 250.7KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-carbon
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-carbon";
+import { icons, getIcon } from "wci-carbon";
 
 const $icon = document.createElement("wci-carbon");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

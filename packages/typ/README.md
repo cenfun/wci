@@ -1,7 +1,7 @@
 # wci-typ
 Built from [typicons.font@2.1.2](https://github.com/stephenhutchings/typicons.font)  
 
-336 icons / size: 108.0KB / gzip: 80.2KB  
+336 icons / size: 106.7KB / gzip: 79.3KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-typ
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-typ";
+import { icons, getIcon } from "wci-typ";
 
 const $icon = document.createElement("wci-typ");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

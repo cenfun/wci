@@ -1,7 +1,7 @@
 # wci-feather
 Built from [feather-icons@4.29.0](https://github.com/feathericons/feather)  
 
-287 icons / size: 30.1KB / gzip: 21.2KB  
+287 icons / size: 29.0KB / gzip: 20.7KB  
 
 
 
@@ -21,7 +21,7 @@ npm install wci-feather
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-feather";
+import { icons, getIcon } from "wci-feather";
 
 const $icon = document.createElement("wci-feather");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)

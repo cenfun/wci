@@ -1,20 +1,20 @@
-import icon from './dist/wci-bootstrap.js';
+import metadata from './dist/wci-bootstrap.js';
+const icons = metadata.icons;
 
-const getIcon = function(id, key) {
-    if (!id) {
-        return null;
+const getIcon = function(name, key) {
+    if (!name) {
+        return;
     }
     let item;
-    const list = icon.list;
-    for (let i = 0, l = list.length; i < l; i++) {
-        const it = list[i];
-        if (id === it.id || id === it.fullId) {
+    for (let i = 0, l = icons.length; i < l; i++) {
+        const it = icons[i];
+        if (name === it.name || name === `${it.namespace}-${it.name}`) {
             item = it;
             break;
         }
     }
     if (!item) {
-        return null;
+        return;
     }
     if (key) {
         return item[key];
@@ -76,7 +76,7 @@ class IconElement extends HTMLElement {
             $overflow = 'overflow: hidden;';
         }
 
-        this.svg = getIcon(name, 'fullSvg');
+        this.svg = getIcon(name, 'svg');
 
         this.$style.textContent = `
             :host, svg {
@@ -110,14 +110,14 @@ if (customElements.get(tagName)) {
 
 export {
     tagName,
-    icon,
+    icons,
     getIcon,
     IconElement
 };
 
 export default {
     tagName,
-    icon,
+    icons,
     getIcon,
     IconElement
 };

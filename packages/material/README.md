@@ -1,7 +1,7 @@
 # wci-material
 Built from [@material-design-icons/svg@0.11.3](https://github.com/marella/material-design-icons)  
 
-4248 icons / size: 517.5KB / gzip: 389.2KB  
+4248 icons / size: 516.9KB / gzip: 388.5KB  
 
 No sharp/round/two-tone icons
 
@@ -21,7 +21,7 @@ npm install wci-material
 ```
 # API Usage
 ```js
-import { icon, getIcon } from "wci-material";
+import { icons, getIcon } from "wci-material";
 
 const $icon = document.createElement("wci-material");
 $icon.setAttribute("name", "[icon-name]");
@@ -30,9 +30,8 @@ $icon.setAttribute("color", "#000");
 document.body.appendChild($icon);
 
 // get all icons
-icon.list.forEach(item => {
-    const ic = getIcon(item.id);
-    console.log(ic)
+icons.forEach(item => {
+    console.log(getIcon(item.name))
 });
 ```
 # Browser Usage
@@ -45,7 +44,6 @@ icon.list.forEach(item => {
 ```
 see [public/index.html](public/index.html)
 
-## Optimizing and Compression with [svg-to-symbol](https://github.com/cenfun/svg-to-symbol)
+## Minified with [svg-minifier](https://github.com/cenfun/svg-minifier)
 * Optimized with [svgo](https://github.com/svg/svgo)
-* Removed repeated contents
 * Compressed with [lz-string](https://github.com/pieroxy/lz-string)
