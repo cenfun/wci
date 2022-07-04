@@ -106,27 +106,26 @@ const initGrid = function() {
     const Grid = window.turbogrid.Grid;
     grid = new Grid($('.wci-grid'));
     grid.bind('onClick', function(e, d) {
+        const rowItem = d.rowItem;
         const $target = d.e.target;
         if ($target.tagName === 'TEXTAREA') {
             $target.select();
             return;
         }
         if ($target.classList.contains('wci-icon-copy')) {
-            const row = grid.getRowItem(d.row);
-            const url = `https://cenfun.github.io/wci/js/${row.tag}.js`;
+            const url = `https://cenfun.github.io/wci/js/${rowItem.tag}.js`;
             const textarea = document.createElement('textarea');
             textarea.innerHTML = `&lt;script src=&quot;${url}&quot;&gt;&lt;/script&gt;\n${$target.innerHTML}`;
             copyContent(textarea.value);
             return;
         }
         if ($target.classList.contains('wci-icon-download')) {
-            const row = grid.getRowItem(d.row);
             const type = $target.getAttribute('name');
             if (type === 'png') {
-                savePNG(row.svg, row.name);
+                savePNG(rowItem.svg, rowItem.name);
                 return;
             }
-            saveSVG(row.svg, row.name);
+            saveSVG(rowItem.svg, rowItem.name);
         }
     });
     grid.showLoading();
