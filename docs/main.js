@@ -621,7 +621,7 @@ const openDB = async (name, version = 1) => {
             resolve(request.result);
         };
         request.onupgradeneeded = function(e) {
-            console.log('open onupgradeneeded');
+            //console.log('open onupgradeneeded');
             const idb = request.result;
             const store = idb.createObjectStore(tableName, {
                 keyPath: 'id'
