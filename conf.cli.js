@@ -308,8 +308,6 @@ module.exports = {
                 recursive: true
             });
 
-            const libs = [];
-
             //copy vendors
             const vendors = {
                 'turbogrid.js': 'node_modules/turbogrid/dist/turbogrid.js',
@@ -318,11 +316,11 @@ module.exports = {
 
             Object.keys(vendors).forEach((key) => {
                 fs.copyFileSync(path.resolve(__dirname, vendors[key]), path.resolve(jsPath, key));
-                libs.push(key);
                 console.log(`copied ${key}`);
             });
 
 
+            const libs = [];
             //copy packages
             list.forEach((p) => {
                 const fn = `wci-${p.name}.js`;

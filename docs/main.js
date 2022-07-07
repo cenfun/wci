@@ -518,17 +518,7 @@ const renderMenu = function(metadata) {
 };
 
 const renderStart = function(metadata) {
-
     const list = metadata.list;
-    list.forEach(function(item) {
-        const lib = window[`wci-${item.name}`];
-        if (!lib) {
-            return;
-        }
-        item.tagName = lib.tagName;
-        item.icons = lib.icons;
-    });
-
     const gridRows = [];
     list.forEach(function(item) {
         item.icons.forEach((ic) => {
@@ -604,16 +594,110 @@ const renderStart = function(metadata) {
     renderView(list, gridRows);
 };
 
-const loadLibs = function() {
+const initMetadata = function(metadata) {
+    const list = metadata.list;
+    list.forEach(function(item) {
+        const lib = window[`wci-${item.name}`];
+        if (!lib) {
+            return;
+        }
+        item.tagName = lib.tagName;
+        item.icons = lib.icons;
+    });
+};
+
+const openDB = async (name, version = 1) => {
+    const tableName = 'metadata';
+    const cacheId = 'metadata';
+
+    const db = await new Promise((resolve) => {
+        const request = window.indexedDB.open(name, version);
+        request.onerror = function(e) {
+            //console.log('open onerror');
+            resolve();
+        };
+        request.onsuccess = function(e) {
+            //console.log('open onsuccess');
+            resolve(request.result);
+        };
+        request.onupgradeneeded = function(e) {
+            console.log('open onupgradeneeded');
+            const idb = request.result;
+            const store = idb.createObjectStore(tableName, {
+                keyPath: 'id'
+            });
+            store.transaction.oncomplete = function(ee) {
+                resolve(idb);
+            };
+        };
+    });
+
+    if (!db) {
+        return;
+    }
+
+    return {
+        set: (data) => {
+            return new Promise((resolve) => {
+                const transaction = db.transaction(tableName, 'readwrite');
+                const store = transaction.objectStore(tableName);
+                const request = store.put({
+                    id: cacheId,
+                    data: data
+                });
+                request.onsuccess = function(e) {
+                    //console.log('set onsuccess');
+                    resolve();
+                };
+                request.onerror = function(e) {
+                    //console.log('set onerror');
+                    resolve();
+                };
+            });
+        },
+
+        get: () => {
+            return new Promise((resolve) => {
+                const transaction = db.transaction(tableName, 'readonly');
+                const store = transaction.objectStore(tableName);
+                const request = store.get(cacheId);
+                request.onsuccess = function(e) {
+                    //console.log('get onsuccess');
+                    const result = request.result;
+                    const data = result && result.data;
+                    resolve(data);
+                };
+                request.onerror = function(e) {
+                    //console.log('get onerror');
+                    resolve();
+                };
+            });
+        }
+    };
+};
+
+const loadLibs = async () => {
 
     const metadata = window.wciMetadata;
     console.log(metadata);
 
-    const libs = metadata.libs;
-    const total = libs.length;
-
     const $loading = $('.wci-loading');
     const $loadingLabel = $loading.querySelector('.wci-loading-label');
+
+    const db = await openDB('wci');
+    //console.log(db);
+    const cache = await db.get();
+    //console.log(cache);
+    if (cache && cache.version === metadata.version) {
+        console.log('Found local cache', cache);
+        $loading.style.display = 'none';
+        renderMenu(cache);
+        renderStart(cache);
+        return;
+    }
+
+    const libs = metadata.libs;
+    const total = libs.length;
 
     let loaded = 0;
     const loadHandler = function(item) {
@@ -623,6 +707,8 @@ const loadLibs = function() {
         renderMenu(metadata);
         if (loaded >= total) {
             $loading.style.display = 'none';
+            initMetadata(metadata);
+            db.set(metadata);
             renderStart(metadata);
         }
     };

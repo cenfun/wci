@@ -6,8 +6,6 @@ window.wciMetadata = {
     "branch": "main",
     "timestamp": "2022-07-01T05:59:20.120Z",
     "libs": [
-        "turbogrid.js",
-        "filesaver.js",
         "wci-akar.js",
         "wci-ant.js",
         "wci-awesome.js",
