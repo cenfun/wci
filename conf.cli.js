@@ -311,7 +311,8 @@ module.exports = {
             //copy vendors
             const vendors = {
                 'turbogrid.js': 'node_modules/turbogrid/dist/turbogrid.js',
-                'filesaver.js': 'node_modules/file-saver/dist/FileSaver.min.js'
+                'filesaver.js': 'node_modules/file-saver/dist/FileSaver.min.js',
+                'open-store.js': 'node_modules/open-store/dist/open-store.js'
             };
 
             Object.keys(vendors).forEach((key) => {

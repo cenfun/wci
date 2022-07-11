@@ -718,76 +718,6 @@ const initIconElement = function(metadata) {
     });
 };
 
-const openDB = async (name, version = 1) => {
-    const tableName = 'metadata';
-    const cacheId = 'metadata';
-
-    const db = await new Promise((resolve) => {
-        const request = window.indexedDB.open(name, version);
-        request.onerror = function(e) {
-            //console.log('open onerror');
-            resolve();
-        };
-        request.onsuccess = function(e) {
-            //console.log('open onsuccess');
-            resolve(request.result);
-        };
-        request.onupgradeneeded = function(e) {
-            //console.log('open onupgradeneeded');
-            const idb = request.result;
-            const store = idb.createObjectStore(tableName, {
-                keyPath: 'id'
-            });
-            store.transaction.oncomplete = function(ee) {
-                resolve(idb);
-            };
-        };
-    });
-
-    if (!db) {
-        return;
-    }
-
-    return {
-        set: (data) => {
-            return new Promise((resolve) => {
-                const transaction = db.transaction(tableName, 'readwrite');
-                const store = transaction.objectStore(tableName);
-                const request = store.put({
-                    id: cacheId,
-                    data: data
-                });
-                request.onsuccess = function(e) {
-                    //console.log('set onsuccess');
-                    resolve();
-                };
-                request.onerror = function(e) {
-                    //console.log('set onerror');
-                    resolve();
-                };
-            });
-        },
-
-        get: () => {
-            return new Promise((resolve) => {
-                const transaction = db.transaction(tableName, 'readonly');
-                const store = transaction.objectStore(tableName);
-                const request = store.get(cacheId);
-                request.onsuccess = function(e) {
-                    //console.log('get onsuccess');
-                    const result = request.result;
-                    const data = result && result.data;
-                    resolve(data);
-                };
-                request.onerror = function(e) {
-                    //console.log('get onerror');
-                    resolve();
-                };
-            });
-        }
-    };
-};
-
 const loadLibs = async () => {
 
     const metadata = window.wciMetadata;
@@ -796,9 +726,10 @@ const loadLibs = async () => {
     const $loading = $('.wci-loading');
     const $loadingLabel = $loading.querySelector('.wci-loading-label');
 
-    const db = await openDB('wci');
+    const { openStore } = window['open-store'];
+    const ost = await openStore('wci');
     //console.log(db);
-    const cache = await db.get();
+    const cache = await ost.get('metadata');
     //console.log(cache);
     if (cache && cache.version === metadata.version) {
         console.log('Found local cache', cache);
@@ -821,7 +752,7 @@ const loadLibs = async () => {
         if (loaded >= total) {
             $loading.style.display = 'none';
             initMetadata(metadata);
-            db.set(metadata);
+            ost.set('metadata', metadata);
             renderStart(metadata);
         }
     };

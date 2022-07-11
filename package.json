@@ -69,6 +69,7 @@
         "eslint-plugin-html": "^6.2.0",
         "eslint-plugin-vue": "^9.1.1",
         "file-saver": "^2.0.5",
+        "open-store": "^1.0.0",
         "postcss": "^8.4.14",
         "postcss-html": "^1.4.1",
         "postcss-scss": "^4.0.4",
